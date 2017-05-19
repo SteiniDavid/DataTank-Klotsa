@@ -4,7 +4,8 @@
 #include "DTSaveError.h"
 
 #include "DTDataFile.h"
-#include "DTPointValueCollection2D.h"
+#include "DTPointCollection2D.h"
+#include "DTSeriesPointCollection2D.h"
 #include "DTVectorCollection2D.h"
 
 // Common utilities
@@ -16,7 +17,7 @@
 
 #include <math.h>
 
-DTVectorCollection2D Computation(const DTPointValueCollection2D &centerMass);
+DTVectorCollection2D Computation(const DTSeriesPointCollection2D &allPoints);
 
 int main(int argc,const char *argv[])
 {
@@ -24,13 +25,13 @@ int main(int argc,const char *argv[])
     
     DTDataFile inputFile("Input.dtbin",DTFile::ReadOnly);
     // Read in the input variables.
-    DTPointValueCollection2D centerMass;
-    Read(inputFile,"centerMass",centerMass);
+    DTSeriesPointCollection2D allPoints;
+    Read(inputFile,"allPoints",allPoints);
     
     // The computation.
     DTVectorCollection2D computed;
     clock_t t_before = clock();
-    computed = Computation(centerMass);
+    computed = Computation(allPoints);
     clock_t t_after = clock();
     double exec_time = double(t_after-t_before)/double(CLOCKS_PER_SEC);
     
@@ -54,7 +55,33 @@ int main(int argc,const char *argv[])
     return 0;
 }
 
-DTVectorCollection2D Computation(const DTPointValueCollection2D &centerMass)
+struct SingleList
+{
+    SingleList() {howManyPoints = 0; points = DTMutableDoubleArray(2,10);} // Initialize
+    
+    DTMutableDoubleArray points; // 2xN array of xy values
+    int howManyPoints;
+    
+    DTPoint2D lastPoint;
+    int timeIndex;
+    void AddPoint(const DTPoint2D &addThis,int timeI);
+};
+
+void SingleList::AddPoint(const DTPoint2D &addThis,int timeI)
+{
+    if (howManyPoints==points.n()) {
+        // at the end of the array
+        points = IncreaseSize(points,points.Length());
+    }
+    points(0,howManyPoints) = addThis.x;
+    points(1,howManyPoints) = addThis.y;
+    howManyPoints++;
+    lastPoint = addThis;
+    timeIndex = timeI;
+}
+
+
+DTVectorCollection2D Computation(const DTSeriesPointCollection2D &allPoints)
 {
     
     // To extract a single entry, you can use
@@ -73,15 +100,29 @@ DTVectorCollection2D Computation(const DTPointValueCollection2D &centerMass)
     //     ....
     // }
     
-    DTPointCollection2D points = centerMass;
-    for (int i = 0; i <points.NumberOfPoints(); i++) {
-        DTPoint2DValue point = points(i);
-        double xOrig = point(0,i);
-        double yOrig;
-        double xNext;
-        double yNext;
+    DTMutableList<SingleList> listOfSegments;
+    
+    DTDoubleArray timeValues = allPoints.TimeValues();
+    int timeN, howManyTimes = timeValues.Length();
+    DTPointCollection2D current;
+    int frameNumber = 0;
+    for (timeN=0;timeN<howManyTimes;timeN++) {
+        current = allPoints.Get(timeValues(timeN));
         
+        // For each point in current, find the closest point in the listOfSegments
+        for (int i = 0; i < current.NumberOfPoints(); i++) {
+            
+            // DTPoint2D point = next(i);
+            // double xOrig = point.x;
+            double yOrig;
+            double xNext;
+            double yNext;
+            
+        }
+    
+        frameNumber++;
     }
+    
     
     
     

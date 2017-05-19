@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>EC669B50-D673-4200-B701-8FB296F62C4E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>directionCenterOfMass</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>
 		<string>https://github.com/SteiniDavid/DataTank-Klotsa.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Ant Motion Tracking.tank/Attachments/directionCenterOfMass/directionCenterOfMass.xcodeproj</string>
+	<string>Ant Motion Tracking.tank/Attachments/directionCenterOfMass/directionCenterOfMass.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>

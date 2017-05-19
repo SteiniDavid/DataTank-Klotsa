@@ -57,8 +57,25 @@ int main(int argc,const char *argv[])
 DTVectorCollection2D Computation(const DTPointValueCollection2D &centerMass)
 {
     
-    for (int i = 0; i <centerMass.NumberOfPoints(); i++) {
-        DTPoint2DValue point = centerMass(i);
+    // To extract a single entry, you can use
+    // DTPointCollection Pts = ...
+    // for (int i = 0;i<Pts.NumberOfPoints();i++) {
+    //     DTPoint2D p = Pts(i);
+    //     ....
+    // }
+    //
+    // More efficient
+    // DTDoubleArray data = Pts.Data();
+    // DTPoint2D p;
+    // for (int i = 0;i<data.n();i++) {
+    //     p.x = data(0,i);
+    //     p.y = data(1,i);
+    //     ....
+    // }
+    
+    DTPointCollection2D points = centerMass;
+    for (int i = 0; i <points.NumberOfPoints(); i++) {
+        DTPoint2DValue point = points(i);
         double xOrig = point(0,i);
         double yOrig;
         double xNext;

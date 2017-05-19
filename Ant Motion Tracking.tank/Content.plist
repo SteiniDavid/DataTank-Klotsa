@@ -471,8 +471,8 @@
 			<string>Gray</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-530</real>
-				<real>1924</real>
+				<real>-474</real>
+				<real>1158</real>
 				<real>1013</real>
 				<real>773</real>
 			</array>
@@ -807,7 +807,7 @@
 			<string>Gray</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-464</real>
+				<real>-528</real>
 				<real>1924</real>
 				<real>557</real>
 				<real>773</real>
@@ -1282,7 +1282,7 @@
 			<string>Center of mass of Big loops in Contour of Subtract background</string>
 			<key>WindowPos</key>
 			<array>
-				<real>1346</real>
+				<real>-346</real>
 				<real>1924</real>
 				<real>901</real>
 				<real>773</real>
@@ -1302,13 +1302,13 @@
 		<key>CurrentTime</key>
 		<dict>
 			<key>CurrentValue</key>
-			<real>11.9</real>
+			<real>14.600000000000001</real>
 			<key>MaxValue</key>
 			<real>19.960000000000001</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>11.9</string>
+			<string>14.6</string>
 		</dict>
 		<key>Duration</key>
 		<string>10</string>
@@ -1508,13 +1508,13 @@
 				<key>Slider</key>
 				<dict>
 					<key>CurrentValue</key>
-					<real>-0.23500000000000001</real>
+					<real>-0.22600000000000001</real>
 					<key>MaxValue</key>
 					<real>0.122</real>
 					<key>MinValue</key>
 					<real>-0.53300000000000003</real>
 					<key>String</key>
-					<string>-0.235</string>
+					<string>-0.226</string>
 				</dict>
 			</dict>
 			<key>Selection</key>
@@ -1818,10 +1818,10 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>593</real>
-		<real>1298</real>
+		<real>739</real>
+		<real>1499</real>
 		<real>941</real>
-		<real>1399</real>
+		<real>1198</real>
 	</array>
 </dict>
 </plist>

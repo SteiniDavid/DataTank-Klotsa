@@ -79,44 +79,34 @@ public:
         timeIndex = timeI;
     }
     
-    DTPath2D ConvertToPath();
+    DTPath2D ConvertToPath(){
+        // The first column needs to be the length
+        DTMutableDoubleArray loop(2,howManyPoints+1);
+        // [ 0 x1 .... xN]
+        // [ N y1 .... yN]
+        loop(0,0) = 0;
+        loop(1,0) = howManyPoints;
+        
+        for (int i=0;i<howManyPoints;i++) {
+            loop(0,i+1) = points(0,i);
+            loop(1,i+1) = points(1,i);
+        }
+        
+        return DTPath2D(loop);
+    }
+
+    void pall(void) const;
 };
 
-DTPath2D SingleList::ConvertToPath()
+void SingleList::pall(void) const
 {
-    // The first column needs to be the length
-    DTMutableDoubleArray loop(2,howManyPoints+1);
-    // [ 0 x1 .... xN]
-    // [ N y1 .... yN]
-    loop(0,0) = 0;
-    loop(1,0) = howManyPoints;
-    
-    for (int i=0;i<howManyPoints;i++) {
-        loop(0,i+1) = points(0,i);
-        loop(1,i+1) = points(1,i);
-    }
-    
-    return DTPath2D(loop);
+    cerr << "time = " << timeIndex << endl;
+    ExtractColumns(points,DTRange(0,howManyPoints)).pall();
 }
+
 
 DTPath2D Computation(const DTSeriesPointCollection2D &allPoints,double maxDist)
 {
-    
-    // To extract a single entry, you can use
-    // DTPointCollection Pts = ...
-    // for (int i = 0;i<Pts.NumberOfPoints();i++) {
-    //     DTPoint2D p = Pts(i);
-    //     ....
-    // }
-    //
-    // More efficient
-    // DTDoubleArray data = Pts.Data();
-    // DTPoint2D p;
-    // for (int i = 0;i<data.n();i++) {
-    //     p.x = data(0,i);
-    //     p.y = data(1,i);
-    //     ....
-    // }
     
     DTMutableList<SingleList> listOfSegments(10);
     int howManySegments = 0;
@@ -126,41 +116,69 @@ DTPath2D Computation(const DTSeriesPointCollection2D &allPoints,double maxDist)
     DTPointCollection2D current;
     int frameNumber = 0;
     DTMutableDoubleArray dist(100,100);
+    dist = maxDist;
     
-    for (timeN=0;timeN<howManyTimes;timeN++) {
+    //Starting
+    int numPoints = allPoints.Get(timeValues(2)).NumberOfPoints();
+    for (int i = 0; i < numPoints; i++) {
+        DTPointCollection2D currentPoints = allPoints.Get(timeValues(2));
+        DTPoint2D currentPoint = currentPoints(i);
+        
+        listOfSegments(i).AddPoint(currentPoint, 2);
+    }
+    
+    for (timeN=3;timeN<howManyTimes;timeN++) {
         current = allPoints.Get(timeValues(timeN));
         
         // For each point in current, find the closest point in the listOfSegments
         if (current.IsEmpty()) continue;
+        howManySegments = listOfSegments.Length();
         // For each point in the segments, find a close match in the current
-        for (int j = 0; j < howManySegments; j++) {
-            for (int k = 0; k < current.NumberOfPoints(); k++) {
-                DTPoint2D currentPoint = current(k);
-                dist(j,k) = (currentPoint.x-listOfSegments(j).points(0,j))+(currentPoint.y-listOfSegments(j).points(1,j));
-            }
-        }
+
         // Compute a distance matrix
         // dist(i,j) = distance from point i in the current point collection to point j in the segment list
+        for (int j = 0; j < howManySegments; j++) {
+            DTPoint2D endPoint = listOfSegments(j).lastPoint; //   DTPoint2D(listOfSegments(j).points(0,j),listOfSegments(j).points(1,j));
+            for (int k = 0; k < current.NumberOfPoints(); k++) {
+                DTPoint2D currentPoint = current(k);
+                // dist(j,k) = Norm(DTPoint2D(currentPoint.x-listOfSegments(j).points(0,j)),(currentPoint.y-listOfSegments(j).points(1,j)));
+                dist(j,k) = Norm(currentPoint-endPoint);
+                // cerr << j << "," << k << " : " << dist(j,k) << endl;
+            }
+        }
         
         // Find I,J such that dist(I,J) is the minimum distance
+        
+        while (1) {
+            ssize_t minAt;
+            double minDist = Minimum(dist,minAt); // minAt = I + J*dist.m()
+            if (minDist>=maxDist) {
+                // Done
+                //DTErrorMessage("not finished");
+                break;
+            }
+            int j = minAt%dist.m();
+            int k = minAt/dist.m();
+            
+            listOfSegments(j).AddPoint(current(k), timeN);
+            for (int i=0;i < dist.n(); i++) {
+                dist(j,i) = maxDist;
+            }
+            for (int i=0;i < dist.m(); i++) {
+                dist(i,k) = maxDist;
+            }
+        }
+       
+        
+        
         // Connect points I and J, i.e. point I in the current should be added to point J in the segment list
         // and then set dist(I,:) and dist(:,J) to the largest value (maxDist) so that it won't be picked again.
         // Repeat the last 3 lines until the minimum distance is >= maxDist
         
+        
         // Any leftover points need to be added to the segments
         
-        for (int i = 0; i < current.NumberOfPoints(); i++) {
-            
-            // DTPoint2D currentPoint = current.DTPoint2D();
-            //DTPoint2D lastPoint = listOfSegments.
-            // double xOrig = point.x;
-            double yOrig;
-            double xNext;
-            double yNext;
-            
-        }
-        
-        frameNumber++;
+       
     }
     
     // At this point go over the segments, tie them together into a path.

@@ -471,8 +471,8 @@
 			<string>Gray</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-474</real>
-				<real>1158</real>
+				<real>1196</real>
+				<real>936</real>
 				<real>1013</real>
 				<real>773</real>
 			</array>
@@ -577,13 +577,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>-124.90000000000001</real>
+								<real>-109.5</real>
 								<key>MaxValue</key>
 								<real>180</real>
 								<key>MinValue</key>
 								<real>-180</real>
 								<key>String</key>
-								<string>-124.9</string>
+								<string>-109.5</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -611,13 +611,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>4.7160000000000002</real>
+								<real>60.689999999999998</real>
 								<key>MaxValue</key>
 								<real>90</real>
 								<key>MinValue</key>
 								<real>-90</real>
 								<key>String</key>
-								<string>4.716</string>
+								<string>60.69</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -695,7 +695,7 @@
 							<key>Inline</key>
 							<dict>
 								<key>Range</key>
-								<string>-0.533,0.122</string>
+								<string>-1,0.227</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -714,13 +714,13 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>483</real>
+			<real>789</real>
 			<key>DrawingWindowType</key>
 			<string>2DPlotGL</string>
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{557, 483}</string>
+			<string>{969, 789}</string>
 			<key>Lights</key>
 			<dict>
 				<key>Lights</key>
@@ -798,19 +798,19 @@
 				<real>0.0</real>
 			</array>
 			<key>ViewSizeJoined</key>
-			<string>559,483.5</string>
+			<string>971,789</string>
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>Gray</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-528</real>
-				<real>1924</real>
-				<real>557</real>
-				<real>773</real>
+				<real>1213</real>
+				<real>605</real>
+				<real>969</real>
+				<real>1217</real>
 			</array>
 		</dict>
 		<dict>
@@ -1282,10 +1282,877 @@
 			<string>Center of mass of Big loops in Contour of Subtract background</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-346</real>
-				<real>1924</real>
+				<real>1535</real>
+				<real>775</real>
 				<real>901</real>
 				<real>773</real>
+			</array>
+		</dict>
+		<dict>
+			<key>Antialiasing</key>
+			<string>YES</string>
+			<key>Axis</key>
+			<dict>
+				<key>YScale</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Number</key>
+						<string>1</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingBox</key>
+			<dict>
+				<key>MaxXValue</key>
+				<string></string>
+				<key>MaxYValue</key>
+				<string></string>
+				<key>MinXValue</key>
+				<string></string>
+				<key>MinYValue</key>
+				<string></string>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>Region</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>CommandContents</key>
+			<array>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Mesh</string>
+					<key>Computation</key>
+					<dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>Crop</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>Interpolation</key>
+						<integer>0</integer>
+						<key>Mesh</key>
+						<dict>
+							<key>Selected</key>
+							<string>Subtract background</string>
+						</dict>
+						<key>Opacity</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
+								<string>1</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Ramp</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Menu</key>
+								<integer>4</integer>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Range</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Range</key>
+								<string>0,1</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Sparsify</key>
+						<string>On</string>
+						<key>Swap</key>
+						<string>Off</string>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+					<key>ToggleOpen</key>
+					<string>YES</string>
+				</dict>
+			</array>
+			<key>DrawingHeight</key>
+			<real>417</real>
+			<key>DrawingWindow</key>
+			<dict>
+				<key>ClickMenu</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Automatic</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>DrawingWindowType</key>
+			<string>2DGraph</string>
+			<key>FigureName</key>
+			<string>Untitled</string>
+			<key>Last Drawing View Size</key>
+			<string>{792, 417}</string>
+			<key>MaxHeight</key>
+			<string></string>
+			<key>MaxWidth</key>
+			<string></string>
+			<key>OutputHeight</key>
+			<string></string>
+			<key>OutputWidth</key>
+			<string></string>
+			<key>QT</key>
+			<dict>
+				<key>Format</key>
+				<string>Animation</string>
+				<key>Quality</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Lossless</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Range</key>
+				<string>0,∞</string>
+				<key>ShowInFinder</key>
+				<string>On</string>
+				<key>TimeStep</key>
+				<string>1.0</string>
+			</dict>
+			<key>SeparateWindowPos</key>
+			<array>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+			</array>
+			<key>ViewSizeJoined</key>
+			<string>792,417</string>
+			<key>ViewSizeSeparated</key>
+			<string></string>
+			<key>Visible</key>
+			<string>NO</string>
+			<key>WindowName</key>
+			<string>Subtract background</string>
+			<key>WindowPos</key>
+			<array>
+				<real>213</real>
+				<real>760</real>
+				<real>790</real>
+				<real>747</real>
+			</array>
+		</dict>
+		<dict>
+			<key>Antialiasing</key>
+			<string>YES</string>
+			<key>Axis</key>
+			<dict>
+				<key>YScale</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Number</key>
+						<string>1</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingBox</key>
+			<dict>
+				<key>MaxXValue</key>
+				<string></string>
+				<key>MaxYValue</key>
+				<string></string>
+				<key>MinXValue</key>
+				<string></string>
+				<key>MinYValue</key>
+				<string></string>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>Region</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingRange</key>
+			<dict>
+				<key>Include</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Text</key>
+						<string>0</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>IncludeSwitch</key>
+				<string>Off</string>
+				<key>Range</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Max</key>
+						<string></string>
+						<key>Min</key>
+						<string></string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>RestrictState</key>
+				<dict>
+					<key>Position</key>
+					<integer>0</integer>
+					<key>Stack</key>
+					<array>
+						<string>-∞,∞</string>
+					</array>
+					<key>String</key>
+					<string>-∞,∞</string>
+				</dict>
+				<key>RestrictSwitch</key>
+				<string>On</string>
+				<key>RestrictVariable</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Range</key>
+						<string>-∞,∞</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>Camera</key>
+			<dict>
+				<key>Active</key>
+				<integer>0</integer>
+				<key>Cameras</key>
+				<array>
+					<dict>
+						<key>CameraType</key>
+						<string>Spherical</string>
+						<key>Horizontal</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>CurrentValue</key>
+								<real>98.990000000000009</real>
+								<key>MaxValue</key>
+								<real>180</real>
+								<key>MinValue</key>
+								<real>-180</real>
+								<key>String</key>
+								<string>98.99</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Magnification</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>CurrentValue</key>
+								<real>20</real>
+								<key>MaxValue</key>
+								<real>60</real>
+								<key>MinValue</key>
+								<real>2</real>
+								<key>String</key>
+								<string>20</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Name</key>
+						<string>Spherical</string>
+						<key>Vertical</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>CurrentValue</key>
+								<real>-42.710000000000001</real>
+								<key>MaxValue</key>
+								<real>90</real>
+								<key>MinValue</key>
+								<real>-90</real>
+								<key>String</key>
+								<string>-42.71</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+			<key>CommandContents</key>
+			<array>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Mesh</string>
+					<key>Computation</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>Blue</key>
+								<real>0.0</real>
+								<key>Green</key>
+								<real>0.0</real>
+								<key>Red</key>
+								<real>0.0</real>
+								<key>Space</key>
+								<string>NSCalibratedRGBColorSpace</string>
+							</dict>
+						</dict>
+						<key>ColorRamp</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Menu</key>
+								<integer>0</integer>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Crop</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>DrawLines</key>
+						<string>Off</string>
+						<key>HeighOption</key>
+						<integer>0</integer>
+						<key>Height</key>
+						<string>0</string>
+						<key>Material</key>
+						<integer>0</integer>
+						<key>MaxNumber</key>
+						<string>6M</string>
+						<key>Mesh</key>
+						<dict>
+							<key>Selected</key>
+							<string>Subtract background</string>
+						</dict>
+						<key>Opacity</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
+								<string>1</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Range</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Range</key>
+								<string>-0.518,0.137</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Sparsify</key>
+						<string>On</string>
+						<key>Swap</key>
+						<string>Off</string>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+					<key>ToggleOpen</key>
+					<string>YES</string>
+				</dict>
+			</array>
+			<key>DrawingHeight</key>
+			<real>404.5</real>
+			<key>DrawingWindowType</key>
+			<string>2DPlotGL</string>
+			<key>FigureName</key>
+			<string>Untitled</string>
+			<key>Last Drawing View Size</key>
+			<string>{920, 404.5}</string>
+			<key>Lights</key>
+			<dict>
+				<key>Lights</key>
+				<array/>
+			</dict>
+			<key>MaxHeight</key>
+			<string></string>
+			<key>MaxWidth</key>
+			<string></string>
+			<key>OutputHeight</key>
+			<string></string>
+			<key>OutputWidth</key>
+			<string></string>
+			<key>QT</key>
+			<dict>
+				<key>Format</key>
+				<string>Animation</string>
+				<key>Quality</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Lossless</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Range</key>
+				<string>0,∞</string>
+				<key>ShowInFinder</key>
+				<string>On</string>
+				<key>TimeStep</key>
+				<string>1.0</string>
+			</dict>
+			<key>Rendering</key>
+			<dict>
+				<key>BackgroundColor</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>Alpha</key>
+							<real>0.0</real>
+							<key>Blue</key>
+							<real>1</real>
+							<key>Green</key>
+							<real>1</real>
+							<key>Red</key>
+							<real>1</real>
+							<key>Space</key>
+							<string>NSCalibratedRGBColorSpace</string>
+						</dict>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Density</key>
+				<string>1</string>
+				<key>Fog</key>
+				<string>Off</string>
+				<key>FogType</key>
+				<integer>0</integer>
+				<key>LinearRange</key>
+				<string>0,1</string>
+				<key>Offset</key>
+				<string>1,10</string>
+				<key>Smoothing</key>
+				<integer>3</integer>
+				<key>Sorting</key>
+				<integer>0</integer>
+			</dict>
+			<key>SeparateWindowPos</key>
+			<array>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+			</array>
+			<key>ViewSizeJoined</key>
+			<string>922,404.5</string>
+			<key>ViewSizeSeparated</key>
+			<string></string>
+			<key>Visible</key>
+			<string>YES</string>
+			<key>WindowName</key>
+			<string>Subtract background</string>
+			<key>WindowPos</key>
+			<array>
+				<real>2201</real>
+				<real>612</real>
+				<real>920</real>
+				<real>777</real>
+			</array>
+		</dict>
+		<dict>
+			<key>Antialiasing</key>
+			<string>YES</string>
+			<key>Axis</key>
+			<dict>
+				<key>YScale</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Number</key>
+						<string>1</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingBox</key>
+			<dict>
+				<key>MaxXValue</key>
+				<string></string>
+				<key>MaxYValue</key>
+				<string></string>
+				<key>MinXValue</key>
+				<string></string>
+				<key>MinYValue</key>
+				<string></string>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>Region</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingRange</key>
+			<dict>
+				<key>Include</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Text</key>
+						<string>0</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>IncludeSwitch</key>
+				<string>Off</string>
+				<key>Range</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Max</key>
+						<string></string>
+						<key>Min</key>
+						<string></string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>RestrictState</key>
+				<dict>
+					<key>Position</key>
+					<integer>0</integer>
+					<key>Stack</key>
+					<array>
+						<string>-∞,∞</string>
+					</array>
+					<key>String</key>
+					<string>-∞,∞</string>
+				</dict>
+				<key>RestrictSwitch</key>
+				<string>On</string>
+				<key>RestrictVariable</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Range</key>
+						<string>-∞,∞</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>Camera</key>
+			<dict>
+				<key>Active</key>
+				<integer>0</integer>
+				<key>Cameras</key>
+				<array>
+					<dict>
+						<key>CameraType</key>
+						<string>Spherical</string>
+						<key>Horizontal</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>CurrentValue</key>
+								<real>-89.269999999999996</real>
+								<key>MaxValue</key>
+								<real>180</real>
+								<key>MinValue</key>
+								<real>-180</real>
+								<key>String</key>
+								<string>-89.27</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Magnification</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>CurrentValue</key>
+								<real>9.2309999999999999</real>
+								<key>MaxValue</key>
+								<real>60</real>
+								<key>MinValue</key>
+								<real>2</real>
+								<key>String</key>
+								<string>9.231</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Name</key>
+						<string>Spherical</string>
+						<key>Vertical</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>CurrentValue</key>
+								<real>61.079999999999998</real>
+								<key>MaxValue</key>
+								<real>90</real>
+								<key>MinValue</key>
+								<real>-90</real>
+								<key>String</key>
+								<string>61.08</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+			<key>CommandContents</key>
+			<array>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Path</string>
+					<key>Computation</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Blue</key>
+									<real>0.0</real>
+									<key>Green</key>
+									<real>0.0</real>
+									<key>Red</key>
+									<real>0.0</real>
+									<key>Space</key>
+									<string>NSCalibratedRGBColorSpace</string>
+								</dict>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Crop</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>Path</key>
+						<dict>
+							<key>Selected</key>
+							<string>2D Path</string>
+						</dict>
+						<key>Size</key>
+						<string>1</string>
+						<key>Type</key>
+						<integer>0</integer>
+						<key>ZLocation</key>
+						<integer>0</integer>
+						<key>ZValue</key>
+						<string>0</string>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+				</dict>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Point Line</string>
+					<key>Computation</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Blue</key>
+									<real>0.0</real>
+									<key>Green</key>
+									<real>0.0</real>
+									<key>Red</key>
+									<real>1</real>
+									<key>Space</key>
+									<string>NSCalibratedRGBColorSpace</string>
+								</dict>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Crop</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>Points</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Point</key>
+								<string>0,0</string>
+							</dict>
+							<key>Selected</key>
+							<string>Points</string>
+						</dict>
+						<key>Rough</key>
+						<string>On</string>
+						<key>Size</key>
+						<string>1</string>
+						<key>Subdivide</key>
+						<string>1</string>
+						<key>Type</key>
+						<integer>0</integer>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+					<key>ToggleOpen</key>
+					<string>YES</string>
+				</dict>
+			</array>
+			<key>DrawingHeight</key>
+			<real>565</real>
+			<key>DrawingWindowType</key>
+			<string>2DPlotGL</string>
+			<key>FigureName</key>
+			<string>Untitled</string>
+			<key>Last Drawing View Size</key>
+			<string>{920, 565}</string>
+			<key>Lights</key>
+			<dict>
+				<key>Lights</key>
+				<array/>
+			</dict>
+			<key>MaxHeight</key>
+			<string></string>
+			<key>MaxWidth</key>
+			<string></string>
+			<key>OutputHeight</key>
+			<string></string>
+			<key>OutputWidth</key>
+			<string></string>
+			<key>QT</key>
+			<dict>
+				<key>Format</key>
+				<string>Animation</string>
+				<key>Quality</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Lossless</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Range</key>
+				<string>0,∞</string>
+				<key>ShowInFinder</key>
+				<string>On</string>
+				<key>TimeStep</key>
+				<string>1.0</string>
+			</dict>
+			<key>Rendering</key>
+			<dict>
+				<key>BackgroundColor</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>Alpha</key>
+							<real>0.0</real>
+							<key>Blue</key>
+							<real>1</real>
+							<key>Green</key>
+							<real>1</real>
+							<key>Red</key>
+							<real>1</real>
+							<key>Space</key>
+							<string>NSCalibratedRGBColorSpace</string>
+						</dict>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Density</key>
+				<string>1</string>
+				<key>Fog</key>
+				<string>Off</string>
+				<key>FogType</key>
+				<integer>0</integer>
+				<key>LinearRange</key>
+				<string>0,1</string>
+				<key>Offset</key>
+				<string>1,10</string>
+				<key>Smoothing</key>
+				<integer>3</integer>
+				<key>Sorting</key>
+				<integer>0</integer>
+			</dict>
+			<key>SeparateWindowPos</key>
+			<array>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+			</array>
+			<key>ViewSizeJoined</key>
+			<string>922,565</string>
+			<key>ViewSizeSeparated</key>
+			<string></string>
+			<key>Visible</key>
+			<string>YES</string>
+			<key>WindowName</key>
+			<string>2D Path</string>
+			<key>WindowPos</key>
+			<array>
+				<real>64</real>
+				<real>189</real>
+				<real>920</real>
+				<real>909</real>
 			</array>
 		</dict>
 	</array>
@@ -1293,22 +2160,25 @@
 	<array>
 		<string>Loops from Ant outline approximation</string>
 		<string>Direction of ants based on center of mass</string>
+		<string>Region of Points</string>
+		<string>Points</string>
 		<string>Source</string>
 		<string>Ant outline approximation</string>
 		<string>Center of mass of Big loops in Contour of Subtract background</string>
+		<string>all time values</string>
 	</array>
 	<key>Time</key>
 	<dict>
 		<key>CurrentTime</key>
 		<dict>
 			<key>CurrentValue</key>
-			<real>14.600000000000001</real>
+			<real>14.100000000000001</real>
 			<key>MaxValue</key>
 			<real>19.960000000000001</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>14.6</string>
+			<string>14.1</string>
 		</dict>
 		<key>Duration</key>
 		<string>10</string>
@@ -1317,7 +2187,7 @@
 		<key>Loop</key>
 		<string>On</string>
 		<key>TimeHint</key>
-		<real>11.9</real>
+		<real>14.6</real>
 		<key>TimeStep</key>
 		<string>1.0</string>
 		<key>TimeStepSwitch</key>
@@ -1508,13 +2378,13 @@
 				<key>Slider</key>
 				<dict>
 					<key>CurrentValue</key>
-					<real>-0.22600000000000001</real>
+					<real>-0.20400000000000001</real>
 					<key>MaxValue</key>
 					<real>0.122</real>
 					<key>MinValue</key>
 					<real>-0.53300000000000003</real>
 					<key>String</key>
-					<string>-0.226</string>
+					<string>-0.204</string>
 				</dict>
 			</dict>
 			<key>Selection</key>
@@ -1549,8 +2419,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>Contour</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>Contour of Subtract background</string>
 			<key>VariableType</key>
@@ -1607,8 +2475,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>Remove Loops</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>Ant outline approximation</string>
 			<key>VariableType</key>
@@ -1635,8 +2501,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>Extract Loops</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>Loops from Ant outline approximation</string>
 			<key>VariableType</key>
@@ -1684,8 +2548,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>External Program</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>Direction of ants based on center of mass</string>
 			<key>VariableType</key>
@@ -1720,13 +2582,35 @@
 						<key>Include</key>
 						<string>On</string>
 						<key>Name</key>
-						<string>centerMass</string>
+						<string>allPoints</string>
+						<key>SeriesType</key>
+						<string>PointCollection2D</string>
 						<key>Type</key>
-						<string>PointValueCollection2D</string>
+						<string>Series</string>
 						<key>Var</key>
 						<dict>
 							<key>Selected</key>
-							<string>Center of mass of Big loops in Contour of Subtract background</string>
+							<string>all time values</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>maxDist</string>
+						<key>Number Type</key>
+						<integer>0</integer>
+						<key>Type</key>
+						<string>Real Number</string>
+						<key>Var</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
+								<string>10</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
 						</dict>
 					</dict>
 				</array>
@@ -1736,9 +2620,9 @@
 			<key>ToggleOpen</key>
 			<string>YES</string>
 			<key>VariableName</key>
-			<string>direction of ants based on disp of center of mass</string>
+			<string>2D Path</string>
 			<key>VariableType</key>
-			<string>VectorCollection2D</string>
+			<string>Path2D</string>
 		</dict>
 		<dict>
 			<key>Content</key>
@@ -1751,6 +2635,8 @@
 			</dict>
 			<key>Selection</key>
 			<string>Center of Mass</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
 			<key>VariableName</key>
 			<string>Center of mass of Big loops in Contour of Subtract background</string>
 			<key>VariableType</key>
@@ -1767,10 +2653,98 @@
 			</dict>
 			<key>Selection</key>
 			<string>Extract Points</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
 			<key>VariableName</key>
 			<string>Points</string>
 			<key>VariableType</key>
 			<string>PointCollection2D</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>MaxX</key>
+				<dict>
+					<key>CurrentValue</key>
+					<real>313</real>
+					<key>MaxValue</key>
+					<real>540</real>
+					<key>MinValue</key>
+					<real>0.0</real>
+					<key>String</key>
+					<string>313</string>
+				</dict>
+				<key>MaxY</key>
+				<dict>
+					<key>CurrentValue</key>
+					<real>225</real>
+					<key>MaxValue</key>
+					<real>360</real>
+					<key>MinValue</key>
+					<real>0.0</real>
+					<key>String</key>
+					<string>225</string>
+				</dict>
+				<key>MinX</key>
+				<dict>
+					<key>CurrentValue</key>
+					<real>0.0</real>
+					<key>MaxValue</key>
+					<real>540</real>
+					<key>MinValue</key>
+					<real>0.0</real>
+					<key>String</key>
+					<string>0</string>
+				</dict>
+				<key>MinY</key>
+				<dict>
+					<key>CurrentValue</key>
+					<real>0.0</real>
+					<key>MaxValue</key>
+					<real>360</real>
+					<key>MinValue</key>
+					<real>0.0</real>
+					<key>String</key>
+					<string>0</string>
+				</dict>
+				<key>Type</key>
+				<integer>1</integer>
+				<key>XRange</key>
+				<string>0,1</string>
+				<key>YRange</key>
+				<string>0,1</string>
+				<key>variableSelector</key>
+				<dict>
+					<key>Selected</key>
+					<string>Points</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>Crop With Sliders</string>
+			<key>VariableName</key>
+			<string>Region of Points</string>
+			<key>VariableType</key>
+			<string>PointCollection2D</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Threads</key>
+				<integer>3</integer>
+				<key>Variable</key>
+				<dict>
+					<key>Selected</key>
+					<string>Points</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>Combine Time Values</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>all time values</string>
+			<key>VariableType</key>
+			<string>Series</string>
 		</dict>
 		<dict>
 			<key>Content</key>
@@ -1818,10 +2792,10 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>739</real>
-		<real>1499</real>
+		<real>41</real>
+		<real>1120</real>
 		<real>941</real>
-		<real>1198</real>
+		<real>777</real>
 	</array>
 </dict>
 </plist>

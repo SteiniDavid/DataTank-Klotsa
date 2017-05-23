@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
-            landmarkName = "Computation(const DTSeriesPointCollection2D &amp;allPoints)"
+            landmarkName = "Computation(const DTSeriesPointCollection2D &amp;allPoints,double maxDist)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

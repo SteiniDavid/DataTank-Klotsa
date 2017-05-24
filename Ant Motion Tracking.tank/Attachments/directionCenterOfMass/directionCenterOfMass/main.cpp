@@ -95,32 +95,29 @@ public:
         return DTPath2D(loop);
     }
 
-    void pall(void) const;
+    void pall(void) const {
+        cerr << "time = " << timeIndex << endl;
+        ExtractColumns(points,DTRange(0,howManyPoints)).pall();
+    }
 };
-
-void SingleList::pall(void) const
-{
-    cerr << "time = " << timeIndex << endl;
-    ExtractColumns(points,DTRange(0,howManyPoints)).pall();
-}
 
 
 DTPath2D Computation(const DTSeriesPointCollection2D &allPoints,double maxDist)
 {
     
-    DTMutableList<SingleList> listOfSegments(10);
+    DTMutableList<SingleList> listOfSegments(20);
     int howManySegments = 0;
     
     DTDoubleArray timeValues = allPoints.TimeValues();
     int timeN, howManyTimes = timeValues.Length();
     DTPointCollection2D current;
     int frameNumber = 0;
-    DTMutableDoubleArray dist(100,100);
+    DTMutableDoubleArray dist(1000,1000);
     dist = maxDist;
     
     //Starting
     int numPoints = allPoints.Get(timeValues(2)).NumberOfPoints();
-    for (int i = 0; i < numPoints; i++) {
+    for (int i = 0; i < numPoints-1; i++) {
         DTPointCollection2D currentPoints = allPoints.Get(timeValues(2));
         DTPoint2D currentPoint = currentPoints(i);
         

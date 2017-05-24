@@ -472,7 +472,7 @@
 			<key>WindowPos</key>
 			<array>
 				<real>1196</real>
-				<real>936</real>
+				<real>932</real>
 				<real>1013</real>
 				<real>773</real>
 			</array>
@@ -1282,8 +1282,8 @@
 			<string>Center of mass of Big loops in Contour of Subtract background</string>
 			<key>WindowPos</key>
 			<array>
-				<real>1535</real>
-				<real>775</real>
+				<real>2476</real>
+				<real>932</real>
 				<real>901</real>
 				<real>773</real>
 			</array>
@@ -1557,13 +1557,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>98.990000000000009</real>
+								<real>-80.890000000000001</real>
 								<key>MaxValue</key>
 								<real>180</real>
 								<key>MinValue</key>
 								<real>-180</real>
 								<key>String</key>
-								<string>98.99</string>
+								<string>-80.89</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -1591,13 +1591,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>-42.710000000000001</real>
+								<real>90</real>
 								<key>MaxValue</key>
 								<real>90</real>
 								<key>MinValue</key>
 								<real>-90</real>
 								<key>String</key>
-								<string>-42.71</string>
+								<string>90</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -1694,13 +1694,13 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>404.5</real>
+			<real>402</real>
 			<key>DrawingWindowType</key>
 			<string>2DPlotGL</string>
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{920, 404.5}</string>
+			<string>{920, 402}</string>
 			<key>Lights</key>
 			<dict>
 				<key>Lights</key>
@@ -1778,19 +1778,19 @@
 				<real>0.0</real>
 			</array>
 			<key>ViewSizeJoined</key>
-			<string>922,404.5</string>
+			<string>922,402</string>
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>Subtract background</string>
 			<key>WindowPos</key>
 			<array>
-				<real>2201</real>
-				<real>612</real>
+				<real>2552</real>
+				<real>936</real>
 				<real>920</real>
-				<real>777</real>
+				<real>773</real>
 			</array>
 		</dict>
 		<dict>
@@ -1893,13 +1893,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>-89.269999999999996</real>
+								<real>-82.960000000000008</real>
 								<key>MaxValue</key>
 								<real>180</real>
 								<key>MinValue</key>
 								<real>-180</real>
 								<key>String</key>
-								<string>-89.27</string>
+								<string>-82.96</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -1927,13 +1927,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>61.079999999999998</real>
+								<real>89.549999999999997</real>
 								<key>MaxValue</key>
 								<real>90</real>
 								<key>MinValue</key>
 								<real>-90</real>
 								<key>String</key>
-								<string>61.08</string>
+								<string>89.55</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -2056,13 +2056,13 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>565</real>
+			<real>476</real>
 			<key>DrawingWindowType</key>
 			<string>2DPlotGL</string>
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{920, 565}</string>
+			<string>{920, 476}</string>
 			<key>Lights</key>
 			<dict>
 				<key>Lights</key>
@@ -2140,7 +2140,7 @@
 				<real>0.0</real>
 			</array>
 			<key>ViewSizeJoined</key>
-			<string>922,565</string>
+			<string>922,476</string>
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
@@ -2149,10 +2149,10 @@
 			<string>2D Path</string>
 			<key>WindowPos</key>
 			<array>
-				<real>64</real>
-				<real>189</real>
+				<real>57</real>
+				<real>305</real>
 				<real>920</real>
-				<real>909</real>
+				<real>777</real>
 			</array>
 		</dict>
 	</array>
@@ -2172,13 +2172,13 @@
 		<key>CurrentTime</key>
 		<dict>
 			<key>CurrentValue</key>
-			<real>14.100000000000001</real>
+			<real>6.96</real>
 			<key>MaxValue</key>
 			<real>19.960000000000001</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>14.1</string>
+			<string>6.96</string>
 		</dict>
 		<key>Duration</key>
 		<string>10</string>
@@ -2378,13 +2378,13 @@
 				<key>Slider</key>
 				<dict>
 					<key>CurrentValue</key>
-					<real>-0.20400000000000001</real>
+					<real>-0.215</real>
 					<key>MaxValue</key>
 					<real>0.122</real>
 					<key>MinValue</key>
 					<real>-0.53300000000000003</real>
 					<key>String</key>
-					<string>-0.204</string>
+					<string>-0.215</string>
 				</dict>
 			</dict>
 			<key>Selection</key>
@@ -2793,7 +2793,7 @@
 	<key>WindowPosition</key>
 	<array>
 		<real>41</real>
-		<real>1120</real>
+		<real>1116</real>
 		<real>941</real>
 		<real>777</real>
 	</array>

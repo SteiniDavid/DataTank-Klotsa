@@ -94,7 +94,8 @@ public:
         
         return DTPath2D(loop);
     }
-
+    
+    //a way of getting a more compact explanation in the debugger
     void pall(void) const {
         cerr << "time = " << timeIndex << endl;
         ExtractColumns(points,DTRange(0,howManyPoints)).pall();
@@ -104,54 +105,44 @@ public:
 
 DTPath2D Computation(const DTSeriesPointCollection2D &allPoints,double maxDist)
 {
-    
     DTMutableList<SingleList> listOfSegments(20);
     int howManySegments = 0;
-    
     DTDoubleArray timeValues = allPoints.TimeValues();
     int timeN, howManyTimes = timeValues.Length();
     DTPointCollection2D current;
     int frameNumber = 0;
     DTMutableDoubleArray dist(1000,1000);
-    dist = maxDist;
+    dist = maxDist; //sets everything to max dist initally
     
-    //Starting
+    //Starting initiation
     int numPoints = allPoints.Get(timeValues(2)).NumberOfPoints();
     for (int i = 0; i < numPoints-1; i++) {
         DTPointCollection2D currentPoints = allPoints.Get(timeValues(2));
         DTPoint2D currentPoint = currentPoints(i);
-        
         listOfSegments(i).AddPoint(currentPoint, 2);
     }
-    
+    //The start time is hardcoded for the video and will need to be intelligently modified later
     for (timeN=3;timeN<howManyTimes;timeN++) {
         current = allPoints.Get(timeValues(timeN));
         
-        // For each point in current, find the closest point in the listOfSegments
-        if (current.IsEmpty()) continue;
+        if (current.IsEmpty()) continue; //If its empty continue
         howManySegments = listOfSegments.Length();
-        // For each point in the segments, find a close match in the current
-
-        // Compute a distance matrix
+        
+        // Computes distance matrix
         // dist(i,j) = distance from point i in the current point collection to point j in the segment list
         for (int j = 0; j < howManySegments; j++) {
-            DTPoint2D endPoint = listOfSegments(j).lastPoint; //   DTPoint2D(listOfSegments(j).points(0,j),listOfSegments(j).points(1,j));
+            DTPoint2D endPoint = listOfSegments(j).lastPoint;
             for (int k = 0; k < current.NumberOfPoints(); k++) {
                 DTPoint2D currentPoint = current(k);
-                // dist(j,k) = Norm(DTPoint2D(currentPoint.x-listOfSegments(j).points(0,j)),(currentPoint.y-listOfSegments(j).points(1,j)));
                 dist(j,k) = Norm(currentPoint-endPoint);
-                // cerr << j << "," << k << " : " << dist(j,k) << endl;
             }
         }
         
-        // Find I,J such that dist(I,J) is the minimum distance
-        
+        // Finds j,k such that dist(j,k) is the minimum distance
         while (1) {
             ssize_t minAt;
             double minDist = Minimum(dist,minAt); // minAt = I + J*dist.m()
-            if (minDist>=maxDist) {
-                // Done
-                //DTErrorMessage("not finished");
+            if (minDist>=maxDist) { //When true everything is matched up
                 break;
             }
             int j = minAt%dist.m();
@@ -165,23 +156,11 @@ DTPath2D Computation(const DTSeriesPointCollection2D &allPoints,double maxDist)
                 dist(i,k) = maxDist;
             }
         }
-       
-        
-        
-        // Connect points I and J, i.e. point I in the current should be added to point J in the segment list
-        // and then set dist(I,:) and dist(:,J) to the largest value (maxDist) so that it won't be picked again.
-        // Repeat the last 3 lines until the minimum distance is >= maxDist
-        
-        
-        // Any leftover points need to be added to the segments
-        
-       
     }
     
-    // At this point go over the segments, tie them together into a path.
+    //Goes over the segment paths and stiches them togther using a function of the structure
     DTMutableList<DTPath2D> segmentPaths(howManySegments);
-    int i;
-    for (i=0;i<howManySegments;i++) {
+    for (int i=0;i<howManySegments;i++) {
         segmentPaths(i) = listOfSegments(i).ConvertToPath();
     }
     return Combine(segmentPaths);

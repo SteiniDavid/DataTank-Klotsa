@@ -59,7 +59,9 @@ int main(int argc,const char *argv[])
 class SingleList
 {
 public:
-    SingleList() {howManyPoints = 0; points = DTMutableDoubleArray(2,10);} // Initialize
+    SingleList() {
+        howManyPoints = 0; points = DTMutableDoubleArray(2,10);
+    } // Initialize
     
     DTMutableDoubleArray points; // 2xN array of xy values
     int howManyPoints;

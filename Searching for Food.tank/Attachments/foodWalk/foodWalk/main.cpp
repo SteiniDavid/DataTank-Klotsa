@@ -226,7 +226,7 @@ void Computation(const DTPointCollection2D &initial,const DTPoint2D &food,
                  DTSeriesGroup<DT_RetGroup> &computed)
 {
     DTMutablePointCollection2D ants = initial.Copy();
-    int nunAnts = ants.NumberOfPoints();
+    int numAnts = ants.NumberOfPoints();
     
     DTMutableDoubleArray antArray = ants.Data();
     
@@ -234,13 +234,12 @@ void Computation(const DTPointCollection2D &initial,const DTPoint2D &food,
     DTRandom randNumber(seed);
     double sqrtDT = sqrt(dt);
     double xy[2];
-    randNumber.Normal(xy,2);
     
     double noise = parameters("noise");
     double radius = parameters("radius");
     
-    DTMutableList<Agent> antList(nunAnts);
-    for (int i=0;i<nunAnts;i++) {
+    DTMutableList<Agent> antList(numAnts);
+    for (int i=0;i<numAnts;i++) {
         //every agent knows where it is and where the food is, although it cant directly access it
         // FIXME: Make it so they are not passed the food, I think that makes sense
         antList(i) = Agent(DTPoint2D(ants(i)), food, noise, radius);
@@ -250,114 +249,103 @@ void Computation(const DTPointCollection2D &initial,const DTPoint2D &food,
     
     double t = 0;
     while (t<endTime) {
-        for (int i = 0; i<nunAnts; i++) {
+        for (int i = 0; i<numAnts; i++) {
             //Random Walk
-            //            antList(i).Move(sqrtDT,region,randNumber);
-            if (antList(i).Type() == Agent::LOOKING) {
+            randNumber.Normal(xy,2);
+            //antList(i).Move(sqrtDT,region,randNumber);
+            if (antList(i).Type() == Agent::FOLLOWER) {
                 //When its looking for
                 antList(i).advanceLOOKING(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],region);
-                //            }
-                //            else if (antList(i).Type() == Agent::FOLLOWER) {
-                //                //antList(i).AdvanceNoInfluence(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],region);
-                //            }
-                //            else if (antList(i).Type() == Agent::BEACON) {
-                //                //No movement of the beacon others orient themselves based on it
-                //            }
-                //            else if (antList(i).Type() == Agent::FOUNDIT) {
-                //                //Goes back home to beacon on a noisy but directed walk
-                //            }
             }
+            //            else if (antList(i).Type() == Agent::FOLLOWER) {
+            //                //antList(i).AdvanceNoInfluence(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],region);
+            //            }
+            //            else if (antList(i).Type() == Agent::BEACON) {
+            //                //No movement of the beacon others orient themselves based on it
+            //            }
+            //            else if (antList(i).Type() == Agent::FOUNDIT) {
+            //                //Goes back home to beacon on a noisy but directed walk
+            //            }
             
-            t += dt;
-            
-            //Food particle
-            
-            
-            // Save
-            // Start by converting your antList into structures that can be saved to the file
-            DTMutableDoubleArray xyPoints(2,nunAnts);
-            DTPoint2D P;
-            for (int i=0;i<nunAnts;i++) {
-                P = antList(i).location();
-                xyPoints(0,i) = P.x;
-                xyPoints(1,i) = P.y;
-            }
-            state.position = DTPointCollection2D(xyPoints);
-            state.foodBeacon;
-            state.homeBeacon;
-            computed.Add(state,t);
         }
         
+        t += dt;
         
-        DTProgress progress;
-        
-        // Inside the loop, do
-        //     progress.UpdatePercentage(fraction);
-        //     computed.Add(returnStructure,time); // Call with time>=0 and strictly increasing.
-        
+        // Save
+        // Start by converting your antList into structures that can be saved to the file
+        DTMutableDoubleArray xyPoints(2,numAnts);
+        DTPoint2D P;
+        for (int i=0;i<numAnts;i++) {
+            P = antList(i).location();
+            xyPoints(0,i) = P.x;
+            xyPoints(1,i) = P.y;
+        }
+        state.position = DTPointCollection2D(xyPoints);
+        state.foodBeacon;
+        state.homeBeacon;
+        computed.Add(state,t);
     }
     
-    int createHomeBeacon(const DTPointCollection2D &initial, const DTDictionary &parameters, int seed){
-        DTMutableIntArray swarmID(initial.NumberOfPoints());
-        DTMutableIntArray swarmBiggestID(initial.NumberOfPoints());
-        double radius = parameters("radius");
-        DTDoubleArray antArray = initial.Data();
-        int numPoints = initial.NumberOfPoints();
-        DTRandom randNumber(seed);
-        
-        //Everyone generates their ids, assuming that none will be the same and the biggest
-        for (int i = 0; i < numPoints; i++) {
-            swarmID(i) = randNumber.UInteger();
+    
+    DTProgress progress;
+    
+    // Inside the loop, do
+    //     progress.UpdatePercentage(fraction);
+    //     computed.Add(returnStructure,time); // Call with time>=0 and strictly increasing.
+    
+}
+
+int createHomeBeacon(const DTPointCollection2D &initial, const DTDictionary &parameters, int seed){
+    DTMutableIntArray swarmID(initial.NumberOfPoints());
+    DTMutableIntArray swarmBiggestID(initial.NumberOfPoints());
+    double radius = parameters("radius");
+    DTDoubleArray antArray = initial.Data();
+    int numPoints = initial.NumberOfPoints();
+    DTRandom randNumber(seed);
+    
+    //Everyone generates their ids, assuming that none will be the same and the biggest
+    for (int i = 0; i < numPoints; i++) {
+        swarmID(i) = randNumber.UInteger();
+    }
+    
+    //Attempt to do it with radius of interaction
+    DTMutableDoubleArray dist(1000,1000);
+    for (int i = 0; i < numPoints; i++) {
+        DTPoint2D ithPoint = initial(i);
+        for (int j = 0; j < numPoints; j++) {
+            DTPoint2D jthPoint = initial(j);
+            dist(i,j) = Norm(ithPoint-jthPoint);
         }
-        
-        //build in that it looks within clusters and communicates between clusters
-        //this is the quicker and dirtier version
-        //    int biggestID = -99999999;
-        //    for (int i = 0; i < numPoints; i++) {
-        //        int temp = swarmID(i);
-        //        if (temp > biggestID) {
-        //            biggestID = temp;
-        //        }
-        //    }
-        
-        //Attempt to do it with radius of interaction
-        DTMutableDoubleArray dist(1000,1000);
-        for (int i = 0; i < numPoints; i++) {
-            DTPoint2D ithPoint = initial(i);
-            for (int j = 0; j < numPoints; j++) {
-                DTPoint2D jthPoint = initial(j);
-                dist(i,j) = Norm(ithPoint-jthPoint);
-            }
-        }
-        //Now that I have the distances between everyone I can make people only be able to talk to
-        //neighbors within their specified radius
-        swarmBiggestID = swarmID.Copy();
-        for (int i = 0; i < numPoints; i++) {
-            for (int j = 0; j < numPoints; j++) {
-                if (dist(i,j) <= radius) {
-                    int ithID = swarmBiggestID(i);
-                    int jthID = swarmBiggestID(j);
-                    if(ithID > jthID) {
-                        swarmBiggestID(j) = ithID;
-                    } else {
-                        swarmBiggestID(i) = jthID;
-                    }
+    }
+    //Now that I have the distances between everyone I can make people only be able to talk to
+    //neighbors within their specified radius
+    swarmBiggestID = swarmID.Copy();
+    for (int i = 0; i < numPoints; i++) {
+        for (int j = 0; j < numPoints; j++) {
+            if (dist(i,j) <= radius) {
+                int ithID = swarmBiggestID(i);
+                int jthID = swarmBiggestID(j);
+                if(ithID > jthID) {
+                    swarmBiggestID(j) = ithID;
+                } else {
+                    swarmBiggestID(i) = jthID;
                 }
             }
         }
-        int beaconParticleID = -1;
-        //Now we have to find which point has the biggest ID
-        for (int i = 0; i < numPoints-1; i++) {
-            int swarmsID = swarmID(i);
-            int swarmsBiggestID = swarmBiggestID(2);
-            if (swarmsBiggestID == swarmsID) {
-                beaconParticleID = i;
-            }
-        }
-        return beaconParticleID;
     }
-    
-    
-    
-    
-    
+    int beaconParticleID = -1;
+    //Now we have to find which point has the biggest ID
+    for (int i = 0; i < numPoints-1; i++) {
+        int swarmsID = swarmID(i);
+        int swarmsBiggestID = swarmBiggestID(2);
+        if (swarmsBiggestID == swarmsID) {
+            beaconParticleID = i;
+        }
+    }
+    return beaconParticleID;
+}
+
+
+
+
+

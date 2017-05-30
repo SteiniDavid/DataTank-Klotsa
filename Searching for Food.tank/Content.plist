@@ -302,7 +302,7 @@
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>n particles</string>
 			<key>WindowPos</key>
@@ -554,8 +554,8 @@
 			<string>position from Group</string>
 			<key>WindowPos</key>
 			<array>
-				<real>116</real>
-				<real>74</real>
+				<real>2577</real>
+				<real>768</real>
 				<real>867</real>
 				<real>637</real>
 			</array>
@@ -588,7 +588,7 @@
 		<key>Loop</key>
 		<string>Off</string>
 		<key>TimeHint</key>
-		<real>100</real>
+		<real>0.0</real>
 		<key>TimeStep</key>
 		<string>1.0</string>
 		<key>TimeStepSwitch</key>

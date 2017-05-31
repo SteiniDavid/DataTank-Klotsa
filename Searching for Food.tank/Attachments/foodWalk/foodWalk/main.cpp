@@ -198,9 +198,9 @@ public:
         //The agent object was instantiated with the location of the food
         //uses it to figure out if it found it within its given radius of search
         double distanceToFood = Norm(location()-food);
-        // if (distanceToFood <= radius*radius) {
-        //    ChangeToFOUNDIT(); //the agent has now found the food
-        // }
+        if (distanceToFood <= radius*radius) {
+            ChangeToFOUNDIT(); //the agent has now found the food
+        }
     }
     
     void advanceFOLLOWER(double dx,double dy,const DTRegion2D &box, Agent beaconAgent) {

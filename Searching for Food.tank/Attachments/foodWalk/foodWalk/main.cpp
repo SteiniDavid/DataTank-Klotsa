@@ -169,24 +169,23 @@ public:
         //Figure out which type of advance method to use and hand in the right things.
         double xy[2];
         randNumber.Normal(xy,2);
-//        if (Type() == FOLLOWER) { //The ones that swarm around the beacon
-//            //advanceLOOKING(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],box);
-//            
-//            //Conversion rate to LOOKING type
-//            int chance = rand() % 10 + 1;
-//            if (chance < 4) {
-//                ChangeToLOOKING();
-//            }
-//            advanceFOLLOWER(box, beacon);
-//        }
         if (Type() == FOLLOWER) { //when looking for food its a random walk
+            //Conversion rate to LOOKING type
+            int chance = rand() % 10000 + 1;
+            if (chance < 2) {
+                ChangeToLOOKING();
+            }
+        //If not converted it moves
+            
+        }
+        if (Type() == LOOKING) {
             advanceLOOKING(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],box);
         }
         if (Type() == FOUNDIT) {
             
         }
         if (Type() == BEACON) {
-             //Don't move
+            //Don't move
         }
         
     }
@@ -221,7 +220,7 @@ public:
         }
     }
     
-    void advanceFOLLOWER(const DTRegion2D &box,const Agent &beaconAgent) {
+    void advanceFOLLOWER(double dx,double dy,const DTRegion2D &box, Agent beaconAgent) {
         
     }
     
@@ -268,8 +267,9 @@ void Computation(const DTPointCollection2D &initial,const DTPoint2D &food,
     double t = 0;
     while (t<endTime) {
         for (int i = 0; i<numAnts; i++) {
+            //Random Walk
+            randNumber.Normal(xy,2);
             antList(i).Move(sqrtDT,region,randNumber, antList(beaconID));
-
         }
         
         t += dt;

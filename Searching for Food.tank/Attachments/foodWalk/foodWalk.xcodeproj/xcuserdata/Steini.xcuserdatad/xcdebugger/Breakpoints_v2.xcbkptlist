@@ -42,13 +42,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "foodWalk/main.cpp"
-            timestampString = "517936451.796787"
+            timestampString = "517937470.381216"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
-            landmarkName = "Computation(const DTPointCollection2D &amp;initial,const DTPoint2D &amp;food, double dt,double endTime,int seed, const DTDictionary &amp;parameters,const DTRegion2D &amp;region, DTSeriesGroup&lt;DT_RetGroup&gt; &amp;computed)"
-            landmarkType = "7">
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "Move(double sqrtDT, DTRegion2D box, DTRandom randNumber, const Agent &amp;beacon)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foodWalk/main.cpp"
+            timestampString = "517937532.065453"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "advanceLOOKING(double dx,double dy,const DTRegion2D &amp;box)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

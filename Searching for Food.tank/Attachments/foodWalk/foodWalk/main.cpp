@@ -165,11 +165,29 @@ public:
     
     //Move command is what is called in computation
     //Its the most basic version and everything goes out of it.
-    void Move(double sqrtDT, DTRegion2D box, DTRandom randNumber) {
+    void Move(double sqrtDT, DTRegion2D box, DTRandom randNumber, const Agent &beacon) {
         //Figure out which type of advance method to use and hand in the right things.
         double xy[2];
         randNumber.Normal(xy,2);
-        advanceLOOKING(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],box);
+//        if (Type() == FOLLOWER) { //The ones that swarm around the beacon
+//            //advanceLOOKING(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],box);
+//            
+//            //Conversion rate to LOOKING type
+//            int chance = rand() % 10 + 1;
+//            if (chance < 4) {
+//                ChangeToLOOKING();
+//            }
+//            advanceFOLLOWER(box, beacon);
+//        }
+        if (Type() == FOLLOWER) { //when looking for food its a random walk
+            advanceLOOKING(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],box);
+        }
+        if (Type() == FOUNDIT) {
+            
+        }
+        if (Type() == BEACON) {
+             //Don't move
+        }
         
     }
     
@@ -203,7 +221,7 @@ public:
         }
     }
     
-    void advanceFOLLOWER(double dx,double dy,const DTRegion2D &box, Agent beaconAgent) {
+    void advanceFOLLOWER(const DTRegion2D &box,const Agent &beaconAgent) {
         
     }
     
@@ -250,23 +268,8 @@ void Computation(const DTPointCollection2D &initial,const DTPoint2D &food,
     double t = 0;
     while (t<endTime) {
         for (int i = 0; i<numAnts; i++) {
-            //Random Walk
-            randNumber.Normal(xy,2);
-            //antList(i).Move(sqrtDT,region,randNumber);
-            if (antList(i).Type() == Agent::FOLLOWER) {
-                //When its looking for
-                antList(i).advanceLOOKING(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],region);
-            }
-            //            else if (antList(i).Type() == Agent::FOLLOWER) {
-            //                //antList(i).AdvanceNoInfluence(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],region);
-            //            }
-            //            else if (antList(i).Type() == Agent::BEACON) {
-            //                //No movement of the beacon others orient themselves based on it
-            //            }
-            //            else if (antList(i).Type() == Agent::FOUNDIT) {
-            //                //Goes back home to beacon on a noisy but directed walk
-            //            }
-            
+            antList(i).Move(sqrtDT,region,randNumber, antList(beaconID));
+
         }
         
         t += dt;

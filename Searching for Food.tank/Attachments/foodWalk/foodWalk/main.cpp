@@ -132,6 +132,7 @@ int main(int argc,const char *argv[])
 #include "stdlib.h"
 #include "DTVector2D.h"
 
+
 int createHomeBeacon(const DTPointCollection2D &initial, const DTDictionary &parameters, int seed);
 
 
@@ -171,15 +172,17 @@ public:
         randNumber.Normal(xy,2);
         if (Type() == FOLLOWER) { //when looking for food its a random walk
             //Conversion rate to LOOKING type
+            //Eventually it will be based on how close you are to the beacon
+            //Closer meaning lower probability of conversion
             int chance = rand() % 10000 + 1;
             if (chance < 2) {
                 ChangeToLOOKING();
             }
-        //If not converted it moves
-            
+            //If not converted it moves
+            advanceFOLLOWER(box, beacon);
         }
         if (Type() == LOOKING) {
-            advanceLOOKING(sqrtDT*noise*xy[0],sqrtDT*noise*xy[1],box);
+           // advanceLOOKING(sqrtDT*noise*xy[0], sqrtDT*noise*xy[1], box);
         }
         if (Type() == FOUNDIT) {
             
@@ -189,10 +192,6 @@ public:
         }
         
     }
-    
-    
-    
-    
     
     void advanceLOOKING(double dx,double dy,const DTRegion2D &box) {
         //This handles the random walk
@@ -220,7 +219,51 @@ public:
         }
     }
     
-    void advanceFOLLOWER(double dx,double dy,const DTRegion2D &box, Agent beaconAgent) {
+    void advanceFOLLOWER(const DTRegion2D &box, Agent beacon) {
+//        //Have them headed right at the beacon, but have noise so it just swarms around it.
+//        
+//        //compare this distance with the manipulated dx and dy to see which way will get you closer
+//        double distBeaconFollower = Norm(location()-beacon.location());
+//        
+//        double xFollower = beacon.x+x;
+//        double yFollower = beacon.y+y;
+//        //Create these as points
+//        DTPoint2D xChanged(xFollower,y);
+//        DTPoint2D yChanged(x,yFollower);
+//        DTPoint2D xyChanged(xFollower,yFollower);
+//        //the distances for the modifications
+//        double distxChanged = Norm(xChanged-beacon.location());
+//        double distyChanged = Norm(yChanged-beacon.location());
+//        double distxyChanged = Norm(xyChanged-beacon.location());
+//        
+//        if (distxyChanged < distBeaconFollower) {
+//            if (distxChanged) {
+//                
+//            }
+//            x += dx;
+//            y += dy;
+//        } else {
+//            x -= dx;
+//            y -= dy;
+//        }
+        
+        //second try, this time the closer to the beacon less variance and smaller step
+        double dx = beacon.x-x;
+        double dy = beacon.y-y;
+        double distBeaconFollower = sqrt(Norm(location()-beacon.location()))*1000;
+        if(dx > 0) {
+            x -= dx/distBeaconFollower;
+        } else {
+            x += dx/distBeaconFollower;
+        }
+        if(dy > 0) {
+            y -= dy/distBeaconFollower;
+        } else {
+            y += dy/distBeaconFollower;
+        }
+        
+        
+        
         
     }
     

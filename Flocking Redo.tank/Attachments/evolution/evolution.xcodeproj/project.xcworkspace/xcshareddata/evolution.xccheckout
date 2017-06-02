@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3F23FC3E-FCF2-4526-9D45-C57A3BFFD09F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>evolution</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>
+		<string>https://github.com/SteiniDavid/DataTank-Klotsa.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Flocking Redo.tank/Attachments/evolution/evolution.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SteiniDavid/DataTank-Klotsa.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DataTank-Klotsa</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -380,7 +380,7 @@
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>2D Vector Collection</string>
 			<key>WindowPos</key>
@@ -410,13 +410,13 @@
 		<key>CurrentTime</key>
 		<dict>
 			<key>CurrentValue</key>
-			<real>2363.6223111833851</real>
+			<real>10000</real>
 			<key>MaxValue</key>
 			<real>10000</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>2363.6223111834</string>
+			<string>10000</string>
 		</dict>
 		<key>Duration</key>
 		<string>70</string>
@@ -425,7 +425,7 @@
 		<key>Loop</key>
 		<string>Off</string>
 		<key>TimeHint</key>
-		<real>1152.191470885276</real>
+		<real>9716</real>
 		<key>TimeStep</key>
 		<string>1.0</string>
 		<key>TimeStepSwitch</key>
@@ -599,7 +599,7 @@
 			<key>Content</key>
 			<dict>
 				<key>Application</key>
-				<string>$BUILD/Release/evolution</string>
+				<string>$BUILD/Debug/evolution</string>
 				<key>Argument</key>
 				<string></string>
 				<key>DirName</key>
@@ -793,7 +793,7 @@
 			<key>Content</key>
 			<dict>
 				<key>Application</key>
-				<string>$BUILD/Release/new evolution</string>
+				<string>$BUILD/Debug/new evolution</string>
 				<key>Argument</key>
 				<string></string>
 				<key>DirName</key>
@@ -1375,8 +1375,8 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>308</real>
-		<real>36</real>
+		<real>67</real>
+		<real>6</real>
 		<real>941</real>
 		<real>741</real>
 	</array>

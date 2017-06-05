@@ -248,20 +248,20 @@ public:
 //        }
         
         //second try, this time the closer to the beacon less variance and smaller step
-        double dx = beacon.x-x;
-        double dy = beacon.y-y;
-        double distBeaconFollower = sqrt(Norm(location()-beacon.location()))*1000;
-        if(dx > 0) {
-            x -= dx/distBeaconFollower;
-        } else {
-            x += dx/distBeaconFollower;
-        }
-        if(dy > 0) {
-            y -= dy/distBeaconFollower;
-        } else {
-            y += dy/distBeaconFollower;
-        }
-        
+//        double dx = beacon.x-x;
+//        double dy = beacon.y-y;
+//        double distBeaconFollower = sqrt(Norm(location()-beacon.location()))*1000;
+//        if(dx > 0) {
+//            x -= dx/distBeaconFollower;
+//        } else {
+//            x += dx/distBeaconFollower;
+//        }
+//        if(dy > 0) {
+//            y -= dy/distBeaconFollower;
+//        } else {
+//            y += dy/distBeaconFollower;
+//        }
+        //third try
         
         
         

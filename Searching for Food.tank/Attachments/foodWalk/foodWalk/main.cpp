@@ -220,50 +220,7 @@ public:
     }
     
     void advanceFOLLOWER(const DTRegion2D &box, Agent beacon) {
-//        //Have them headed right at the beacon, but have noise so it just swarms around it.
-//        
-//        //compare this distance with the manipulated dx and dy to see which way will get you closer
-//        double distBeaconFollower = Norm(location()-beacon.location());
-//        
-//        double xFollower = beacon.x+x;
-//        double yFollower = beacon.y+y;
-//        //Create these as points
-//        DTPoint2D xChanged(xFollower,y);
-//        DTPoint2D yChanged(x,yFollower);
-//        DTPoint2D xyChanged(xFollower,yFollower);
-//        //the distances for the modifications
-//        double distxChanged = Norm(xChanged-beacon.location());
-//        double distyChanged = Norm(yChanged-beacon.location());
-//        double distxyChanged = Norm(xyChanged-beacon.location());
-//        
-//        if (distxyChanged < distBeaconFollower) {
-//            if (distxChanged) {
-//                
-//            }
-//            x += dx;
-//            y += dy;
-//        } else {
-//            x -= dx;
-//            y -= dy;
-//        }
-        
-        //second try, this time the closer to the beacon less variance and smaller step
-//        double dx = beacon.x-x;
-//        double dy = beacon.y-y;
-//        double distBeaconFollower = sqrt(Norm(location()-beacon.location()))*1000;
-//        if(dx > 0) {
-//            x -= dx/distBeaconFollower;
-//        } else {
-//            x += dx/distBeaconFollower;
-//        }
-//        if(dy > 0) {
-//            y -= dy/distBeaconFollower;
-//        } else {
-//            y += dy/distBeaconFollower;
-//        }
-        //third try
-        
-        
+        //
         
     }
     

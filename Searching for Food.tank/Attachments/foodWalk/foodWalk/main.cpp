@@ -166,7 +166,7 @@ public:
     
     //Move command is what is called in computation
     //Its the most basic version and everything goes out of it.
-    void Move(double sqrtDT, DTRegion2D box, DTRandom randNumber, const Agent &beacon) {
+    void Move(double sqrtDT, DTRegion2D box, DTRandom randNumber, const Agent &beacon, double dt) {
         //Figure out which type of advance method to use and hand in the right things.
         double xy[2];
         randNumber.Normal(xy,2);
@@ -179,10 +179,10 @@ public:
                 ChangeToLOOKING();
             }
             //If not converted it moves
-            advanceFOLLOWER(box, beacon);
+            advanceFOLLOWER(box, beacon, randNumber, dt);
         }
         if (Type() == LOOKING) {
-           // advanceLOOKING(sqrtDT*noise*xy[0], sqrtDT*noise*xy[1], box);
+           advanceLOOKING(sqrtDT*noise*xy[0], sqrtDT*noise*xy[1], box);
         }
         if (Type() == FOUNDIT) {
             
@@ -219,9 +219,27 @@ public:
         }
     }
     
-    void advanceFOLLOWER(const DTRegion2D &box, Agent beacon) {
-        //
-        
+    void advanceFOLLOWER(const DTRegion2D &box, Agent beacon, DTRandom rand, double dt) {
+        double xDist = beacon.x-x;
+        double yDist = beacon.y-y;
+        //speed should decay with distance
+        //double speed = parameters("speed");
+        double theta = atan2(yDist, xDist);
+        theta = theta + (rand.UniformHalf()-.5)*noise;
+        x += cos(theta)*dt;
+        y += sin(theta)*dt;
+        if (x > box.xmax) {
+            x = 2*box.xmax-x;
+        }
+        if (y > box.ymax) {
+            y = 2*box.ymax-y;
+        }
+        if (x < box.xmin) {
+            x = 2*box.xmin-x;
+        }
+        if (y < box.ymin) {
+            y = 2*box.ymin-y;
+        }
     }
     
     void advanceFOUNDIT(double dx,double dy,const DTRegion2D &box, Agent beaconAgent) {
@@ -269,7 +287,7 @@ void Computation(const DTPointCollection2D &initial,const DTPoint2D &food,
         for (int i = 0; i<numAnts; i++) {
             //Random Walk
             randNumber.Normal(xy,2);
-            antList(i).Move(sqrtDT,region,randNumber, antList(beaconID));
+            antList(i).Move(sqrtDT,region,randNumber, antList(beaconID), dt);
         }
         
         t += dt;

@@ -247,7 +247,7 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>536.5</real>
+			<real>536</real>
 			<key>DrawingWindow</key>
 			<dict>
 				<key>ClickMenu</key>
@@ -263,7 +263,7 @@
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{803, 536.5}</string>
+			<string>{803, 536}</string>
 			<key>MaxHeight</key>
 			<string></string>
 			<key>MaxWidth</key>
@@ -340,11 +340,11 @@
 				<key>MinYValue</key>
 				<string></string>
 				<key>RangeType</key>
-				<integer>0</integer>
+				<integer>3</integer>
 				<key>Region</key>
 				<dict>
-					<key>SelectedNumber</key>
-					<integer>0</integer>
+					<key>Selected</key>
+					<string>2D Region</string>
 				</dict>
 			</dict>
 			<key>CommandContents</key>
@@ -492,9 +492,73 @@
 					<key>ToggleOpen</key>
 					<string>YES</string>
 				</dict>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Point</string>
+					<key>Computation</key>
+					<dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>CroppingPath</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>LineStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Color</key>
+									<dict>
+										<key>Blue</key>
+										<real>0.24000885273108852</real>
+										<key>Green</key>
+										<real>1</real>
+										<key>Red</key>
+										<real>0.21889655114155315</real>
+										<key>Space</key>
+										<string>NSCalibratedRGBColorSpace</string>
+									</dict>
+								</dict>
+								<key>LineType</key>
+								<integer>0</integer>
+								<key>LineWidth</key>
+								<string>0.5</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>MarkerSize</key>
+						<string>4.0</string>
+						<key>MarkerType</key>
+						<integer>1</integer>
+						<key>Point</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Point</key>
+								<string>0,0</string>
+							</dict>
+							<key>Selected</key>
+							<string>food particle</string>
+						</dict>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+					<key>ToggleOpen</key>
+					<string>YES</string>
+				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>383</real>
+			<real>406</real>
 			<key>DrawingWindow</key>
 			<dict>
 				<key>ClickMenu</key>
@@ -510,7 +574,7 @@
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{869, 383}</string>
+			<string>{869, 406}</string>
 			<key>MaxHeight</key>
 			<string></string>
 			<key>MaxWidth</key>
@@ -545,7 +609,7 @@
 				<real>0.0</real>
 			</array>
 			<key>ViewSizeJoined</key>
-			<string>869,383</string>
+			<string>869,406</string>
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
@@ -554,10 +618,10 @@
 			<string>position from Group</string>
 			<key>WindowPos</key>
 			<array>
-				<real>2577</real>
-				<real>768</real>
+				<real>2747</real>
+				<real>1038</real>
 				<real>867</real>
-				<real>637</real>
+				<real>671</real>
 			</array>
 		</dict>
 	</array>
@@ -567,19 +631,20 @@
 		<string>List of Numbers Reshaped</string>
 		<string>Dictionary</string>
 		<string>Group</string>
+		<string>position from Group</string>
 	</array>
 	<key>Time</key>
 	<dict>
 		<key>CurrentTime</key>
 		<dict>
 			<key>CurrentValue</key>
-			<real>100.09999999999859</real>
+			<real>0.0</real>
 			<key>MaxValue</key>
 			<real>100.09999999999859</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>100.1</string>
+			<string>0</string>
 		</dict>
 		<key>Duration</key>
 		<string>10</string>
@@ -617,7 +682,7 @@
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>0</string>
+			<string></string>
 		</dict>
 	</dict>
 	<key>Variables</key>
@@ -794,7 +859,7 @@
 							<key>Inline</key>
 							<dict>
 								<key>Number</key>
-								<string>0.1</string>
+								<string>0.01</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -855,6 +920,46 @@
 							<dict>
 								<key>Number</key>
 								<string>0.3</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>speed</string>
+						<key>Number Type</key>
+						<integer>0</integer>
+						<key>Type</key>
+						<string>Real Number</string>
+						<key>Var</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
+								<string>1</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>dt</string>
+						<key>Number Type</key>
+						<integer>0</integer>
+						<key>Type</key>
+						<string>Real Number</string>
+						<key>Var</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
+								<string>0</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -998,7 +1103,7 @@
 							<key>Inline</key>
 							<dict>
 								<key>Number</key>
-								<string>23</string>
+								<string>233</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -1081,10 +1186,10 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>4</real>
-		<real>921</real>
-		<real>1065</real>
-		<real>772</real>
+		<real>78</real>
+		<real>905</real>
+		<real>941</real>
+		<real>777</real>
 	</array>
 </dict>
 </plist>

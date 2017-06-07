@@ -112,7 +112,6 @@ DTPath2D Computation(const DTSeriesPointCollection2D &allPoints,double maxDist)
     DTDoubleArray timeValues = allPoints.TimeValues();
     int timeN, howManyTimes = timeValues.Length();
     DTPointCollection2D current;
-    int frameNumber = 0;
     DTMutableDoubleArray dist(1000,1000);
     dist = maxDist; //sets everything to max dist initally
     

@@ -222,12 +222,17 @@ public:
     void advanceFOLLOWER(const DTRegion2D &box, Agent beacon, DTRandom rand, double dt) {
         double xDist = beacon.x-x;
         double yDist = beacon.y-y;
+        double distance = sqrt(xDist*xDist+yDist*yDist);
         //speed should decay with distance
         //double speed = parameters("speed");
         double theta = atan2(yDist, xDist);
         theta = theta + (rand.UniformHalf()-.5)*noise;
-        x += cos(theta)*dt;
-        y += sin(theta)*dt;
+        //speed of the particles decays with distance to the beacon.
+        double speed = dt/distance;
+        
+        x += cos(theta)*dt*speed;
+        y += sin(theta)*dt*speed;
+        
         if (x > box.xmax) {
             x = 2*box.xmax-x;
         }
@@ -242,8 +247,39 @@ public:
         }
     }
     
-    void advanceFOUNDIT(double dx,double dy,const DTRegion2D &box, Agent beaconAgent) {
+    void advanceFOUNDIT(const DTRegion2D &box, Agent beacon, DTRandom rand, double dt) {
+        if(Norm(location()-food) <= radius*radius) {
+            ChangeToFOLLOWER();
+            
+        } else {
+            double xDist = beacon.x-x;
+            double yDist = beacon.y-y;
+            double distance = sqrt(xDist*xDist+yDist*yDist);
+            //speed should decay with distance
+            //double speed = parameters("speed");
+            double theta = atan2(yDist, xDist);
+            theta = theta + (rand.UniformHalf()-.5)*noise;
+            //speed of the particles decays with distance to the beacon.
+            double speed = dt*distance;
+            
+            x += cos(theta)*dt*speed;
+            y += sin(theta)*dt*speed;
+        }
         
+        
+        
+        if (x > box.xmax) {
+            x = 2*box.xmax-x;
+        }
+        if (y > box.ymax) {
+            y = 2*box.ymax-y;
+        }
+        if (x < box.xmin) {
+            x = 2*box.xmin-x;
+        }
+        if (y < box.ymin) {
+            y = 2*box.ymin-y;
+        }
     }
     
 private:
@@ -251,6 +287,7 @@ private:
     double u,v; // Velocity
     double radius;
     double noise;
+
     DTPoint2D food;
     AgentType type;
 };

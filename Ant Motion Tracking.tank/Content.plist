@@ -5771,6 +5771,37 @@
 					<key>CommandName</key>
 					<string></string>
 					<key>CommandType</key>
+					<string>Bitmap</string>
+					<key>Computation</key>
+					<dict>
+						<key>Bitmap</key>
+						<dict>
+							<key>Selected</key>
+							<string>Source</string>
+						</dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>Crop</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>Interpolation</key>
+						<integer>0</integer>
+						<key>Sparsify</key>
+						<string>On</string>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+				</dict>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
 					<string>Point Collection</string>
 					<key>Computation</key>
 					<dict>
@@ -5832,7 +5863,7 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>428</real>
+			<real>943</real>
 			<key>DrawingWindow</key>
 			<dict>
 				<key>ClickMenu</key>
@@ -5848,7 +5879,7 @@
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{725, 428}</string>
+			<string>{1322, 943}</string>
 			<key>MaxHeight</key>
 			<string></string>
 			<key>MaxWidth</key>
@@ -5883,19 +5914,184 @@
 				<real>0.0</real>
 			</array>
 			<key>ViewSizeJoined</key>
-			<string>725,428</string>
+			<string>1322,943</string>
+			<key>ViewSizeSeparated</key>
+			<string></string>
+			<key>Visible</key>
+			<string>NO</string>
+			<key>WindowName</key>
+			<string>2D Path</string>
+			<key>WindowPos</key>
+			<array>
+				<real>1753</real>
+				<real>303</real>
+				<real>1320</real>
+				<real>1404</real>
+			</array>
+		</dict>
+		<dict>
+			<key>Antialiasing</key>
+			<string>YES</string>
+			<key>Axis</key>
+			<dict>
+				<key>YScale</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Number</key>
+						<string>1</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingBox</key>
+			<dict>
+				<key>MaxXValue</key>
+				<string></string>
+				<key>MaxYValue</key>
+				<string></string>
+				<key>MinXValue</key>
+				<string></string>
+				<key>MinYValue</key>
+				<string></string>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>Region</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>CommandContents</key>
+			<array>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Point Collection</string>
+					<key>Computation</key>
+					<dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>Collection</key>
+						<dict>
+							<key>Selected</key>
+							<string>Region of Points</string>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>CroppingPath</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>LineStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Color</key>
+									<dict>
+										<key>Blue</key>
+										<real>0.0</real>
+										<key>Green</key>
+										<real>0.0</real>
+										<key>Red</key>
+										<real>0.0</real>
+										<key>Space</key>
+										<string>NSCalibratedRGBColorSpace</string>
+									</dict>
+								</dict>
+								<key>LineType</key>
+								<integer>0</integer>
+								<key>LineWidth</key>
+								<string>0.5</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Magnification</key>
+						<integer>0</integer>
+						<key>MarkerSize</key>
+						<string>4.0</string>
+						<key>MarkerType</key>
+						<integer>4</integer>
+						<key>SwitchAt</key>
+						<string>10000</string>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+				</dict>
+			</array>
+			<key>DrawingHeight</key>
+			<real>362</real>
+			<key>DrawingWindow</key>
+			<dict>
+				<key>ClickMenu</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Automatic</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>DrawingWindowType</key>
+			<string>2DGraph</string>
+			<key>FigureName</key>
+			<string>Untitled</string>
+			<key>Last Drawing View Size</key>
+			<string>{711, 362}</string>
+			<key>MaxHeight</key>
+			<string></string>
+			<key>MaxWidth</key>
+			<string></string>
+			<key>OutputHeight</key>
+			<string></string>
+			<key>OutputWidth</key>
+			<string></string>
+			<key>QT</key>
+			<dict>
+				<key>Format</key>
+				<string>Animation</string>
+				<key>Quality</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Lossless</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Range</key>
+				<string>0,∞</string>
+				<key>ShowInFinder</key>
+				<string>On</string>
+				<key>TimeStep</key>
+				<string>1.0</string>
+			</dict>
+			<key>SeparateWindowPos</key>
+			<array>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+			</array>
+			<key>ViewSizeJoined</key>
+			<string>711,362</string>
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
 			<string>YES</string>
 			<key>WindowName</key>
-			<string>2D Path</string>
+			<string>Region of Points</string>
 			<key>WindowPos</key>
 			<array>
-				<real>556</real>
-				<real>99</real>
-				<real>723</real>
-				<real>677</real>
+				<real>399</real>
+				<real>77</real>
+				<real>709</real>
+				<real>700</real>
 			</array>
 		</dict>
 	</array>
@@ -5915,13 +6111,13 @@
 		<key>CurrentTime</key>
 		<dict>
 			<key>CurrentValue</key>
-			<real>0.040000000000000001</real>
+			<real>3.6899999999999999</real>
 			<key>MaxValue</key>
 			<real>19.960000000000001</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>0.04</string>
+			<string>3.69</string>
 		</dict>
 		<key>Duration</key>
 		<string>35</string>
@@ -5930,7 +6126,7 @@
 		<key>Loop</key>
 		<string>On</string>
 		<key>TimeHint</key>
-		<real>14.6</real>
+		<real>0.040000000000000001</real>
 		<key>TimeStep</key>
 		<string>1.0</string>
 		<key>TimeStepSwitch</key>
@@ -6545,9 +6741,9 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>0.0</real>
-		<real>80</real>
-		<real>900</real>
+		<real>85</real>
+		<real>84</real>
+		<real>941</real>
 		<real>693</real>
 	</array>
 </dict>

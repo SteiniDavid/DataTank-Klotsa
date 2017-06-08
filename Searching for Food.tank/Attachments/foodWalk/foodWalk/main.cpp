@@ -228,10 +228,9 @@ public:
         double theta = atan2(yDist, xDist);
         theta = theta + (rand.UniformHalf()-.5)*noise;
         //speed of the particles decays with distance to the beacon.
-        double speed = dt/distance;
         
-        x += cos(theta)*dt*speed;
-        y += sin(theta)*dt*speed;
+        x += cos(theta)*dt;
+        y += sin(theta)*dt;
         
         if (x > box.xmax) {
             x = 2*box.xmax-x;

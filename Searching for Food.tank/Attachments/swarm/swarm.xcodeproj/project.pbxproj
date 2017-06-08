@@ -1,0 +1,1264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6340D9D11926661200C9DA99 /* DTMesh3DOnDisk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6340D9CF1926661200C9DA99 /* DTMesh3DOnDisk.cpp */; };
+		636DC1271BDF158F009A8B49 /* DTTransform2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 636DC1251BDF158F009A8B49 /* DTTransform2D.cpp */; settings = {ASSET_TAGS = (); }; };
+		636DC12A1BDF1596009A8B49 /* DTBitmap2DStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 636DC1281BDF1596009A8B49 /* DTBitmap2DStack.cpp */; settings = {ASSET_TAGS = (); }; };
+		636DC12D1BDF15AA009A8B49 /* DTNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 636DC12B1BDF15AA009A8B49 /* DTNetwork.cpp */; settings = {ASSET_TAGS = (); }; };
+		63D8635E156D2DD2004440D9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8635D156D2DD2004440D9 /* main.cpp */; };
+		63D86360156D2DD2004440D9 /* swarm.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 63D8635F156D2DD2004440D9 /* swarm.1 */; };
+		63D864BD156D3622004440D9 /* DTArrayConversion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8637D156D3622004440D9 /* DTArrayConversion.cpp */; };
+		63D864BE156D3622004440D9 /* DTCharArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86381156D3622004440D9 /* DTCharArray.cpp */; };
+		63D864BF156D3622004440D9 /* DTCharArrayRegion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86383156D3622004440D9 /* DTCharArrayRegion.cpp */; };
+		63D864C0156D3622004440D9 /* DTDoubleArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86385156D3622004440D9 /* DTDoubleArray.cpp */; };
+		63D864C1156D3622004440D9 /* DTDoubleArrayOperators.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86387156D3622004440D9 /* DTDoubleArrayOperators.cpp */; };
+		63D864C2156D3622004440D9 /* DTDoubleArrayRegion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86389156D3622004440D9 /* DTDoubleArrayRegion.cpp */; };
+		63D864C3156D3622004440D9 /* DTDoubleComplexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8638B156D3622004440D9 /* DTDoubleComplexArray.cpp */; };
+		63D864C4156D3622004440D9 /* DTFloatArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8638D156D3622004440D9 /* DTFloatArray.cpp */; };
+		63D864C5156D3622004440D9 /* DTFloatArrayOperators.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8638F156D3622004440D9 /* DTFloatArrayOperators.cpp */; };
+		63D864C6156D3622004440D9 /* DTFloatArrayRegion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86391156D3622004440D9 /* DTFloatArrayRegion.cpp */; };
+		63D864C7156D3622004440D9 /* DTIndex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86393156D3622004440D9 /* DTIndex.cpp */; };
+		63D864C8156D3622004440D9 /* DTIntArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86395156D3622004440D9 /* DTIntArray.cpp */; };
+		63D864C9156D3622004440D9 /* DTIntArrayOperators.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86397156D3622004440D9 /* DTIntArrayOperators.cpp */; };
+		63D864CA156D3622004440D9 /* DTIntArrayRegion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86399156D3622004440D9 /* DTIntArrayRegion.cpp */; };
+		63D864CB156D3622004440D9 /* DTShortIntArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8639B156D3622004440D9 /* DTShortIntArray.cpp */; };
+		63D864CC156D3622004440D9 /* DTShortIntArrayRegion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8639D156D3622004440D9 /* DTShortIntArrayRegion.cpp */; };
+		63D864CD156D3622004440D9 /* DTUCharArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8639F156D3622004440D9 /* DTUCharArray.cpp */; };
+		63D864CE156D3622004440D9 /* DTUCharArrayRegion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863A1156D3622004440D9 /* DTUCharArrayRegion.cpp */; };
+		63D864CF156D3622004440D9 /* DTUShortIntArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863A3156D3622004440D9 /* DTUShortIntArray.cpp */; };
+		63D864D0156D3622004440D9 /* DTUShortIntArrayRegion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863A5156D3622004440D9 /* DTUShortIntArrayRegion.cpp */; };
+		63D864D1156D3622004440D9 /* DTDataContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863A8156D3622004440D9 /* DTDataContainer.cpp */; };
+		63D864D2156D3622004440D9 /* DTDataFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863AA156D3622004440D9 /* DTDataFile.cpp */; };
+		63D864D3156D3622004440D9 /* DTDataStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863AC156D3622004440D9 /* DTDataStorage.cpp */; };
+		63D864D4156D3622004440D9 /* DTEndianSwap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863AE156D3622004440D9 /* DTEndianSwap.cpp */; };
+		63D864D5156D3622004440D9 /* DTFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863B0156D3622004440D9 /* DTFile.cpp */; };
+		63D864D6156D3622004440D9 /* DTLiveUpdate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863B2156D3622004440D9 /* DTLiveUpdate.cpp */; };
+		63D864D7156D3622004440D9 /* DTMatlabDataFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863B5156D3622004440D9 /* DTMatlabDataFile.cpp */; };
+		63D864D8156D3622004440D9 /* DTSeriesArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863BA156D3622004440D9 /* DTSeriesArray.cpp */; };
+		63D864D9156D3622004440D9 /* DTSeriesNumberList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863BD156D3622004440D9 /* DTSeriesNumberList.cpp */; };
+		63D864DA156D3622004440D9 /* DTSeriesRealNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863C0156D3622004440D9 /* DTSeriesRealNumber.cpp */; };
+		63D864DB156D3622004440D9 /* DTSeriesString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863C2156D3622004440D9 /* DTSeriesString.cpp */; };
+		63D864DC156D3622004440D9 /* DTSeriesStringList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863C4156D3622004440D9 /* DTSeriesStringList.cpp */; };
+		63D864DD156D3622004440D9 /* DTSeriesFunction1D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863C7156D3622004440D9 /* DTSeriesFunction1D.cpp */; };
+		63D864DE156D3622004440D9 /* DTSeriesPlot1D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863C9156D3622004440D9 /* DTSeriesPlot1D.cpp */; };
+		63D864DF156D3622004440D9 /* DTSeriesRegion1D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863CB156D3622004440D9 /* DTSeriesRegion1D.cpp */; };
+		63D864E0156D3622004440D9 /* DTSeriesBitmap2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863CE156D3622004440D9 /* DTSeriesBitmap2D.cpp */; };
+		63D864E1156D3622004440D9 /* DTSeriesFunction2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863D0156D3622004440D9 /* DTSeriesFunction2D.cpp */; };
+		63D864E2156D3622004440D9 /* DTSeriesMesh2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863D2156D3622004440D9 /* DTSeriesMesh2D.cpp */; };
+		63D864E3156D3622004440D9 /* DTSeriesMesh2DGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863D4156D3622004440D9 /* DTSeriesMesh2DGrid.cpp */; };
+		63D864E4156D3622004440D9 /* DTSeriesPath2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863D6156D3622004440D9 /* DTSeriesPath2D.cpp */; };
+		63D864E5156D3622004440D9 /* DTSeriesPath2DValues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863D8156D3622004440D9 /* DTSeriesPath2DValues.cpp */; };
+		63D864E6156D3622004440D9 /* DTSeriesPoint2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863DA156D3622004440D9 /* DTSeriesPoint2D.cpp */; };
+		63D864E7156D3622004440D9 /* DTSeriesPoint2DValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863DC156D3622004440D9 /* DTSeriesPoint2DValue.cpp */; };
+		63D864E8156D3622004440D9 /* DTSeriesPointCollection2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863DE156D3622004440D9 /* DTSeriesPointCollection2D.cpp */; };
+		63D864E9156D3622004440D9 /* DTSeriesPointValueCollection2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863E0156D3622004440D9 /* DTSeriesPointValueCollection2D.cpp */; };
+		63D864EA156D3622004440D9 /* DTSeriesRegion2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863E2156D3622004440D9 /* DTSeriesRegion2D.cpp */; };
+		63D864EB156D3622004440D9 /* DTSeriesStructuredMesh2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863E4156D3622004440D9 /* DTSeriesStructuredMesh2D.cpp */; };
+		63D864EC156D3622004440D9 /* DTSeriesTriangularGrid2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863E6156D3622004440D9 /* DTSeriesTriangularGrid2D.cpp */; };
+		63D864ED156D3622004440D9 /* DTSeriesTriangularMesh2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863E8156D3622004440D9 /* DTSeriesTriangularMesh2D.cpp */; };
+		63D864EE156D3622004440D9 /* DTSeriesFunction3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863EB156D3622004440D9 /* DTSeriesFunction3D.cpp */; };
+		63D864EF156D3622004440D9 /* DTSeriesMesh3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863ED156D3622004440D9 /* DTSeriesMesh3D.cpp */; };
+		63D864F0156D3622004440D9 /* DTSeriesMesh3DGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863EF156D3622004440D9 /* DTSeriesMesh3DGrid.cpp */; };
+		63D864F1156D3622004440D9 /* DTSeriesPath3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863F1156D3622004440D9 /* DTSeriesPath3D.cpp */; };
+		63D864F2156D3622004440D9 /* DTSeriesPath3DValues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863F3156D3622004440D9 /* DTSeriesPath3DValues.cpp */; };
+		63D864F3156D3622004440D9 /* DTSeriesPoint3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863F5156D3622004440D9 /* DTSeriesPoint3D.cpp */; };
+		63D864F4156D3622004440D9 /* DTSeriesPoint3DValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863F7156D3622004440D9 /* DTSeriesPoint3DValue.cpp */; };
+		63D864F5156D3622004440D9 /* DTSeriesPointCollection3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863F9156D3622004440D9 /* DTSeriesPointCollection3D.cpp */; };
+		63D864F6156D3622004440D9 /* DTSeriesPointValueCollection3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863FB156D3622004440D9 /* DTSeriesPointValueCollection3D.cpp */; };
+		63D864F7156D3622004440D9 /* DTSeriesPointVector3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863FD156D3622004440D9 /* DTSeriesPointVector3D.cpp */; };
+		63D864F8156D3622004440D9 /* DTSeriesRegion3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D863FF156D3622004440D9 /* DTSeriesRegion3D.cpp */; };
+		63D864F9156D3622004440D9 /* DTSeriesSurface3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86401156D3622004440D9 /* DTSeriesSurface3D.cpp */; };
+		63D864FA156D3622004440D9 /* DTSeriesSurfaceCoordinates3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86403156D3622004440D9 /* DTSeriesSurfaceCoordinates3D.cpp */; };
+		63D864FB156D3622004440D9 /* DTSeriesSurfaceTexture3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86405156D3622004440D9 /* DTSeriesSurfaceTexture3D.cpp */; };
+		63D864FC156D3622004440D9 /* DTSeriesSurfaceValues3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86407156D3622004440D9 /* DTSeriesSurfaceValues3D.cpp */; };
+		63D864FD156D3622004440D9 /* DTSeriesTetrahedralGrid3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86409156D3622004440D9 /* DTSeriesTetrahedralGrid3D.cpp */; };
+		63D864FE156D3622004440D9 /* DTSeriesTetrahedralMesh3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8640B156D3622004440D9 /* DTSeriesTetrahedralMesh3D.cpp */; };
+		63D864FF156D3622004440D9 /* DTSeriesTetrahedralVectorField3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8640D156D3622004440D9 /* DTSeriesTetrahedralVectorField3D.cpp */; };
+		63D86500156D3622004440D9 /* DTSeriesVectorCollection3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8640F156D3622004440D9 /* DTSeriesVectorCollection3D.cpp */; };
+		63D86501156D3622004440D9 /* DTSeriesVectorField3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86411156D3622004440D9 /* DTSeriesVectorField3D.cpp */; };
+		63D86502156D3622004440D9 /* DTSeries.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86413156D3622004440D9 /* DTSeries.cpp */; };
+		63D86503156D3622004440D9 /* DTArguments.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86417156D3622004440D9 /* DTArguments.cpp */; };
+		63D86504156D3622004440D9 /* DTDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86419156D3622004440D9 /* DTDictionary.cpp */; };
+		63D86505156D3622004440D9 /* DTError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8641B156D3622004440D9 /* DTError.cpp */; };
+		63D86506156D3622004440D9 /* DTProgress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86421156D3622004440D9 /* DTProgress.cpp */; };
+		63D86507156D3622004440D9 /* DTSaveError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86423156D3622004440D9 /* DTSaveError.cpp */; };
+		63D86508156D3622004440D9 /* DTThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86425156D3622004440D9 /* DTThread.cpp */; };
+		63D86509156D3622004440D9 /* DTUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86428156D3622004440D9 /* DTUtilities.cpp */; };
+		63D8650A156D3622004440D9 /* DTRandom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8642B156D3622004440D9 /* DTRandom.cpp */; };
+		63D8650B156D3622004440D9 /* DTAudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8642F156D3622004440D9 /* DTAudio.cpp */; };
+		63D8650C156D3622004440D9 /* DTColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86431156D3622004440D9 /* DTColor.cpp */; };
+		63D8650D156D3622004440D9 /* DTColorList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86433156D3622004440D9 /* DTColorList.cpp */; };
+		63D8650E156D3622004440D9 /* DTStringList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86435156D3622004440D9 /* DTStringList.cpp */; };
+		63D8650F156D3622004440D9 /* DTFunction1D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86438156D3622004440D9 /* DTFunction1D.cpp */; };
+		63D86510156D3622004440D9 /* DTMesh1DGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8643A156D3622004440D9 /* DTMesh1DGrid.cpp */; };
+		63D86511156D3622004440D9 /* DTPlot1D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8643C156D3622004440D9 /* DTPlot1D.cpp */; };
+		63D86512156D3622004440D9 /* DTRegion1D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8643E156D3622004440D9 /* DTRegion1D.cpp */; };
+		63D86513156D3622004440D9 /* DTBitmap2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86441156D3622004440D9 /* DTBitmap2D.cpp */; };
+		63D86514156D3622004440D9 /* DTCombinedMesh2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86443156D3622004440D9 /* DTCombinedMesh2D.cpp */; };
+		63D86515156D3622004440D9 /* DTCoordinateLine2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86445156D3622004440D9 /* DTCoordinateLine2D.cpp */; };
+		63D86516156D3622004440D9 /* DTFunction2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86447156D3622004440D9 /* DTFunction2D.cpp */; };
+		63D86517156D3622004440D9 /* DTMesh2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86449156D3622004440D9 /* DTMesh2D.cpp */; };
+		63D86518156D3622004440D9 /* DTMesh2DBanded.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8644B156D3622004440D9 /* DTMesh2DBanded.cpp */; };
+		63D86519156D3622004440D9 /* DTMesh2DGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8644D156D3622004440D9 /* DTMesh2DGrid.cpp */; };
+		63D8651A156D3622004440D9 /* DTMutableDoubleMesh2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8644F156D3622004440D9 /* DTMutableDoubleMesh2D.cpp */; };
+		63D8651B156D3622004440D9 /* DTPath2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86451156D3622004440D9 /* DTPath2D.cpp */; };
+		63D8651C156D3622004440D9 /* DTPath2DValues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86453156D3622004440D9 /* DTPath2DValues.cpp */; };
+		63D8651D156D3622004440D9 /* DTPoint2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86455156D3622004440D9 /* DTPoint2D.cpp */; };
+		63D8651E156D3622004440D9 /* DTPoint2DValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86457156D3622004440D9 /* DTPoint2DValue.cpp */; };
+		63D8651F156D3622004440D9 /* DTPointCollection2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86459156D3622004440D9 /* DTPointCollection2D.cpp */; };
+		63D86520156D3622004440D9 /* DTPointValueCollection2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8645B156D3622004440D9 /* DTPointValueCollection2D.cpp */; };
+		63D86521156D3622004440D9 /* DTPointVector2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8645D156D3622004440D9 /* DTPointVector2D.cpp */; };
+		63D86522156D3622004440D9 /* DTRegion2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8645F156D3622004440D9 /* DTRegion2D.cpp */; };
+		63D86523156D3622004440D9 /* DTShiftScale2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86461156D3622004440D9 /* DTShiftScale2D.cpp */; };
+		63D86524156D3622004440D9 /* DTStructuredGrid2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86463156D3622004440D9 /* DTStructuredGrid2D.cpp */; };
+		63D86525156D3622004440D9 /* DTStructuredMesh2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86465156D3622004440D9 /* DTStructuredMesh2D.cpp */; };
+		63D86526156D3622004440D9 /* DTStructuredVectorField2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86467156D3622004440D9 /* DTStructuredVectorField2D.cpp */; };
+		63D86527156D3622004440D9 /* DTTriangularGrid2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86469156D3622004440D9 /* DTTriangularGrid2D.cpp */; };
+		63D86528156D3622004440D9 /* DTTriangularMesh2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8646B156D3622004440D9 /* DTTriangularMesh2D.cpp */; };
+		63D86529156D3622004440D9 /* DTTriangularVectorField2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8646D156D3622004440D9 /* DTTriangularVectorField2D.cpp */; };
+		63D8652A156D3622004440D9 /* DTVectorCollection2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86470156D3622004440D9 /* DTVectorCollection2D.cpp */; };
+		63D8652B156D3622004440D9 /* DTVectorField2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86472156D3622004440D9 /* DTVectorField2D.cpp */; };
+		63D8652C156D3622004440D9 /* DTAtomCollection3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86475156D3622004440D9 /* DTAtomCollection3D.cpp */; };
+		63D8652D156D3622004440D9 /* DTCoordinatePlane3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86477156D3622004440D9 /* DTCoordinatePlane3D.cpp */; };
+		63D8652E156D3622004440D9 /* DTFunction3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86479156D3622004440D9 /* DTFunction3D.cpp */; };
+		63D8652F156D3622004440D9 /* DTMesh3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8647B156D3622004440D9 /* DTMesh3D.cpp */; };
+		63D86530156D3622004440D9 /* DTMesh3DGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8647D156D3622004440D9 /* DTMesh3DGrid.cpp */; };
+		63D86532156D3622004440D9 /* DTPath3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86481156D3622004440D9 /* DTPath3D.cpp */; };
+		63D86533156D3622004440D9 /* DTPath3DValues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86483156D3622004440D9 /* DTPath3DValues.cpp */; };
+		63D86534156D3622004440D9 /* DTPlane3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86485156D3622004440D9 /* DTPlane3D.cpp */; };
+		63D86535156D3622004440D9 /* DTPoint3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86487156D3622004440D9 /* DTPoint3D.cpp */; };
+		63D86536156D3622004440D9 /* DTPoint3DValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86489156D3622004440D9 /* DTPoint3DValue.cpp */; };
+		63D86537156D3622004440D9 /* DTPointCollection3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8648B156D3622004440D9 /* DTPointCollection3D.cpp */; };
+		63D86538156D3622004440D9 /* DTPointValueCollection3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8648D156D3622004440D9 /* DTPointValueCollection3D.cpp */; };
+		63D86539156D3622004440D9 /* DTPointVector3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8648F156D3622004440D9 /* DTPointVector3D.cpp */; };
+		63D8653A156D3622004440D9 /* DTPrismGrid3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86491156D3622004440D9 /* DTPrismGrid3D.cpp */; };
+		63D8653B156D3622004440D9 /* DTPrismMesh3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86493156D3622004440D9 /* DTPrismMesh3D.cpp */; };
+		63D8653C156D3622004440D9 /* DTPrismVectorField3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86495156D3622004440D9 /* DTPrismVectorField3D.cpp */; };
+		63D8653D156D3622004440D9 /* DTRegion3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86497156D3622004440D9 /* DTRegion3D.cpp */; };
+		63D8653E156D3622004440D9 /* DTShiftScale3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D86499156D3622004440D9 /* DTShiftScale3D.cpp */; };
+		63D8653F156D3622004440D9 /* DTStructuredGrid3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8649B156D3622004440D9 /* DTStructuredGrid3D.cpp */; };
+		63D86540156D3622004440D9 /* DTStructuredMesh3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8649D156D3622004440D9 /* DTStructuredMesh3D.cpp */; };
+		63D86541156D3622004440D9 /* DTStructuredVectorField3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D8649F156D3622004440D9 /* DTStructuredVectorField3D.cpp */; };
+		63D86542156D3622004440D9 /* DTSurface3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864A1156D3622004440D9 /* DTSurface3D.cpp */; };
+		63D86543156D3622004440D9 /* DTSurfaceCoordinates3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864A3156D3622004440D9 /* DTSurfaceCoordinates3D.cpp */; };
+		63D86544156D3622004440D9 /* DTSurfaceTexture3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864A5156D3622004440D9 /* DTSurfaceTexture3D.cpp */; };
+		63D86545156D3622004440D9 /* DTSurfaceValues3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864A7156D3622004440D9 /* DTSurfaceValues3D.cpp */; };
+		63D86546156D3622004440D9 /* DTTetrahedralGrid3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864A9156D3622004440D9 /* DTTetrahedralGrid3D.cpp */; };
+		63D86547156D3622004440D9 /* DTTetrahedralMesh3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864AB156D3622004440D9 /* DTTetrahedralMesh3D.cpp */; };
+		63D86548156D3622004440D9 /* DTTetrahedralVectorField3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864AD156D3622004440D9 /* DTTetrahedralVectorField3D.cpp */; };
+		63D86549156D3622004440D9 /* DTTransform3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864AF156D3622004440D9 /* DTTransform3D.cpp */; };
+		63D8654A156D3622004440D9 /* DTVectorCollection3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864B2156D3622004440D9 /* DTVectorCollection3D.cpp */; };
+		63D8654B156D3622004440D9 /* DTVectorField3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864B4156D3622004440D9 /* DTVectorField3D.cpp */; };
+		63D8654C156D3622004440D9 /* DTFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864B7156D3622004440D9 /* DTFunction.cpp */; };
+		63D8654D156D3622004440D9 /* DTFunctionFit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864B9156D3622004440D9 /* DTFunctionFit.cpp */; };
+		63D8654E156D3622004440D9 /* DTMask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864BB156D3622004440D9 /* DTMask.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63D86357156D2DD2004440D9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				63D86360156D2DD2004440D9 /* swarm.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6340D9CF1926661200C9DA99 /* DTMesh3DOnDisk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMesh3DOnDisk.cpp; sourceTree = "<group>"; };
+		6340D9D01926661200C9DA99 /* DTMesh3DOnDisk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMesh3DOnDisk.h; sourceTree = "<group>"; };
+		636DC1251BDF158F009A8B49 /* DTTransform2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTTransform2D.cpp; sourceTree = "<group>"; };
+		636DC1261BDF158F009A8B49 /* DTTransform2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTransform2D.h; sourceTree = "<group>"; };
+		636DC1281BDF1596009A8B49 /* DTBitmap2DStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTBitmap2DStack.cpp; sourceTree = "<group>"; };
+		636DC1291BDF1596009A8B49 /* DTBitmap2DStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBitmap2DStack.h; sourceTree = "<group>"; };
+		636DC12B1BDF15AA009A8B49 /* DTNetwork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTNetwork.cpp; sourceTree = "<group>"; };
+		636DC12C1BDF15AA009A8B49 /* DTNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTNetwork.h; sourceTree = "<group>"; };
+		63D86359156D2DD2004440D9 /* swarm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "swarm"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D8635D156D2DD2004440D9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		63D8635F156D2DD2004440D9 /* swarm.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = swarm.1; sourceTree = "<group>"; };
+		63D8637C156D3622004440D9 /* DTArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTArray.h; sourceTree = "<group>"; };
+		63D8637D156D3622004440D9 /* DTArrayConversion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTArrayConversion.cpp; sourceTree = "<group>"; };
+		63D8637E156D3622004440D9 /* DTArrayConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTArrayConversion.h; sourceTree = "<group>"; };
+		63D8637F156D3622004440D9 /* DTArrayRegionTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTArrayRegionTemplates.h; sourceTree = "<group>"; };
+		63D86380156D3622004440D9 /* DTArrayTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTArrayTemplates.h; sourceTree = "<group>"; };
+		63D86381156D3622004440D9 /* DTCharArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTCharArray.cpp; sourceTree = "<group>"; };
+		63D86382156D3622004440D9 /* DTCharArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCharArray.h; sourceTree = "<group>"; };
+		63D86383156D3622004440D9 /* DTCharArrayRegion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTCharArrayRegion.cpp; sourceTree = "<group>"; };
+		63D86384156D3622004440D9 /* DTCharArrayRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCharArrayRegion.h; sourceTree = "<group>"; };
+		63D86385156D3622004440D9 /* DTDoubleArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTDoubleArray.cpp; sourceTree = "<group>"; };
+		63D86386156D3622004440D9 /* DTDoubleArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDoubleArray.h; sourceTree = "<group>"; };
+		63D86387156D3622004440D9 /* DTDoubleArrayOperators.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTDoubleArrayOperators.cpp; sourceTree = "<group>"; };
+		63D86388156D3622004440D9 /* DTDoubleArrayOperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDoubleArrayOperators.h; sourceTree = "<group>"; };
+		63D86389156D3622004440D9 /* DTDoubleArrayRegion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTDoubleArrayRegion.cpp; sourceTree = "<group>"; };
+		63D8638A156D3622004440D9 /* DTDoubleArrayRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDoubleArrayRegion.h; sourceTree = "<group>"; };
+		63D8638B156D3622004440D9 /* DTDoubleComplexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTDoubleComplexArray.cpp; sourceTree = "<group>"; };
+		63D8638C156D3622004440D9 /* DTDoubleComplexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDoubleComplexArray.h; sourceTree = "<group>"; };
+		63D8638D156D3622004440D9 /* DTFloatArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTFloatArray.cpp; sourceTree = "<group>"; };
+		63D8638E156D3622004440D9 /* DTFloatArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFloatArray.h; sourceTree = "<group>"; };
+		63D8638F156D3622004440D9 /* DTFloatArrayOperators.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTFloatArrayOperators.cpp; sourceTree = "<group>"; };
+		63D86390156D3622004440D9 /* DTFloatArrayOperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFloatArrayOperators.h; sourceTree = "<group>"; };
+		63D86391156D3622004440D9 /* DTFloatArrayRegion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTFloatArrayRegion.cpp; sourceTree = "<group>"; };
+		63D86392156D3622004440D9 /* DTFloatArrayRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFloatArrayRegion.h; sourceTree = "<group>"; };
+		63D86393156D3622004440D9 /* DTIndex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTIndex.cpp; sourceTree = "<group>"; };
+		63D86394156D3622004440D9 /* DTIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIndex.h; sourceTree = "<group>"; };
+		63D86395156D3622004440D9 /* DTIntArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTIntArray.cpp; sourceTree = "<group>"; };
+		63D86396156D3622004440D9 /* DTIntArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIntArray.h; sourceTree = "<group>"; };
+		63D86397156D3622004440D9 /* DTIntArrayOperators.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTIntArrayOperators.cpp; sourceTree = "<group>"; };
+		63D86398156D3622004440D9 /* DTIntArrayOperators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIntArrayOperators.h; sourceTree = "<group>"; };
+		63D86399156D3622004440D9 /* DTIntArrayRegion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTIntArrayRegion.cpp; sourceTree = "<group>"; };
+		63D8639A156D3622004440D9 /* DTIntArrayRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTIntArrayRegion.h; sourceTree = "<group>"; };
+		63D8639B156D3622004440D9 /* DTShortIntArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTShortIntArray.cpp; sourceTree = "<group>"; };
+		63D8639C156D3622004440D9 /* DTShortIntArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTShortIntArray.h; sourceTree = "<group>"; };
+		63D8639D156D3622004440D9 /* DTShortIntArrayRegion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTShortIntArrayRegion.cpp; sourceTree = "<group>"; };
+		63D8639E156D3622004440D9 /* DTShortIntArrayRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTShortIntArrayRegion.h; sourceTree = "<group>"; };
+		63D8639F156D3622004440D9 /* DTUCharArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTUCharArray.cpp; sourceTree = "<group>"; };
+		63D863A0156D3622004440D9 /* DTUCharArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTUCharArray.h; sourceTree = "<group>"; };
+		63D863A1156D3622004440D9 /* DTUCharArrayRegion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTUCharArrayRegion.cpp; sourceTree = "<group>"; };
+		63D863A2156D3622004440D9 /* DTUCharArrayRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTUCharArrayRegion.h; sourceTree = "<group>"; };
+		63D863A3156D3622004440D9 /* DTUShortIntArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTUShortIntArray.cpp; sourceTree = "<group>"; };
+		63D863A4156D3622004440D9 /* DTUShortIntArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTUShortIntArray.h; sourceTree = "<group>"; };
+		63D863A5156D3622004440D9 /* DTUShortIntArrayRegion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTUShortIntArrayRegion.cpp; sourceTree = "<group>"; };
+		63D863A6156D3622004440D9 /* DTUShortIntArrayRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTUShortIntArrayRegion.h; sourceTree = "<group>"; };
+		63D863A8156D3622004440D9 /* DTDataContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTDataContainer.cpp; sourceTree = "<group>"; };
+		63D863A9156D3622004440D9 /* DTDataContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDataContainer.h; sourceTree = "<group>"; };
+		63D863AA156D3622004440D9 /* DTDataFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTDataFile.cpp; sourceTree = "<group>"; };
+		63D863AB156D3622004440D9 /* DTDataFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDataFile.h; sourceTree = "<group>"; };
+		63D863AC156D3622004440D9 /* DTDataStorage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTDataStorage.cpp; sourceTree = "<group>"; };
+		63D863AD156D3622004440D9 /* DTDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDataStorage.h; sourceTree = "<group>"; };
+		63D863AE156D3622004440D9 /* DTEndianSwap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTEndianSwap.cpp; sourceTree = "<group>"; };
+		63D863AF156D3622004440D9 /* DTEndianSwap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTEndianSwap.h; sourceTree = "<group>"; };
+		63D863B0156D3622004440D9 /* DTFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTFile.cpp; sourceTree = "<group>"; };
+		63D863B1156D3622004440D9 /* DTFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFile.h; sourceTree = "<group>"; };
+		63D863B2156D3622004440D9 /* DTLiveUpdate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTLiveUpdate.cpp; sourceTree = "<group>"; };
+		63D863B3156D3622004440D9 /* DTLiveUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTLiveUpdate.h; sourceTree = "<group>"; };
+		63D863B4156D3622004440D9 /* DTLiveUpdateStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTLiveUpdateStorage.h; sourceTree = "<group>"; };
+		63D863B5156D3622004440D9 /* DTMatlabDataFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMatlabDataFile.cpp; sourceTree = "<group>"; };
+		63D863B6156D3622004440D9 /* DTMatlabDataFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMatlabDataFile.h; sourceTree = "<group>"; };
+		63D863B7156D3622004440D9 /* DTSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSource.h; sourceTree = "<group>"; };
+		63D863BA156D3622004440D9 /* DTSeriesArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesArray.cpp; sourceTree = "<group>"; };
+		63D863BB156D3622004440D9 /* DTSeriesArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesArray.h; sourceTree = "<group>"; };
+		63D863BC156D3622004440D9 /* DTSeriesGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesGroup.h; sourceTree = "<group>"; };
+		63D863BD156D3622004440D9 /* DTSeriesNumberList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesNumberList.cpp; sourceTree = "<group>"; };
+		63D863BE156D3622004440D9 /* DTSeriesNumberList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesNumberList.h; sourceTree = "<group>"; };
+		63D863BF156D3622004440D9 /* DTSeriesOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesOf.h; sourceTree = "<group>"; };
+		63D863C0156D3622004440D9 /* DTSeriesRealNumber.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesRealNumber.cpp; sourceTree = "<group>"; };
+		63D863C1156D3622004440D9 /* DTSeriesRealNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesRealNumber.h; sourceTree = "<group>"; };
+		63D863C2156D3622004440D9 /* DTSeriesString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesString.cpp; sourceTree = "<group>"; };
+		63D863C3156D3622004440D9 /* DTSeriesString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesString.h; sourceTree = "<group>"; };
+		63D863C4156D3622004440D9 /* DTSeriesStringList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesStringList.cpp; sourceTree = "<group>"; };
+		63D863C5156D3622004440D9 /* DTSeriesStringList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesStringList.h; sourceTree = "<group>"; };
+		63D863C7156D3622004440D9 /* DTSeriesFunction1D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesFunction1D.cpp; sourceTree = "<group>"; };
+		63D863C8156D3622004440D9 /* DTSeriesFunction1D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesFunction1D.h; sourceTree = "<group>"; };
+		63D863C9156D3622004440D9 /* DTSeriesPlot1D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPlot1D.cpp; sourceTree = "<group>"; };
+		63D863CA156D3622004440D9 /* DTSeriesPlot1D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPlot1D.h; sourceTree = "<group>"; };
+		63D863CB156D3622004440D9 /* DTSeriesRegion1D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesRegion1D.cpp; sourceTree = "<group>"; };
+		63D863CC156D3622004440D9 /* DTSeriesRegion1D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesRegion1D.h; sourceTree = "<group>"; };
+		63D863CE156D3622004440D9 /* DTSeriesBitmap2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesBitmap2D.cpp; sourceTree = "<group>"; };
+		63D863CF156D3622004440D9 /* DTSeriesBitmap2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesBitmap2D.h; sourceTree = "<group>"; };
+		63D863D0156D3622004440D9 /* DTSeriesFunction2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesFunction2D.cpp; sourceTree = "<group>"; };
+		63D863D1156D3622004440D9 /* DTSeriesFunction2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesFunction2D.h; sourceTree = "<group>"; };
+		63D863D2156D3622004440D9 /* DTSeriesMesh2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesMesh2D.cpp; sourceTree = "<group>"; };
+		63D863D3156D3622004440D9 /* DTSeriesMesh2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesMesh2D.h; sourceTree = "<group>"; };
+		63D863D4156D3622004440D9 /* DTSeriesMesh2DGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesMesh2DGrid.cpp; sourceTree = "<group>"; };
+		63D863D5156D3622004440D9 /* DTSeriesMesh2DGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesMesh2DGrid.h; sourceTree = "<group>"; };
+		63D863D6156D3622004440D9 /* DTSeriesPath2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPath2D.cpp; sourceTree = "<group>"; };
+		63D863D7156D3622004440D9 /* DTSeriesPath2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPath2D.h; sourceTree = "<group>"; };
+		63D863D8156D3622004440D9 /* DTSeriesPath2DValues.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPath2DValues.cpp; sourceTree = "<group>"; };
+		63D863D9156D3622004440D9 /* DTSeriesPath2DValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPath2DValues.h; sourceTree = "<group>"; };
+		63D863DA156D3622004440D9 /* DTSeriesPoint2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPoint2D.cpp; sourceTree = "<group>"; };
+		63D863DB156D3622004440D9 /* DTSeriesPoint2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPoint2D.h; sourceTree = "<group>"; };
+		63D863DC156D3622004440D9 /* DTSeriesPoint2DValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPoint2DValue.cpp; sourceTree = "<group>"; };
+		63D863DD156D3622004440D9 /* DTSeriesPoint2DValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPoint2DValue.h; sourceTree = "<group>"; };
+		63D863DE156D3622004440D9 /* DTSeriesPointCollection2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPointCollection2D.cpp; sourceTree = "<group>"; };
+		63D863DF156D3622004440D9 /* DTSeriesPointCollection2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPointCollection2D.h; sourceTree = "<group>"; };
+		63D863E0156D3622004440D9 /* DTSeriesPointValueCollection2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPointValueCollection2D.cpp; sourceTree = "<group>"; };
+		63D863E1156D3622004440D9 /* DTSeriesPointValueCollection2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPointValueCollection2D.h; sourceTree = "<group>"; };
+		63D863E2156D3622004440D9 /* DTSeriesRegion2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesRegion2D.cpp; sourceTree = "<group>"; };
+		63D863E3156D3622004440D9 /* DTSeriesRegion2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesRegion2D.h; sourceTree = "<group>"; };
+		63D863E4156D3622004440D9 /* DTSeriesStructuredMesh2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesStructuredMesh2D.cpp; sourceTree = "<group>"; };
+		63D863E5156D3622004440D9 /* DTSeriesStructuredMesh2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesStructuredMesh2D.h; sourceTree = "<group>"; };
+		63D863E6156D3622004440D9 /* DTSeriesTriangularGrid2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesTriangularGrid2D.cpp; sourceTree = "<group>"; };
+		63D863E7156D3622004440D9 /* DTSeriesTriangularGrid2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesTriangularGrid2D.h; sourceTree = "<group>"; };
+		63D863E8156D3622004440D9 /* DTSeriesTriangularMesh2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesTriangularMesh2D.cpp; sourceTree = "<group>"; };
+		63D863E9156D3622004440D9 /* DTSeriesTriangularMesh2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesTriangularMesh2D.h; sourceTree = "<group>"; };
+		63D863EB156D3622004440D9 /* DTSeriesFunction3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesFunction3D.cpp; sourceTree = "<group>"; };
+		63D863EC156D3622004440D9 /* DTSeriesFunction3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesFunction3D.h; sourceTree = "<group>"; };
+		63D863ED156D3622004440D9 /* DTSeriesMesh3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesMesh3D.cpp; sourceTree = "<group>"; };
+		63D863EE156D3622004440D9 /* DTSeriesMesh3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesMesh3D.h; sourceTree = "<group>"; };
+		63D863EF156D3622004440D9 /* DTSeriesMesh3DGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesMesh3DGrid.cpp; sourceTree = "<group>"; };
+		63D863F0156D3622004440D9 /* DTSeriesMesh3DGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesMesh3DGrid.h; sourceTree = "<group>"; };
+		63D863F1156D3622004440D9 /* DTSeriesPath3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPath3D.cpp; sourceTree = "<group>"; };
+		63D863F2156D3622004440D9 /* DTSeriesPath3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPath3D.h; sourceTree = "<group>"; };
+		63D863F3156D3622004440D9 /* DTSeriesPath3DValues.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPath3DValues.cpp; sourceTree = "<group>"; };
+		63D863F4156D3622004440D9 /* DTSeriesPath3DValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPath3DValues.h; sourceTree = "<group>"; };
+		63D863F5156D3622004440D9 /* DTSeriesPoint3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPoint3D.cpp; sourceTree = "<group>"; };
+		63D863F6156D3622004440D9 /* DTSeriesPoint3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPoint3D.h; sourceTree = "<group>"; };
+		63D863F7156D3622004440D9 /* DTSeriesPoint3DValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPoint3DValue.cpp; sourceTree = "<group>"; };
+		63D863F8156D3622004440D9 /* DTSeriesPoint3DValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPoint3DValue.h; sourceTree = "<group>"; };
+		63D863F9156D3622004440D9 /* DTSeriesPointCollection3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPointCollection3D.cpp; sourceTree = "<group>"; };
+		63D863FA156D3622004440D9 /* DTSeriesPointCollection3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPointCollection3D.h; sourceTree = "<group>"; };
+		63D863FB156D3622004440D9 /* DTSeriesPointValueCollection3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPointValueCollection3D.cpp; sourceTree = "<group>"; };
+		63D863FC156D3622004440D9 /* DTSeriesPointValueCollection3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPointValueCollection3D.h; sourceTree = "<group>"; };
+		63D863FD156D3622004440D9 /* DTSeriesPointVector3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesPointVector3D.cpp; sourceTree = "<group>"; };
+		63D863FE156D3622004440D9 /* DTSeriesPointVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesPointVector3D.h; sourceTree = "<group>"; };
+		63D863FF156D3622004440D9 /* DTSeriesRegion3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesRegion3D.cpp; sourceTree = "<group>"; };
+		63D86400156D3622004440D9 /* DTSeriesRegion3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesRegion3D.h; sourceTree = "<group>"; };
+		63D86401156D3622004440D9 /* DTSeriesSurface3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesSurface3D.cpp; sourceTree = "<group>"; };
+		63D86402156D3622004440D9 /* DTSeriesSurface3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesSurface3D.h; sourceTree = "<group>"; };
+		63D86403156D3622004440D9 /* DTSeriesSurfaceCoordinates3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesSurfaceCoordinates3D.cpp; sourceTree = "<group>"; };
+		63D86404156D3622004440D9 /* DTSeriesSurfaceCoordinates3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesSurfaceCoordinates3D.h; sourceTree = "<group>"; };
+		63D86405156D3622004440D9 /* DTSeriesSurfaceTexture3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesSurfaceTexture3D.cpp; sourceTree = "<group>"; };
+		63D86406156D3622004440D9 /* DTSeriesSurfaceTexture3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesSurfaceTexture3D.h; sourceTree = "<group>"; };
+		63D86407156D3622004440D9 /* DTSeriesSurfaceValues3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesSurfaceValues3D.cpp; sourceTree = "<group>"; };
+		63D86408156D3622004440D9 /* DTSeriesSurfaceValues3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesSurfaceValues3D.h; sourceTree = "<group>"; };
+		63D86409156D3622004440D9 /* DTSeriesTetrahedralGrid3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesTetrahedralGrid3D.cpp; sourceTree = "<group>"; };
+		63D8640A156D3622004440D9 /* DTSeriesTetrahedralGrid3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesTetrahedralGrid3D.h; sourceTree = "<group>"; };
+		63D8640B156D3622004440D9 /* DTSeriesTetrahedralMesh3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesTetrahedralMesh3D.cpp; sourceTree = "<group>"; };
+		63D8640C156D3622004440D9 /* DTSeriesTetrahedralMesh3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesTetrahedralMesh3D.h; sourceTree = "<group>"; };
+		63D8640D156D3622004440D9 /* DTSeriesTetrahedralVectorField3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesTetrahedralVectorField3D.cpp; sourceTree = "<group>"; };
+		63D8640E156D3622004440D9 /* DTSeriesTetrahedralVectorField3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesTetrahedralVectorField3D.h; sourceTree = "<group>"; };
+		63D8640F156D3622004440D9 /* DTSeriesVectorCollection3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesVectorCollection3D.cpp; sourceTree = "<group>"; };
+		63D86410156D3622004440D9 /* DTSeriesVectorCollection3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesVectorCollection3D.h; sourceTree = "<group>"; };
+		63D86411156D3622004440D9 /* DTSeriesVectorField3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesVectorField3D.cpp; sourceTree = "<group>"; };
+		63D86412156D3622004440D9 /* DTSeriesVectorField3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesVectorField3D.h; sourceTree = "<group>"; };
+		63D86413156D3622004440D9 /* DTSeries.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeries.cpp; sourceTree = "<group>"; };
+		63D86414156D3622004440D9 /* DTSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeries.h; sourceTree = "<group>"; };
+		63D86415156D3622004440D9 /* DTSeriesTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesTemplates.h; sourceTree = "<group>"; };
+		63D86417156D3622004440D9 /* DTArguments.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTArguments.cpp; sourceTree = "<group>"; };
+		63D86418156D3622004440D9 /* DTArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTArguments.h; sourceTree = "<group>"; };
+		63D86419156D3622004440D9 /* DTDictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTDictionary.cpp; sourceTree = "<group>"; };
+		63D8641A156D3622004440D9 /* DTDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDictionary.h; sourceTree = "<group>"; };
+		63D8641B156D3622004440D9 /* DTError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTError.cpp; sourceTree = "<group>"; };
+		63D8641C156D3622004440D9 /* DTError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTError.h; sourceTree = "<group>"; };
+		63D8641D156D3622004440D9 /* DTList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTList.h; sourceTree = "<group>"; };
+		63D8641E156D3622004440D9 /* DTLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTLock.h; sourceTree = "<group>"; };
+		63D8641F156D3622004440D9 /* DTLocked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTLocked.h; sourceTree = "<group>"; };
+		63D86420156D3622004440D9 /* DTPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPointer.h; sourceTree = "<group>"; };
+		63D86421156D3622004440D9 /* DTProgress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTProgress.cpp; sourceTree = "<group>"; };
+		63D86422156D3622004440D9 /* DTProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTProgress.h; sourceTree = "<group>"; };
+		63D86423156D3622004440D9 /* DTSaveError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSaveError.cpp; sourceTree = "<group>"; };
+		63D86424156D3622004440D9 /* DTSaveError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSaveError.h; sourceTree = "<group>"; };
+		63D86425156D3622004440D9 /* DTThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTThread.cpp; sourceTree = "<group>"; };
+		63D86426156D3622004440D9 /* DTThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTThread.h; sourceTree = "<group>"; };
+		63D86427156D3622004440D9 /* DTTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTimer.h; sourceTree = "<group>"; };
+		63D86428156D3622004440D9 /* DTUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTUtilities.cpp; sourceTree = "<group>"; };
+		63D86429156D3622004440D9 /* DTUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTUtilities.h; sourceTree = "<group>"; };
+		63D8642B156D3622004440D9 /* DTRandom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTRandom.cpp; sourceTree = "<group>"; };
+		63D8642C156D3622004440D9 /* DTRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRandom.h; sourceTree = "<group>"; };
+		63D8642F156D3622004440D9 /* DTAudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTAudio.cpp; sourceTree = "<group>"; };
+		63D86430156D3622004440D9 /* DTAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAudio.h; sourceTree = "<group>"; };
+		63D86431156D3622004440D9 /* DTColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTColor.cpp; sourceTree = "<group>"; };
+		63D86432156D3622004440D9 /* DTColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTColor.h; sourceTree = "<group>"; };
+		63D86433156D3622004440D9 /* DTColorList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTColorList.cpp; sourceTree = "<group>"; };
+		63D86434156D3622004440D9 /* DTColorList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTColorList.h; sourceTree = "<group>"; };
+		63D86435156D3622004440D9 /* DTStringList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTStringList.cpp; sourceTree = "<group>"; };
+		63D86436156D3622004440D9 /* DTStringList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStringList.h; sourceTree = "<group>"; };
+		63D86438156D3622004440D9 /* DTFunction1D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTFunction1D.cpp; sourceTree = "<group>"; };
+		63D86439156D3622004440D9 /* DTFunction1D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFunction1D.h; sourceTree = "<group>"; };
+		63D8643A156D3622004440D9 /* DTMesh1DGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMesh1DGrid.cpp; sourceTree = "<group>"; };
+		63D8643B156D3622004440D9 /* DTMesh1DGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMesh1DGrid.h; sourceTree = "<group>"; };
+		63D8643C156D3622004440D9 /* DTPlot1D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPlot1D.cpp; sourceTree = "<group>"; };
+		63D8643D156D3622004440D9 /* DTPlot1D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPlot1D.h; sourceTree = "<group>"; };
+		63D8643E156D3622004440D9 /* DTRegion1D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTRegion1D.cpp; sourceTree = "<group>"; };
+		63D8643F156D3622004440D9 /* DTRegion1D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRegion1D.h; sourceTree = "<group>"; };
+		63D86441156D3622004440D9 /* DTBitmap2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTBitmap2D.cpp; sourceTree = "<group>"; };
+		63D86442156D3622004440D9 /* DTBitmap2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBitmap2D.h; sourceTree = "<group>"; };
+		63D86443156D3622004440D9 /* DTCombinedMesh2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTCombinedMesh2D.cpp; sourceTree = "<group>"; };
+		63D86444156D3622004440D9 /* DTCombinedMesh2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCombinedMesh2D.h; sourceTree = "<group>"; };
+		63D86445156D3622004440D9 /* DTCoordinateLine2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTCoordinateLine2D.cpp; sourceTree = "<group>"; };
+		63D86446156D3622004440D9 /* DTCoordinateLine2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCoordinateLine2D.h; sourceTree = "<group>"; };
+		63D86447156D3622004440D9 /* DTFunction2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTFunction2D.cpp; sourceTree = "<group>"; };
+		63D86448156D3622004440D9 /* DTFunction2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFunction2D.h; sourceTree = "<group>"; };
+		63D86449156D3622004440D9 /* DTMesh2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMesh2D.cpp; sourceTree = "<group>"; };
+		63D8644A156D3622004440D9 /* DTMesh2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMesh2D.h; sourceTree = "<group>"; };
+		63D8644B156D3622004440D9 /* DTMesh2DBanded.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMesh2DBanded.cpp; sourceTree = "<group>"; };
+		63D8644C156D3622004440D9 /* DTMesh2DBanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMesh2DBanded.h; sourceTree = "<group>"; };
+		63D8644D156D3622004440D9 /* DTMesh2DGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMesh2DGrid.cpp; sourceTree = "<group>"; };
+		63D8644E156D3622004440D9 /* DTMesh2DGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMesh2DGrid.h; sourceTree = "<group>"; };
+		63D8644F156D3622004440D9 /* DTMutableDoubleMesh2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMutableDoubleMesh2D.cpp; sourceTree = "<group>"; };
+		63D86450156D3622004440D9 /* DTMutableDoubleMesh2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMutableDoubleMesh2D.h; sourceTree = "<group>"; };
+		63D86451156D3622004440D9 /* DTPath2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPath2D.cpp; sourceTree = "<group>"; };
+		63D86452156D3622004440D9 /* DTPath2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPath2D.h; sourceTree = "<group>"; };
+		63D86453156D3622004440D9 /* DTPath2DValues.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPath2DValues.cpp; sourceTree = "<group>"; };
+		63D86454156D3622004440D9 /* DTPath2DValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPath2DValues.h; sourceTree = "<group>"; };
+		63D86455156D3622004440D9 /* DTPoint2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPoint2D.cpp; sourceTree = "<group>"; };
+		63D86456156D3622004440D9 /* DTPoint2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPoint2D.h; sourceTree = "<group>"; };
+		63D86457156D3622004440D9 /* DTPoint2DValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPoint2DValue.cpp; sourceTree = "<group>"; };
+		63D86458156D3622004440D9 /* DTPoint2DValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPoint2DValue.h; sourceTree = "<group>"; };
+		63D86459156D3622004440D9 /* DTPointCollection2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPointCollection2D.cpp; sourceTree = "<group>"; };
+		63D8645A156D3622004440D9 /* DTPointCollection2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPointCollection2D.h; sourceTree = "<group>"; };
+		63D8645B156D3622004440D9 /* DTPointValueCollection2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPointValueCollection2D.cpp; sourceTree = "<group>"; };
+		63D8645C156D3622004440D9 /* DTPointValueCollection2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPointValueCollection2D.h; sourceTree = "<group>"; };
+		63D8645D156D3622004440D9 /* DTPointVector2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPointVector2D.cpp; sourceTree = "<group>"; };
+		63D8645E156D3622004440D9 /* DTPointVector2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPointVector2D.h; sourceTree = "<group>"; };
+		63D8645F156D3622004440D9 /* DTRegion2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTRegion2D.cpp; sourceTree = "<group>"; };
+		63D86460156D3622004440D9 /* DTRegion2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRegion2D.h; sourceTree = "<group>"; };
+		63D86461156D3622004440D9 /* DTShiftScale2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTShiftScale2D.cpp; sourceTree = "<group>"; };
+		63D86462156D3622004440D9 /* DTShiftScale2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTShiftScale2D.h; sourceTree = "<group>"; };
+		63D86463156D3622004440D9 /* DTStructuredGrid2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTStructuredGrid2D.cpp; sourceTree = "<group>"; };
+		63D86464156D3622004440D9 /* DTStructuredGrid2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStructuredGrid2D.h; sourceTree = "<group>"; };
+		63D86465156D3622004440D9 /* DTStructuredMesh2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTStructuredMesh2D.cpp; sourceTree = "<group>"; };
+		63D86466156D3622004440D9 /* DTStructuredMesh2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStructuredMesh2D.h; sourceTree = "<group>"; };
+		63D86467156D3622004440D9 /* DTStructuredVectorField2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTStructuredVectorField2D.cpp; sourceTree = "<group>"; };
+		63D86468156D3622004440D9 /* DTStructuredVectorField2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStructuredVectorField2D.h; sourceTree = "<group>"; };
+		63D86469156D3622004440D9 /* DTTriangularGrid2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTTriangularGrid2D.cpp; sourceTree = "<group>"; };
+		63D8646A156D3622004440D9 /* DTTriangularGrid2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTriangularGrid2D.h; sourceTree = "<group>"; };
+		63D8646B156D3622004440D9 /* DTTriangularMesh2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTTriangularMesh2D.cpp; sourceTree = "<group>"; };
+		63D8646C156D3622004440D9 /* DTTriangularMesh2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTriangularMesh2D.h; sourceTree = "<group>"; };
+		63D8646D156D3622004440D9 /* DTTriangularVectorField2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTTriangularVectorField2D.cpp; sourceTree = "<group>"; };
+		63D8646E156D3622004440D9 /* DTTriangularVectorField2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTriangularVectorField2D.h; sourceTree = "<group>"; };
+		63D8646F156D3622004440D9 /* DTVector2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTVector2D.h; sourceTree = "<group>"; };
+		63D86470156D3622004440D9 /* DTVectorCollection2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTVectorCollection2D.cpp; sourceTree = "<group>"; };
+		63D86471156D3622004440D9 /* DTVectorCollection2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTVectorCollection2D.h; sourceTree = "<group>"; };
+		63D86472156D3622004440D9 /* DTVectorField2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTVectorField2D.cpp; sourceTree = "<group>"; };
+		63D86473156D3622004440D9 /* DTVectorField2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTVectorField2D.h; sourceTree = "<group>"; };
+		63D86475156D3622004440D9 /* DTAtomCollection3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTAtomCollection3D.cpp; sourceTree = "<group>"; };
+		63D86476156D3622004440D9 /* DTAtomCollection3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTAtomCollection3D.h; sourceTree = "<group>"; };
+		63D86477156D3622004440D9 /* DTCoordinatePlane3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTCoordinatePlane3D.cpp; sourceTree = "<group>"; };
+		63D86478156D3622004440D9 /* DTCoordinatePlane3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCoordinatePlane3D.h; sourceTree = "<group>"; };
+		63D86479156D3622004440D9 /* DTFunction3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTFunction3D.cpp; sourceTree = "<group>"; };
+		63D8647A156D3622004440D9 /* DTFunction3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFunction3D.h; sourceTree = "<group>"; };
+		63D8647B156D3622004440D9 /* DTMesh3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMesh3D.cpp; sourceTree = "<group>"; };
+		63D8647C156D3622004440D9 /* DTMesh3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMesh3D.h; sourceTree = "<group>"; };
+		63D8647D156D3622004440D9 /* DTMesh3DGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMesh3DGrid.cpp; sourceTree = "<group>"; };
+		63D8647E156D3622004440D9 /* DTMesh3DGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMesh3DGrid.h; sourceTree = "<group>"; };
+		63D86481156D3622004440D9 /* DTPath3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPath3D.cpp; sourceTree = "<group>"; };
+		63D86482156D3622004440D9 /* DTPath3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPath3D.h; sourceTree = "<group>"; };
+		63D86483156D3622004440D9 /* DTPath3DValues.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPath3DValues.cpp; sourceTree = "<group>"; };
+		63D86484156D3622004440D9 /* DTPath3DValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPath3DValues.h; sourceTree = "<group>"; };
+		63D86485156D3622004440D9 /* DTPlane3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPlane3D.cpp; sourceTree = "<group>"; };
+		63D86486156D3622004440D9 /* DTPlane3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPlane3D.h; sourceTree = "<group>"; };
+		63D86487156D3622004440D9 /* DTPoint3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPoint3D.cpp; sourceTree = "<group>"; };
+		63D86488156D3622004440D9 /* DTPoint3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPoint3D.h; sourceTree = "<group>"; };
+		63D86489156D3622004440D9 /* DTPoint3DValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPoint3DValue.cpp; sourceTree = "<group>"; };
+		63D8648A156D3622004440D9 /* DTPoint3DValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPoint3DValue.h; sourceTree = "<group>"; };
+		63D8648B156D3622004440D9 /* DTPointCollection3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPointCollection3D.cpp; sourceTree = "<group>"; };
+		63D8648C156D3622004440D9 /* DTPointCollection3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPointCollection3D.h; sourceTree = "<group>"; };
+		63D8648D156D3622004440D9 /* DTPointValueCollection3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPointValueCollection3D.cpp; sourceTree = "<group>"; };
+		63D8648E156D3622004440D9 /* DTPointValueCollection3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPointValueCollection3D.h; sourceTree = "<group>"; };
+		63D8648F156D3622004440D9 /* DTPointVector3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPointVector3D.cpp; sourceTree = "<group>"; };
+		63D86490156D3622004440D9 /* DTPointVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPointVector3D.h; sourceTree = "<group>"; };
+		63D86491156D3622004440D9 /* DTPrismGrid3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPrismGrid3D.cpp; sourceTree = "<group>"; };
+		63D86492156D3622004440D9 /* DTPrismGrid3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPrismGrid3D.h; sourceTree = "<group>"; };
+		63D86493156D3622004440D9 /* DTPrismMesh3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPrismMesh3D.cpp; sourceTree = "<group>"; };
+		63D86494156D3622004440D9 /* DTPrismMesh3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPrismMesh3D.h; sourceTree = "<group>"; };
+		63D86495156D3622004440D9 /* DTPrismVectorField3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTPrismVectorField3D.cpp; sourceTree = "<group>"; };
+		63D86496156D3622004440D9 /* DTPrismVectorField3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPrismVectorField3D.h; sourceTree = "<group>"; };
+		63D86497156D3622004440D9 /* DTRegion3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTRegion3D.cpp; sourceTree = "<group>"; };
+		63D86498156D3622004440D9 /* DTRegion3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRegion3D.h; sourceTree = "<group>"; };
+		63D86499156D3622004440D9 /* DTShiftScale3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTShiftScale3D.cpp; sourceTree = "<group>"; };
+		63D8649A156D3622004440D9 /* DTShiftScale3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTShiftScale3D.h; sourceTree = "<group>"; };
+		63D8649B156D3622004440D9 /* DTStructuredGrid3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTStructuredGrid3D.cpp; sourceTree = "<group>"; };
+		63D8649C156D3622004440D9 /* DTStructuredGrid3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStructuredGrid3D.h; sourceTree = "<group>"; };
+		63D8649D156D3622004440D9 /* DTStructuredMesh3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTStructuredMesh3D.cpp; sourceTree = "<group>"; };
+		63D8649E156D3622004440D9 /* DTStructuredMesh3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStructuredMesh3D.h; sourceTree = "<group>"; };
+		63D8649F156D3622004440D9 /* DTStructuredVectorField3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTStructuredVectorField3D.cpp; sourceTree = "<group>"; };
+		63D864A0156D3622004440D9 /* DTStructuredVectorField3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStructuredVectorField3D.h; sourceTree = "<group>"; };
+		63D864A1156D3622004440D9 /* DTSurface3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSurface3D.cpp; sourceTree = "<group>"; };
+		63D864A2156D3622004440D9 /* DTSurface3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSurface3D.h; sourceTree = "<group>"; };
+		63D864A3156D3622004440D9 /* DTSurfaceCoordinates3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSurfaceCoordinates3D.cpp; sourceTree = "<group>"; };
+		63D864A4156D3622004440D9 /* DTSurfaceCoordinates3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSurfaceCoordinates3D.h; sourceTree = "<group>"; };
+		63D864A5156D3622004440D9 /* DTSurfaceTexture3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSurfaceTexture3D.cpp; sourceTree = "<group>"; };
+		63D864A6156D3622004440D9 /* DTSurfaceTexture3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSurfaceTexture3D.h; sourceTree = "<group>"; };
+		63D864A7156D3622004440D9 /* DTSurfaceValues3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSurfaceValues3D.cpp; sourceTree = "<group>"; };
+		63D864A8156D3622004440D9 /* DTSurfaceValues3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSurfaceValues3D.h; sourceTree = "<group>"; };
+		63D864A9156D3622004440D9 /* DTTetrahedralGrid3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTTetrahedralGrid3D.cpp; sourceTree = "<group>"; };
+		63D864AA156D3622004440D9 /* DTTetrahedralGrid3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTetrahedralGrid3D.h; sourceTree = "<group>"; };
+		63D864AB156D3622004440D9 /* DTTetrahedralMesh3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTTetrahedralMesh3D.cpp; sourceTree = "<group>"; };
+		63D864AC156D3622004440D9 /* DTTetrahedralMesh3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTetrahedralMesh3D.h; sourceTree = "<group>"; };
+		63D864AD156D3622004440D9 /* DTTetrahedralVectorField3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTTetrahedralVectorField3D.cpp; sourceTree = "<group>"; };
+		63D864AE156D3622004440D9 /* DTTetrahedralVectorField3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTetrahedralVectorField3D.h; sourceTree = "<group>"; };
+		63D864AF156D3622004440D9 /* DTTransform3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTTransform3D.cpp; sourceTree = "<group>"; };
+		63D864B0156D3622004440D9 /* DTTransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTransform3D.h; sourceTree = "<group>"; };
+		63D864B1156D3622004440D9 /* DTVector3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTVector3D.h; sourceTree = "<group>"; };
+		63D864B2156D3622004440D9 /* DTVectorCollection3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTVectorCollection3D.cpp; sourceTree = "<group>"; };
+		63D864B3156D3622004440D9 /* DTVectorCollection3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTVectorCollection3D.h; sourceTree = "<group>"; };
+		63D864B4156D3622004440D9 /* DTVectorField3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTVectorField3D.cpp; sourceTree = "<group>"; };
+		63D864B5156D3622004440D9 /* DTVectorField3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTVectorField3D.h; sourceTree = "<group>"; };
+		63D864B7156D3622004440D9 /* DTFunction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTFunction.cpp; sourceTree = "<group>"; };
+		63D864B8156D3622004440D9 /* DTFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFunction.h; sourceTree = "<group>"; };
+		63D864B9156D3622004440D9 /* DTFunctionFit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTFunctionFit.cpp; sourceTree = "<group>"; };
+		63D864BA156D3622004440D9 /* DTFunctionFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFunctionFit.h; sourceTree = "<group>"; };
+		63D864BB156D3622004440D9 /* DTMask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMask.cpp; sourceTree = "<group>"; };
+		63D864BC156D3622004440D9 /* DTMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMask.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63D86356156D2DD2004440D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63D8634E156D2DD2004440D9 = {
+			isa = PBXGroup;
+			children = (
+				63D8635C156D2DD2004440D9 /* swarm */,
+				63D8637A156D3622004440D9 /* DTSource */,
+				63D8635A156D2DD2004440D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63D8635A156D2DD2004440D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63D86359156D2DD2004440D9 /* swarm */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63D8635C156D2DD2004440D9 /* swarm */ = {
+			isa = PBXGroup;
+			children = (
+				63D8635D156D2DD2004440D9 /* main.cpp */,
+				63D8635F156D2DD2004440D9 /* swarm.1 */,
+			);
+			path = "swarm";
+			sourceTree = "<group>";
+		};
+		63D8637A156D3622004440D9 /* DTSource */ = {
+			isa = PBXGroup;
+			children = (
+				63D8637B156D3622004440D9 /* Arrays */,
+				63D863A7156D3622004440D9 /* DataFile */,
+				63D863B7156D3622004440D9 /* DTSource.h */,
+				63D863B8156D3622004440D9 /* Series */,
+				63D86416156D3622004440D9 /* Support */,
+				63D8642A156D3622004440D9 /* Utilities */,
+				63D8642D156D3622004440D9 /* Variables */,
+			);
+			name = DTSource;
+			path = /Applications/DataTank.app/Contents/Library/DTSource;
+			sourceTree = "<absolute>";
+		};
+		63D8637B156D3622004440D9 /* Arrays */ = {
+			isa = PBXGroup;
+			children = (
+				63D8637C156D3622004440D9 /* DTArray.h */,
+				63D8637D156D3622004440D9 /* DTArrayConversion.cpp */,
+				63D8637E156D3622004440D9 /* DTArrayConversion.h */,
+				63D8637F156D3622004440D9 /* DTArrayRegionTemplates.h */,
+				63D86380156D3622004440D9 /* DTArrayTemplates.h */,
+				63D86381156D3622004440D9 /* DTCharArray.cpp */,
+				63D86382156D3622004440D9 /* DTCharArray.h */,
+				63D86383156D3622004440D9 /* DTCharArrayRegion.cpp */,
+				63D86384156D3622004440D9 /* DTCharArrayRegion.h */,
+				63D86385156D3622004440D9 /* DTDoubleArray.cpp */,
+				63D86386156D3622004440D9 /* DTDoubleArray.h */,
+				63D86387156D3622004440D9 /* DTDoubleArrayOperators.cpp */,
+				63D86388156D3622004440D9 /* DTDoubleArrayOperators.h */,
+				63D86389156D3622004440D9 /* DTDoubleArrayRegion.cpp */,
+				63D8638A156D3622004440D9 /* DTDoubleArrayRegion.h */,
+				63D8638B156D3622004440D9 /* DTDoubleComplexArray.cpp */,
+				63D8638C156D3622004440D9 /* DTDoubleComplexArray.h */,
+				63D8638D156D3622004440D9 /* DTFloatArray.cpp */,
+				63D8638E156D3622004440D9 /* DTFloatArray.h */,
+				63D8638F156D3622004440D9 /* DTFloatArrayOperators.cpp */,
+				63D86390156D3622004440D9 /* DTFloatArrayOperators.h */,
+				63D86391156D3622004440D9 /* DTFloatArrayRegion.cpp */,
+				63D86392156D3622004440D9 /* DTFloatArrayRegion.h */,
+				63D86393156D3622004440D9 /* DTIndex.cpp */,
+				63D86394156D3622004440D9 /* DTIndex.h */,
+				63D86395156D3622004440D9 /* DTIntArray.cpp */,
+				63D86396156D3622004440D9 /* DTIntArray.h */,
+				63D86397156D3622004440D9 /* DTIntArrayOperators.cpp */,
+				63D86398156D3622004440D9 /* DTIntArrayOperators.h */,
+				63D86399156D3622004440D9 /* DTIntArrayRegion.cpp */,
+				63D8639A156D3622004440D9 /* DTIntArrayRegion.h */,
+				63D8639B156D3622004440D9 /* DTShortIntArray.cpp */,
+				63D8639C156D3622004440D9 /* DTShortIntArray.h */,
+				63D8639D156D3622004440D9 /* DTShortIntArrayRegion.cpp */,
+				63D8639E156D3622004440D9 /* DTShortIntArrayRegion.h */,
+				63D8639F156D3622004440D9 /* DTUCharArray.cpp */,
+				63D863A0156D3622004440D9 /* DTUCharArray.h */,
+				63D863A1156D3622004440D9 /* DTUCharArrayRegion.cpp */,
+				63D863A2156D3622004440D9 /* DTUCharArrayRegion.h */,
+				63D863A3156D3622004440D9 /* DTUShortIntArray.cpp */,
+				63D863A4156D3622004440D9 /* DTUShortIntArray.h */,
+				63D863A5156D3622004440D9 /* DTUShortIntArrayRegion.cpp */,
+				63D863A6156D3622004440D9 /* DTUShortIntArrayRegion.h */,
+			);
+			path = Arrays;
+			sourceTree = "<group>";
+		};
+		63D863A7156D3622004440D9 /* DataFile */ = {
+			isa = PBXGroup;
+			children = (
+				63D863A8156D3622004440D9 /* DTDataContainer.cpp */,
+				63D863A9156D3622004440D9 /* DTDataContainer.h */,
+				63D863AA156D3622004440D9 /* DTDataFile.cpp */,
+				63D863AB156D3622004440D9 /* DTDataFile.h */,
+				63D863AC156D3622004440D9 /* DTDataStorage.cpp */,
+				63D863AD156D3622004440D9 /* DTDataStorage.h */,
+				63D863AE156D3622004440D9 /* DTEndianSwap.cpp */,
+				63D863AF156D3622004440D9 /* DTEndianSwap.h */,
+				63D863B0156D3622004440D9 /* DTFile.cpp */,
+				63D863B1156D3622004440D9 /* DTFile.h */,
+				63D863B2156D3622004440D9 /* DTLiveUpdate.cpp */,
+				63D863B3156D3622004440D9 /* DTLiveUpdate.h */,
+				63D863B4156D3622004440D9 /* DTLiveUpdateStorage.h */,
+				63D863B5156D3622004440D9 /* DTMatlabDataFile.cpp */,
+				63D863B6156D3622004440D9 /* DTMatlabDataFile.h */,
+			);
+			path = DataFile;
+			sourceTree = "<group>";
+		};
+		63D863B8156D3622004440D9 /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				63D863B9156D3622004440D9 /* 0D */,
+				63D863C6156D3622004440D9 /* 1D */,
+				63D863CD156D3622004440D9 /* 2D */,
+				63D863EA156D3622004440D9 /* 3D */,
+				63D86413156D3622004440D9 /* DTSeries.cpp */,
+				63D86414156D3622004440D9 /* DTSeries.h */,
+				63D86415156D3622004440D9 /* DTSeriesTemplates.h */,
+			);
+			path = Series;
+			sourceTree = "<group>";
+		};
+		63D863B9156D3622004440D9 /* 0D */ = {
+			isa = PBXGroup;
+			children = (
+				63D863BA156D3622004440D9 /* DTSeriesArray.cpp */,
+				63D863BB156D3622004440D9 /* DTSeriesArray.h */,
+				63D863BC156D3622004440D9 /* DTSeriesGroup.h */,
+				63D863BD156D3622004440D9 /* DTSeriesNumberList.cpp */,
+				63D863BE156D3622004440D9 /* DTSeriesNumberList.h */,
+				63D863BF156D3622004440D9 /* DTSeriesOf.h */,
+				63D863C0156D3622004440D9 /* DTSeriesRealNumber.cpp */,
+				63D863C1156D3622004440D9 /* DTSeriesRealNumber.h */,
+				63D863C2156D3622004440D9 /* DTSeriesString.cpp */,
+				63D863C3156D3622004440D9 /* DTSeriesString.h */,
+				63D863C4156D3622004440D9 /* DTSeriesStringList.cpp */,
+				63D863C5156D3622004440D9 /* DTSeriesStringList.h */,
+			);
+			path = 0D;
+			sourceTree = "<group>";
+		};
+		63D863C6156D3622004440D9 /* 1D */ = {
+			isa = PBXGroup;
+			children = (
+				63D863C7156D3622004440D9 /* DTSeriesFunction1D.cpp */,
+				63D863C8156D3622004440D9 /* DTSeriesFunction1D.h */,
+				63D863C9156D3622004440D9 /* DTSeriesPlot1D.cpp */,
+				63D863CA156D3622004440D9 /* DTSeriesPlot1D.h */,
+				63D863CB156D3622004440D9 /* DTSeriesRegion1D.cpp */,
+				63D863CC156D3622004440D9 /* DTSeriesRegion1D.h */,
+			);
+			path = 1D;
+			sourceTree = "<group>";
+		};
+		63D863CD156D3622004440D9 /* 2D */ = {
+			isa = PBXGroup;
+			children = (
+				63D863CE156D3622004440D9 /* DTSeriesBitmap2D.cpp */,
+				63D863CF156D3622004440D9 /* DTSeriesBitmap2D.h */,
+				63D863D0156D3622004440D9 /* DTSeriesFunction2D.cpp */,
+				63D863D1156D3622004440D9 /* DTSeriesFunction2D.h */,
+				63D863D2156D3622004440D9 /* DTSeriesMesh2D.cpp */,
+				63D863D3156D3622004440D9 /* DTSeriesMesh2D.h */,
+				63D863D4156D3622004440D9 /* DTSeriesMesh2DGrid.cpp */,
+				63D863D5156D3622004440D9 /* DTSeriesMesh2DGrid.h */,
+				63D863D6156D3622004440D9 /* DTSeriesPath2D.cpp */,
+				63D863D7156D3622004440D9 /* DTSeriesPath2D.h */,
+				63D863D8156D3622004440D9 /* DTSeriesPath2DValues.cpp */,
+				63D863D9156D3622004440D9 /* DTSeriesPath2DValues.h */,
+				63D863DA156D3622004440D9 /* DTSeriesPoint2D.cpp */,
+				63D863DB156D3622004440D9 /* DTSeriesPoint2D.h */,
+				63D863DC156D3622004440D9 /* DTSeriesPoint2DValue.cpp */,
+				63D863DD156D3622004440D9 /* DTSeriesPoint2DValue.h */,
+				63D863DE156D3622004440D9 /* DTSeriesPointCollection2D.cpp */,
+				63D863DF156D3622004440D9 /* DTSeriesPointCollection2D.h */,
+				63D863E0156D3622004440D9 /* DTSeriesPointValueCollection2D.cpp */,
+				63D863E1156D3622004440D9 /* DTSeriesPointValueCollection2D.h */,
+				63D863E2156D3622004440D9 /* DTSeriesRegion2D.cpp */,
+				63D863E3156D3622004440D9 /* DTSeriesRegion2D.h */,
+				63D863E4156D3622004440D9 /* DTSeriesStructuredMesh2D.cpp */,
+				63D863E5156D3622004440D9 /* DTSeriesStructuredMesh2D.h */,
+				63D863E6156D3622004440D9 /* DTSeriesTriangularGrid2D.cpp */,
+				63D863E7156D3622004440D9 /* DTSeriesTriangularGrid2D.h */,
+				63D863E8156D3622004440D9 /* DTSeriesTriangularMesh2D.cpp */,
+				63D863E9156D3622004440D9 /* DTSeriesTriangularMesh2D.h */,
+			);
+			path = 2D;
+			sourceTree = "<group>";
+		};
+		63D863EA156D3622004440D9 /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				63D863EB156D3622004440D9 /* DTSeriesFunction3D.cpp */,
+				63D863EC156D3622004440D9 /* DTSeriesFunction3D.h */,
+				63D863ED156D3622004440D9 /* DTSeriesMesh3D.cpp */,
+				63D863EE156D3622004440D9 /* DTSeriesMesh3D.h */,
+				63D863EF156D3622004440D9 /* DTSeriesMesh3DGrid.cpp */,
+				63D863F0156D3622004440D9 /* DTSeriesMesh3DGrid.h */,
+				63D863F1156D3622004440D9 /* DTSeriesPath3D.cpp */,
+				63D863F2156D3622004440D9 /* DTSeriesPath3D.h */,
+				63D863F3156D3622004440D9 /* DTSeriesPath3DValues.cpp */,
+				63D863F4156D3622004440D9 /* DTSeriesPath3DValues.h */,
+				63D863F5156D3622004440D9 /* DTSeriesPoint3D.cpp */,
+				63D863F6156D3622004440D9 /* DTSeriesPoint3D.h */,
+				63D863F7156D3622004440D9 /* DTSeriesPoint3DValue.cpp */,
+				63D863F8156D3622004440D9 /* DTSeriesPoint3DValue.h */,
+				63D863F9156D3622004440D9 /* DTSeriesPointCollection3D.cpp */,
+				63D863FA156D3622004440D9 /* DTSeriesPointCollection3D.h */,
+				63D863FB156D3622004440D9 /* DTSeriesPointValueCollection3D.cpp */,
+				63D863FC156D3622004440D9 /* DTSeriesPointValueCollection3D.h */,
+				63D863FD156D3622004440D9 /* DTSeriesPointVector3D.cpp */,
+				63D863FE156D3622004440D9 /* DTSeriesPointVector3D.h */,
+				63D863FF156D3622004440D9 /* DTSeriesRegion3D.cpp */,
+				63D86400156D3622004440D9 /* DTSeriesRegion3D.h */,
+				63D86401156D3622004440D9 /* DTSeriesSurface3D.cpp */,
+				63D86402156D3622004440D9 /* DTSeriesSurface3D.h */,
+				63D86403156D3622004440D9 /* DTSeriesSurfaceCoordinates3D.cpp */,
+				63D86404156D3622004440D9 /* DTSeriesSurfaceCoordinates3D.h */,
+				63D86405156D3622004440D9 /* DTSeriesSurfaceTexture3D.cpp */,
+				63D86406156D3622004440D9 /* DTSeriesSurfaceTexture3D.h */,
+				63D86407156D3622004440D9 /* DTSeriesSurfaceValues3D.cpp */,
+				63D86408156D3622004440D9 /* DTSeriesSurfaceValues3D.h */,
+				63D86409156D3622004440D9 /* DTSeriesTetrahedralGrid3D.cpp */,
+				63D8640A156D3622004440D9 /* DTSeriesTetrahedralGrid3D.h */,
+				63D8640B156D3622004440D9 /* DTSeriesTetrahedralMesh3D.cpp */,
+				63D8640C156D3622004440D9 /* DTSeriesTetrahedralMesh3D.h */,
+				63D8640D156D3622004440D9 /* DTSeriesTetrahedralVectorField3D.cpp */,
+				63D8640E156D3622004440D9 /* DTSeriesTetrahedralVectorField3D.h */,
+				63D8640F156D3622004440D9 /* DTSeriesVectorCollection3D.cpp */,
+				63D86410156D3622004440D9 /* DTSeriesVectorCollection3D.h */,
+				63D86411156D3622004440D9 /* DTSeriesVectorField3D.cpp */,
+				63D86412156D3622004440D9 /* DTSeriesVectorField3D.h */,
+			);
+			path = 3D;
+			sourceTree = "<group>";
+		};
+		63D86416156D3622004440D9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				63D86417156D3622004440D9 /* DTArguments.cpp */,
+				63D86418156D3622004440D9 /* DTArguments.h */,
+				63D86419156D3622004440D9 /* DTDictionary.cpp */,
+				63D8641A156D3622004440D9 /* DTDictionary.h */,
+				63D8641B156D3622004440D9 /* DTError.cpp */,
+				63D8641C156D3622004440D9 /* DTError.h */,
+				63D8641D156D3622004440D9 /* DTList.h */,
+				63D8641E156D3622004440D9 /* DTLock.h */,
+				63D8641F156D3622004440D9 /* DTLocked.h */,
+				63D86420156D3622004440D9 /* DTPointer.h */,
+				63D86421156D3622004440D9 /* DTProgress.cpp */,
+				63D86422156D3622004440D9 /* DTProgress.h */,
+				63D86423156D3622004440D9 /* DTSaveError.cpp */,
+				63D86424156D3622004440D9 /* DTSaveError.h */,
+				63D86425156D3622004440D9 /* DTThread.cpp */,
+				63D86426156D3622004440D9 /* DTThread.h */,
+				63D86427156D3622004440D9 /* DTTimer.h */,
+				63D86428156D3622004440D9 /* DTUtilities.cpp */,
+				63D86429156D3622004440D9 /* DTUtilities.h */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		63D8642A156D3622004440D9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				63D8642B156D3622004440D9 /* DTRandom.cpp */,
+				63D8642C156D3622004440D9 /* DTRandom.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		63D8642D156D3622004440D9 /* Variables */ = {
+			isa = PBXGroup;
+			children = (
+				63D8642E156D3622004440D9 /* 0D */,
+				63D86437156D3622004440D9 /* 1D */,
+				63D86440156D3622004440D9 /* 2D */,
+				63D86474156D3622004440D9 /* 3D */,
+				63D864B6156D3622004440D9 /* Support */,
+			);
+			path = Variables;
+			sourceTree = "<group>";
+		};
+		63D8642E156D3622004440D9 /* 0D */ = {
+			isa = PBXGroup;
+			children = (
+				63D8642F156D3622004440D9 /* DTAudio.cpp */,
+				63D86430156D3622004440D9 /* DTAudio.h */,
+				63D86431156D3622004440D9 /* DTColor.cpp */,
+				63D86432156D3622004440D9 /* DTColor.h */,
+				63D86433156D3622004440D9 /* DTColorList.cpp */,
+				63D86434156D3622004440D9 /* DTColorList.h */,
+				636DC12B1BDF15AA009A8B49 /* DTNetwork.cpp */,
+				636DC12C1BDF15AA009A8B49 /* DTNetwork.h */,
+				63D86435156D3622004440D9 /* DTStringList.cpp */,
+				63D86436156D3622004440D9 /* DTStringList.h */,
+			);
+			path = 0D;
+			sourceTree = "<group>";
+		};
+		63D86437156D3622004440D9 /* 1D */ = {
+			isa = PBXGroup;
+			children = (
+				63D86438156D3622004440D9 /* DTFunction1D.cpp */,
+				63D86439156D3622004440D9 /* DTFunction1D.h */,
+				63D8643A156D3622004440D9 /* DTMesh1DGrid.cpp */,
+				63D8643B156D3622004440D9 /* DTMesh1DGrid.h */,
+				63D8643C156D3622004440D9 /* DTPlot1D.cpp */,
+				63D8643D156D3622004440D9 /* DTPlot1D.h */,
+				63D8643E156D3622004440D9 /* DTRegion1D.cpp */,
+				63D8643F156D3622004440D9 /* DTRegion1D.h */,
+			);
+			path = 1D;
+			sourceTree = "<group>";
+		};
+		63D86440156D3622004440D9 /* 2D */ = {
+			isa = PBXGroup;
+			children = (
+				63D86441156D3622004440D9 /* DTBitmap2D.cpp */,
+				63D86442156D3622004440D9 /* DTBitmap2D.h */,
+				636DC1281BDF1596009A8B49 /* DTBitmap2DStack.cpp */,
+				636DC1291BDF1596009A8B49 /* DTBitmap2DStack.h */,
+				63D86443156D3622004440D9 /* DTCombinedMesh2D.cpp */,
+				63D86444156D3622004440D9 /* DTCombinedMesh2D.h */,
+				63D86445156D3622004440D9 /* DTCoordinateLine2D.cpp */,
+				63D86446156D3622004440D9 /* DTCoordinateLine2D.h */,
+				63D86447156D3622004440D9 /* DTFunction2D.cpp */,
+				63D86448156D3622004440D9 /* DTFunction2D.h */,
+				63D86449156D3622004440D9 /* DTMesh2D.cpp */,
+				63D8644A156D3622004440D9 /* DTMesh2D.h */,
+				63D8644B156D3622004440D9 /* DTMesh2DBanded.cpp */,
+				63D8644C156D3622004440D9 /* DTMesh2DBanded.h */,
+				63D8644D156D3622004440D9 /* DTMesh2DGrid.cpp */,
+				63D8644E156D3622004440D9 /* DTMesh2DGrid.h */,
+				63D8644F156D3622004440D9 /* DTMutableDoubleMesh2D.cpp */,
+				63D86450156D3622004440D9 /* DTMutableDoubleMesh2D.h */,
+				63D86451156D3622004440D9 /* DTPath2D.cpp */,
+				63D86452156D3622004440D9 /* DTPath2D.h */,
+				63D86453156D3622004440D9 /* DTPath2DValues.cpp */,
+				63D86454156D3622004440D9 /* DTPath2DValues.h */,
+				63D86455156D3622004440D9 /* DTPoint2D.cpp */,
+				63D86456156D3622004440D9 /* DTPoint2D.h */,
+				63D86457156D3622004440D9 /* DTPoint2DValue.cpp */,
+				63D86458156D3622004440D9 /* DTPoint2DValue.h */,
+				63D86459156D3622004440D9 /* DTPointCollection2D.cpp */,
+				63D8645A156D3622004440D9 /* DTPointCollection2D.h */,
+				63D8645B156D3622004440D9 /* DTPointValueCollection2D.cpp */,
+				63D8645C156D3622004440D9 /* DTPointValueCollection2D.h */,
+				63D8645D156D3622004440D9 /* DTPointVector2D.cpp */,
+				63D8645E156D3622004440D9 /* DTPointVector2D.h */,
+				63D8645F156D3622004440D9 /* DTRegion2D.cpp */,
+				63D86460156D3622004440D9 /* DTRegion2D.h */,
+				63D86461156D3622004440D9 /* DTShiftScale2D.cpp */,
+				63D86462156D3622004440D9 /* DTShiftScale2D.h */,
+				63D86463156D3622004440D9 /* DTStructuredGrid2D.cpp */,
+				63D86464156D3622004440D9 /* DTStructuredGrid2D.h */,
+				63D86465156D3622004440D9 /* DTStructuredMesh2D.cpp */,
+				63D86466156D3622004440D9 /* DTStructuredMesh2D.h */,
+				63D86467156D3622004440D9 /* DTStructuredVectorField2D.cpp */,
+				63D86468156D3622004440D9 /* DTStructuredVectorField2D.h */,
+				636DC1251BDF158F009A8B49 /* DTTransform2D.cpp */,
+				636DC1261BDF158F009A8B49 /* DTTransform2D.h */,
+				63D86469156D3622004440D9 /* DTTriangularGrid2D.cpp */,
+				63D8646A156D3622004440D9 /* DTTriangularGrid2D.h */,
+				63D8646B156D3622004440D9 /* DTTriangularMesh2D.cpp */,
+				63D8646C156D3622004440D9 /* DTTriangularMesh2D.h */,
+				63D8646D156D3622004440D9 /* DTTriangularVectorField2D.cpp */,
+				63D8646E156D3622004440D9 /* DTTriangularVectorField2D.h */,
+				63D8646F156D3622004440D9 /* DTVector2D.h */,
+				63D86470156D3622004440D9 /* DTVectorCollection2D.cpp */,
+				63D86471156D3622004440D9 /* DTVectorCollection2D.h */,
+				63D86472156D3622004440D9 /* DTVectorField2D.cpp */,
+				63D86473156D3622004440D9 /* DTVectorField2D.h */,
+			);
+			path = 2D;
+			sourceTree = "<group>";
+		};
+		63D86474156D3622004440D9 /* 3D */ = {
+			isa = PBXGroup;
+			children = (
+				63D86475156D3622004440D9 /* DTAtomCollection3D.cpp */,
+				63D86476156D3622004440D9 /* DTAtomCollection3D.h */,
+				63D86477156D3622004440D9 /* DTCoordinatePlane3D.cpp */,
+				63D86478156D3622004440D9 /* DTCoordinatePlane3D.h */,
+				63D86479156D3622004440D9 /* DTFunction3D.cpp */,
+				63D8647A156D3622004440D9 /* DTFunction3D.h */,
+				6340D9CF1926661200C9DA99 /* DTMesh3DOnDisk.cpp */,
+				6340D9D01926661200C9DA99 /* DTMesh3DOnDisk.h */,
+				63D8647B156D3622004440D9 /* DTMesh3D.cpp */,
+				63D8647C156D3622004440D9 /* DTMesh3D.h */,
+				63D8647D156D3622004440D9 /* DTMesh3DGrid.cpp */,
+				63D8647E156D3622004440D9 /* DTMesh3DGrid.h */,
+				63D86481156D3622004440D9 /* DTPath3D.cpp */,
+				63D86482156D3622004440D9 /* DTPath3D.h */,
+				63D86483156D3622004440D9 /* DTPath3DValues.cpp */,
+				63D86484156D3622004440D9 /* DTPath3DValues.h */,
+				63D86485156D3622004440D9 /* DTPlane3D.cpp */,
+				63D86486156D3622004440D9 /* DTPlane3D.h */,
+				63D86487156D3622004440D9 /* DTPoint3D.cpp */,
+				63D86488156D3622004440D9 /* DTPoint3D.h */,
+				63D86489156D3622004440D9 /* DTPoint3DValue.cpp */,
+				63D8648A156D3622004440D9 /* DTPoint3DValue.h */,
+				63D8648B156D3622004440D9 /* DTPointCollection3D.cpp */,
+				63D8648C156D3622004440D9 /* DTPointCollection3D.h */,
+				63D8648D156D3622004440D9 /* DTPointValueCollection3D.cpp */,
+				63D8648E156D3622004440D9 /* DTPointValueCollection3D.h */,
+				63D8648F156D3622004440D9 /* DTPointVector3D.cpp */,
+				63D86490156D3622004440D9 /* DTPointVector3D.h */,
+				63D86491156D3622004440D9 /* DTPrismGrid3D.cpp */,
+				63D86492156D3622004440D9 /* DTPrismGrid3D.h */,
+				63D86493156D3622004440D9 /* DTPrismMesh3D.cpp */,
+				63D86494156D3622004440D9 /* DTPrismMesh3D.h */,
+				63D86495156D3622004440D9 /* DTPrismVectorField3D.cpp */,
+				63D86496156D3622004440D9 /* DTPrismVectorField3D.h */,
+				63D86497156D3622004440D9 /* DTRegion3D.cpp */,
+				63D86498156D3622004440D9 /* DTRegion3D.h */,
+				63D86499156D3622004440D9 /* DTShiftScale3D.cpp */,
+				63D8649A156D3622004440D9 /* DTShiftScale3D.h */,
+				63D8649B156D3622004440D9 /* DTStructuredGrid3D.cpp */,
+				63D8649C156D3622004440D9 /* DTStructuredGrid3D.h */,
+				63D8649D156D3622004440D9 /* DTStructuredMesh3D.cpp */,
+				63D8649E156D3622004440D9 /* DTStructuredMesh3D.h */,
+				63D8649F156D3622004440D9 /* DTStructuredVectorField3D.cpp */,
+				63D864A0156D3622004440D9 /* DTStructuredVectorField3D.h */,
+				63D864A1156D3622004440D9 /* DTSurface3D.cpp */,
+				63D864A2156D3622004440D9 /* DTSurface3D.h */,
+				63D864A3156D3622004440D9 /* DTSurfaceCoordinates3D.cpp */,
+				63D864A4156D3622004440D9 /* DTSurfaceCoordinates3D.h */,
+				63D864A5156D3622004440D9 /* DTSurfaceTexture3D.cpp */,
+				63D864A6156D3622004440D9 /* DTSurfaceTexture3D.h */,
+				63D864A7156D3622004440D9 /* DTSurfaceValues3D.cpp */,
+				63D864A8156D3622004440D9 /* DTSurfaceValues3D.h */,
+				63D864A9156D3622004440D9 /* DTTetrahedralGrid3D.cpp */,
+				63D864AA156D3622004440D9 /* DTTetrahedralGrid3D.h */,
+				63D864AB156D3622004440D9 /* DTTetrahedralMesh3D.cpp */,
+				63D864AC156D3622004440D9 /* DTTetrahedralMesh3D.h */,
+				63D864AD156D3622004440D9 /* DTTetrahedralVectorField3D.cpp */,
+				63D864AE156D3622004440D9 /* DTTetrahedralVectorField3D.h */,
+				63D864AF156D3622004440D9 /* DTTransform3D.cpp */,
+				63D864B0156D3622004440D9 /* DTTransform3D.h */,
+				63D864B1156D3622004440D9 /* DTVector3D.h */,
+				63D864B2156D3622004440D9 /* DTVectorCollection3D.cpp */,
+				63D864B3156D3622004440D9 /* DTVectorCollection3D.h */,
+				63D864B4156D3622004440D9 /* DTVectorField3D.cpp */,
+				63D864B5156D3622004440D9 /* DTVectorField3D.h */,
+			);
+			path = 3D;
+			sourceTree = "<group>";
+		};
+		63D864B6156D3622004440D9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				63D864B7156D3622004440D9 /* DTFunction.cpp */,
+				63D864B8156D3622004440D9 /* DTFunction.h */,
+				63D864B9156D3622004440D9 /* DTFunctionFit.cpp */,
+				63D864BA156D3622004440D9 /* DTFunctionFit.h */,
+				63D864BB156D3622004440D9 /* DTMask.cpp */,
+				63D864BC156D3622004440D9 /* DTMask.h */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63D86358156D2DD2004440D9 /* swarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63D86363156D2DD2004440D9 /* Build configuration list for PBXNativeTarget "swarm" */;
+			buildPhases = (
+				63D86355156D2DD2004440D9 /* Sources */,
+				63D86356156D2DD2004440D9 /* Frameworks */,
+				63D86357156D2DD2004440D9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "swarm";
+			productName = "swarm";
+			productReference = 63D86359156D2DD2004440D9 /* swarm */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63D86350156D2DD2004440D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 63D86353156D2DD2004440D9 /* Build configuration list for PBXProject "swarm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63D8634E156D2DD2004440D9;
+			productRefGroup = 63D8635A156D2DD2004440D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63D86358156D2DD2004440D9 /* swarm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63D86355156D2DD2004440D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D8635E156D2DD2004440D9 /* main.cpp in Sources */,
+				63D864BD156D3622004440D9 /* DTArrayConversion.cpp in Sources */,
+				63D864BE156D3622004440D9 /* DTCharArray.cpp in Sources */,
+				63D864BF156D3622004440D9 /* DTCharArrayRegion.cpp in Sources */,
+				63D864C0156D3622004440D9 /* DTDoubleArray.cpp in Sources */,
+				63D864C1156D3622004440D9 /* DTDoubleArrayOperators.cpp in Sources */,
+				63D864C2156D3622004440D9 /* DTDoubleArrayRegion.cpp in Sources */,
+				63D864C3156D3622004440D9 /* DTDoubleComplexArray.cpp in Sources */,
+				63D864C4156D3622004440D9 /* DTFloatArray.cpp in Sources */,
+				63D864C5156D3622004440D9 /* DTFloatArrayOperators.cpp in Sources */,
+				63D864C6156D3622004440D9 /* DTFloatArrayRegion.cpp in Sources */,
+				63D864C7156D3622004440D9 /* DTIndex.cpp in Sources */,
+				63D864C8156D3622004440D9 /* DTIntArray.cpp in Sources */,
+				63D864C9156D3622004440D9 /* DTIntArrayOperators.cpp in Sources */,
+				63D864CA156D3622004440D9 /* DTIntArrayRegion.cpp in Sources */,
+				63D864CB156D3622004440D9 /* DTShortIntArray.cpp in Sources */,
+				63D864CC156D3622004440D9 /* DTShortIntArrayRegion.cpp in Sources */,
+				63D864CD156D3622004440D9 /* DTUCharArray.cpp in Sources */,
+				63D864CE156D3622004440D9 /* DTUCharArrayRegion.cpp in Sources */,
+				63D864CF156D3622004440D9 /* DTUShortIntArray.cpp in Sources */,
+				63D864D0156D3622004440D9 /* DTUShortIntArrayRegion.cpp in Sources */,
+				63D864D1156D3622004440D9 /* DTDataContainer.cpp in Sources */,
+				63D864D2156D3622004440D9 /* DTDataFile.cpp in Sources */,
+				63D864D3156D3622004440D9 /* DTDataStorage.cpp in Sources */,
+				63D864D4156D3622004440D9 /* DTEndianSwap.cpp in Sources */,
+				63D864D5156D3622004440D9 /* DTFile.cpp in Sources */,
+				63D864D6156D3622004440D9 /* DTLiveUpdate.cpp in Sources */,
+				63D864D7156D3622004440D9 /* DTMatlabDataFile.cpp in Sources */,
+				636DC12D1BDF15AA009A8B49 /* DTNetwork.cpp in Sources */,
+				63D864D8156D3622004440D9 /* DTSeriesArray.cpp in Sources */,
+				63D864D9156D3622004440D9 /* DTSeriesNumberList.cpp in Sources */,
+				63D864DA156D3622004440D9 /* DTSeriesRealNumber.cpp in Sources */,
+				63D864DB156D3622004440D9 /* DTSeriesString.cpp in Sources */,
+				63D864DC156D3622004440D9 /* DTSeriesStringList.cpp in Sources */,
+				63D864DD156D3622004440D9 /* DTSeriesFunction1D.cpp in Sources */,
+				63D864DE156D3622004440D9 /* DTSeriesPlot1D.cpp in Sources */,
+				63D864DF156D3622004440D9 /* DTSeriesRegion1D.cpp in Sources */,
+				63D864E0156D3622004440D9 /* DTSeriesBitmap2D.cpp in Sources */,
+				63D864E1156D3622004440D9 /* DTSeriesFunction2D.cpp in Sources */,
+				63D864E2156D3622004440D9 /* DTSeriesMesh2D.cpp in Sources */,
+				63D864E3156D3622004440D9 /* DTSeriesMesh2DGrid.cpp in Sources */,
+				63D864E4156D3622004440D9 /* DTSeriesPath2D.cpp in Sources */,
+				63D864E5156D3622004440D9 /* DTSeriesPath2DValues.cpp in Sources */,
+				63D864E6156D3622004440D9 /* DTSeriesPoint2D.cpp in Sources */,
+				63D864E7156D3622004440D9 /* DTSeriesPoint2DValue.cpp in Sources */,
+				63D864E8156D3622004440D9 /* DTSeriesPointCollection2D.cpp in Sources */,
+				63D864E9156D3622004440D9 /* DTSeriesPointValueCollection2D.cpp in Sources */,
+				63D864EA156D3622004440D9 /* DTSeriesRegion2D.cpp in Sources */,
+				63D864EB156D3622004440D9 /* DTSeriesStructuredMesh2D.cpp in Sources */,
+				636DC1271BDF158F009A8B49 /* DTTransform2D.cpp in Sources */,
+				63D864EC156D3622004440D9 /* DTSeriesTriangularGrid2D.cpp in Sources */,
+				63D864ED156D3622004440D9 /* DTSeriesTriangularMesh2D.cpp in Sources */,
+				63D864EE156D3622004440D9 /* DTSeriesFunction3D.cpp in Sources */,
+				63D864EF156D3622004440D9 /* DTSeriesMesh3D.cpp in Sources */,
+				63D864F0156D3622004440D9 /* DTSeriesMesh3DGrid.cpp in Sources */,
+				63D864F1156D3622004440D9 /* DTSeriesPath3D.cpp in Sources */,
+				63D864F2156D3622004440D9 /* DTSeriesPath3DValues.cpp in Sources */,
+				63D864F3156D3622004440D9 /* DTSeriesPoint3D.cpp in Sources */,
+				63D864F4156D3622004440D9 /* DTSeriesPoint3DValue.cpp in Sources */,
+				63D864F5156D3622004440D9 /* DTSeriesPointCollection3D.cpp in Sources */,
+				63D864F6156D3622004440D9 /* DTSeriesPointValueCollection3D.cpp in Sources */,
+				63D864F7156D3622004440D9 /* DTSeriesPointVector3D.cpp in Sources */,
+				63D864F8156D3622004440D9 /* DTSeriesRegion3D.cpp in Sources */,
+				63D864F9156D3622004440D9 /* DTSeriesSurface3D.cpp in Sources */,
+				63D864FA156D3622004440D9 /* DTSeriesSurfaceCoordinates3D.cpp in Sources */,
+				63D864FB156D3622004440D9 /* DTSeriesSurfaceTexture3D.cpp in Sources */,
+				63D864FC156D3622004440D9 /* DTSeriesSurfaceValues3D.cpp in Sources */,
+				63D864FD156D3622004440D9 /* DTSeriesTetrahedralGrid3D.cpp in Sources */,
+				63D864FE156D3622004440D9 /* DTSeriesTetrahedralMesh3D.cpp in Sources */,
+				63D864FF156D3622004440D9 /* DTSeriesTetrahedralVectorField3D.cpp in Sources */,
+				63D86500156D3622004440D9 /* DTSeriesVectorCollection3D.cpp in Sources */,
+				63D86501156D3622004440D9 /* DTSeriesVectorField3D.cpp in Sources */,
+				63D86502156D3622004440D9 /* DTSeries.cpp in Sources */,
+				63D86503156D3622004440D9 /* DTArguments.cpp in Sources */,
+				63D86504156D3622004440D9 /* DTDictionary.cpp in Sources */,
+				63D86505156D3622004440D9 /* DTError.cpp in Sources */,
+				63D86506156D3622004440D9 /* DTProgress.cpp in Sources */,
+				63D86507156D3622004440D9 /* DTSaveError.cpp in Sources */,
+				63D86508156D3622004440D9 /* DTThread.cpp in Sources */,
+				63D86509156D3622004440D9 /* DTUtilities.cpp in Sources */,
+				63D8650A156D3622004440D9 /* DTRandom.cpp in Sources */,
+				63D8650B156D3622004440D9 /* DTAudio.cpp in Sources */,
+				63D8650C156D3622004440D9 /* DTColor.cpp in Sources */,
+				63D8650D156D3622004440D9 /* DTColorList.cpp in Sources */,
+				63D8650E156D3622004440D9 /* DTStringList.cpp in Sources */,
+				63D8650F156D3622004440D9 /* DTFunction1D.cpp in Sources */,
+				63D86510156D3622004440D9 /* DTMesh1DGrid.cpp in Sources */,
+				63D86511156D3622004440D9 /* DTPlot1D.cpp in Sources */,
+				63D86512156D3622004440D9 /* DTRegion1D.cpp in Sources */,
+				63D86513156D3622004440D9 /* DTBitmap2D.cpp in Sources */,
+				63D86514156D3622004440D9 /* DTCombinedMesh2D.cpp in Sources */,
+				63D86515156D3622004440D9 /* DTCoordinateLine2D.cpp in Sources */,
+				63D86516156D3622004440D9 /* DTFunction2D.cpp in Sources */,
+				636DC12A1BDF1596009A8B49 /* DTBitmap2DStack.cpp in Sources */,
+				63D86517156D3622004440D9 /* DTMesh2D.cpp in Sources */,
+				63D86518156D3622004440D9 /* DTMesh2DBanded.cpp in Sources */,
+				63D86519156D3622004440D9 /* DTMesh2DGrid.cpp in Sources */,
+				63D8651A156D3622004440D9 /* DTMutableDoubleMesh2D.cpp in Sources */,
+				63D8651B156D3622004440D9 /* DTPath2D.cpp in Sources */,
+				63D8651C156D3622004440D9 /* DTPath2DValues.cpp in Sources */,
+				63D8651D156D3622004440D9 /* DTPoint2D.cpp in Sources */,
+				63D8651E156D3622004440D9 /* DTPoint2DValue.cpp in Sources */,
+				63D8651F156D3622004440D9 /* DTPointCollection2D.cpp in Sources */,
+				63D86520156D3622004440D9 /* DTPointValueCollection2D.cpp in Sources */,
+				63D86521156D3622004440D9 /* DTPointVector2D.cpp in Sources */,
+				63D86522156D3622004440D9 /* DTRegion2D.cpp in Sources */,
+				63D86523156D3622004440D9 /* DTShiftScale2D.cpp in Sources */,
+				63D86524156D3622004440D9 /* DTStructuredGrid2D.cpp in Sources */,
+				63D86525156D3622004440D9 /* DTStructuredMesh2D.cpp in Sources */,
+				63D86526156D3622004440D9 /* DTStructuredVectorField2D.cpp in Sources */,
+				63D86527156D3622004440D9 /* DTTriangularGrid2D.cpp in Sources */,
+				63D86528156D3622004440D9 /* DTTriangularMesh2D.cpp in Sources */,
+				63D86529156D3622004440D9 /* DTTriangularVectorField2D.cpp in Sources */,
+				63D8652A156D3622004440D9 /* DTVectorCollection2D.cpp in Sources */,
+				63D8652B156D3622004440D9 /* DTVectorField2D.cpp in Sources */,
+				63D8652C156D3622004440D9 /* DTAtomCollection3D.cpp in Sources */,
+				63D8652D156D3622004440D9 /* DTCoordinatePlane3D.cpp in Sources */,
+				63D8652E156D3622004440D9 /* DTFunction3D.cpp in Sources */,
+				63D8652F156D3622004440D9 /* DTMesh3D.cpp in Sources */,
+				63D86530156D3622004440D9 /* DTMesh3DGrid.cpp in Sources */,
+				63D86532156D3622004440D9 /* DTPath3D.cpp in Sources */,
+				63D86533156D3622004440D9 /* DTPath3DValues.cpp in Sources */,
+				63D86534156D3622004440D9 /* DTPlane3D.cpp in Sources */,
+				63D86535156D3622004440D9 /* DTPoint3D.cpp in Sources */,
+				63D86536156D3622004440D9 /* DTPoint3DValue.cpp in Sources */,
+				63D86537156D3622004440D9 /* DTPointCollection3D.cpp in Sources */,
+				63D86538156D3622004440D9 /* DTPointValueCollection3D.cpp in Sources */,
+				63D86539156D3622004440D9 /* DTPointVector3D.cpp in Sources */,
+				63D8653A156D3622004440D9 /* DTPrismGrid3D.cpp in Sources */,
+				63D8653B156D3622004440D9 /* DTPrismMesh3D.cpp in Sources */,
+				63D8653C156D3622004440D9 /* DTPrismVectorField3D.cpp in Sources */,
+				63D8653D156D3622004440D9 /* DTRegion3D.cpp in Sources */,
+				63D8653E156D3622004440D9 /* DTShiftScale3D.cpp in Sources */,
+				63D8653F156D3622004440D9 /* DTStructuredGrid3D.cpp in Sources */,
+				63D86540156D3622004440D9 /* DTStructuredMesh3D.cpp in Sources */,
+				63D86541156D3622004440D9 /* DTStructuredVectorField3D.cpp in Sources */,
+				63D86542156D3622004440D9 /* DTSurface3D.cpp in Sources */,
+				63D86543156D3622004440D9 /* DTSurfaceCoordinates3D.cpp in Sources */,
+				63D86544156D3622004440D9 /* DTSurfaceTexture3D.cpp in Sources */,
+				63D86545156D3622004440D9 /* DTSurfaceValues3D.cpp in Sources */,
+				63D86546156D3622004440D9 /* DTTetrahedralGrid3D.cpp in Sources */,
+				63D86547156D3622004440D9 /* DTTetrahedralMesh3D.cpp in Sources */,
+				63D86548156D3622004440D9 /* DTTetrahedralVectorField3D.cpp in Sources */,
+				63D86549156D3622004440D9 /* DTTransform3D.cpp in Sources */,
+				63D8654A156D3622004440D9 /* DTVectorCollection3D.cpp in Sources */,
+				63D8654B156D3622004440D9 /* DTVectorField3D.cpp in Sources */,
+				63D8654C156D3622004440D9 /* DTFunction.cpp in Sources */,
+				63D8654D156D3622004440D9 /* DTFunctionFit.cpp in Sources */,
+				63D8654E156D3622004440D9 /* DTMask.cpp in Sources */,
+				6340D9D11926661200C9DA99 /* DTMesh3DOnDisk.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		63D86361156D2DD2004440D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		63D86362156D2DD2004440D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		63D86364156D2DD2004440D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		63D86365156D2DD2004440D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63D86353156D2DD2004440D9 /* Build configuration list for PBXProject "swarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D86361156D2DD2004440D9 /* Debug */,
+				63D86362156D2DD2004440D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63D86363156D2DD2004440D9 /* Build configuration list for PBXNativeTarget "swarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D86364156D2DD2004440D9 /* Debug */,
+				63D86365156D2DD2004440D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63D86350156D2DD2004440D9 /* Project object */;
+}

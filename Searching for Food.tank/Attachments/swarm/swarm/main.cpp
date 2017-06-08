@@ -75,7 +75,7 @@ public:
     
     //Constructors
     Ant() : type(FOLLOWER) {}
-    Ant(DTPoint2D l, DTDictionary dict, DTPoint2D food) : x(l.x), y(l.y), dict(dict), food(food), type(FOLLOWER) {}
+    Ant(DTPoint2D l, DTDictionary dict, DTPoint2D food, DTRegion2D region) : x(l.x), y(l.y), dict(dict), food(food), region(region), type(FOLLOWER) {}
     
     //Getters
     AgentType Type(void) const {
@@ -99,8 +99,59 @@ public:
         type = FOLLOWER;
     }
     
-    void advanceFOLLOWER() {
+    //Movement functions
+    void Move(DTRandom r, Ant beacon) {
+        double xy[2];
+        r.Normal(xy,2); //generates a random x and y coordinate that will later be scaled
+        double sqrtDT = sqrt(dt);
+        if (Type() == FOLLOWER) {
+            
+        }
+        if (Type() == LOOKING) {
+            advanceLOOKING();
+        }
+        if (Type() == FOUNDIT) {
+            
+        }
+        if (Type() == BEACON) {
+            //Don't move
+        }
         
+    }
+    
+    void advanceFOLLOWER(DTRandom r, Ant Beacon) {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    void advanceLOOKING(){
+        
+    }
+    
+    void bounding(DTRegion2D box) { //Bounds the x and y within the region
+        if (x > box.xmax) {
+            x = 2*box.xmax-x;
+        }
+        if (y > box.ymax) {
+            y = 2*box.ymax-y;
+        }
+        if (x < box.xmin) {
+            x = 2*box.xmin-x;
+        }
+        if (y < box.ymin) {
+            y = 2*box.ymin-y;
+        }
     }
     
     
@@ -110,6 +161,8 @@ private:
     double sight = dict("sight");
     double radius = dict("radius");
     DTPoint2D food;
+    DTRegion2D region;
+    double dt = dict("dt");
     
     AgentType type;
 };
@@ -124,16 +177,19 @@ DTPointCollection2D Computation(const DTRegion2D &region,const DTDictionary &par
     
     DTMutableList<Ant> antList(numAnts);
     for (int i=0;i<numAnts;i++) {
-        //every agent knows where it is and where the food is, although it cant directly access it
-        // FIXME: Make it so they are not passed the food, I think that makes sense
-        antList(i) = Ant(DTPoint2D(ants(i)), parameters, food);
+        antList(i) = Ant(DTPoint2D(ants(i)), parameters, food, region);
     }
+    
+    int beaconID = createHomeBeacon(initial, parameters, seed);
+    antList(beaconID).ChangeToBeacon(); //converts the one that is picked as beacon to beacon
     
     DTRandom r(seed);
     
     double t = 0;
     while (t<endTime) {
-        
+        for (int i = 0; i<numAnts; i++) {
+            antList(i).Move(r, antList(beaconID));
+        }
     
         t += dt;
     }

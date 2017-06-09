@@ -75,7 +75,13 @@ public:
     
     //Constructors
     Ant() : type(FOLLOWER) {}
-    Ant(DTPoint2D l, DTDictionary dict, DTPoint2D food, DTRegion2D region) : x(l.x), y(l.y), dict(dict), food(food), region(region), type(FOLLOWER) {}
+    Ant(DTPoint2D l, DTDictionary dict, DTPoint2D food, DTRegion2D region, DTRandom r) : x(l.x), y(l.y), dict(dict), food(food), box(region), type(FOLLOWER) {
+        //Setting random vx and vy between -.1 and .1
+        double angle = r.UniformHalf()*2*M_PI;
+        double v0 = dict("v0");
+        vx = cos(angle)*v0; //initial vx
+        vy = sin(angle)*v0; //inital vy
+    }
     
     //Getters
     AgentType Type(void) const {
@@ -100,15 +106,12 @@ public:
     }
     
     //Movement functions
-    void Move(DTRandom r, Ant beacon) {
-        double xy[2];
-        r.Normal(xy,2); //generates a random x and y coordinate that will later be scaled
-        double sqrtDT = sqrt(dt);
+    void Move(DTRandom r, Ant beacon, DTMutableList<Ant> ants) {
         if (Type() == FOLLOWER) {
-            
+            advanceFOLLOWER(r, beacon, ants);
         }
         if (Type() == LOOKING) {
-            advanceLOOKING();
+            advanceLOOKING(r);
         }
         if (Type() == FOUNDIT) {
             
@@ -119,27 +122,60 @@ public:
         
     }
     
-    void advanceFOLLOWER(DTRandom r, Ant Beacon) {
+    void advanceFOLLOWER(DTRandom r, Ant beacon, DTMutableList<Ant> ants) {
         
+        collisionDetection(ants);
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        bounding();
         
     }
-    void advanceLOOKING(){
+    void advanceLOOKING(DTRandom r){
+        double xy[2];
+        r.Normal(xy,2); //generates a random x and y coordinate that will later be scaled
+        double sqrtDT = sqrt(dt);
+        double dx = sqrtDT*noise*xy[0];
+        double dy = sqrtDT*noise*xy[1];
+        //This handles the random walk
+        x += dx;
+        y += dy;
+        bounding();
         
+        double distanceToFood = Norm(location()-food);
+        if (distanceToFood <= radius*radius) {
+            ChangeToFOUNDIT(); //the agent has now found the food
+        }
     }
     
-    void bounding(DTRegion2D box) { //Bounds the x and y within the region
+    //check if there was a collision between particles and handles particle interaction
+    void collisionDetection(DTMutableList<Ant> ants) {
+        double rad = radius*radius;
+        for (int i = 0; i < ants.Length(); i++) {
+            double xDist = ants(i).x-x;
+            double yDist = ants(i).y-y;
+            double distance = xDist*xDist+yDist*yDist;
+            if (distance < rad && xDist != 0 && yDist != 0) {
+                //overlapping then lenard jones potential equation is used, in form of force
+                
+                double epsilon = 1;
+                double sigma = radius*2;
+                double force = ((24*epsilon)/(sigma))*(2*pow(sigma/distance, 13.0)-pow(sigma/distance, 7.0));
+                double theta = atan2(vy, vx);
+                double fx = force*cos(theta);
+                double fy = force*sin(theta);
+                
+                //the exact same force negated impacts the other particle
+                
+                
+                //double potential = 4*epsilon*(pow(radius*2/distance, 12.0)-pow(radius*2/distance, 6.0));
+                //this force is directed in reverse of the xDist and yDist and scaled by the force
+                //x -= xDist*force; //scaled by force for now since i dont know how to handle it better
+                //y -= yDist*force;
+            }
+        }
+    }
+    
+    
+    void bounding() { //Bounds the x and y within the region
         if (x > box.xmax) {
             x = 2*box.xmax-x;
         }
@@ -157,12 +193,15 @@ public:
     
 private:
     double x,y; // Coordinates
+    double vx, vy; //velocity's
     DTDictionary dict;
     double sight = dict("sight");
     double radius = dict("radius");
     DTPoint2D food;
-    DTRegion2D region;
+    DTRegion2D box;
     double dt = dict("dt");
+    double noise = dict("noise");
+    double vMax = dict("vMax");
     
     AgentType type;
 };
@@ -175,20 +214,21 @@ DTPointCollection2D Computation(const DTRegion2D &region,const DTDictionary &par
     int numAnts = ants.NumberOfPoints();
     DTMutableDoubleArray antArray = ants.Data();
     
+    DTRandom r(seed);
+    
     DTMutableList<Ant> antList(numAnts);
     for (int i=0;i<numAnts;i++) {
-        antList(i) = Ant(DTPoint2D(ants(i)), parameters, food, region);
+        antList(i) = Ant(DTPoint2D(ants(i)), parameters, food, region, r);
     }
     
     int beaconID = createHomeBeacon(initial, parameters, seed);
     antList(beaconID).ChangeToBeacon(); //converts the one that is picked as beacon to beacon
     
-    DTRandom r(seed);
     
     double t = 0;
     while (t<endTime) {
         for (int i = 0; i<numAnts; i++) {
-            antList(i).Move(r, antList(beaconID));
+            antList(i).Move(r, antList(beaconID), antList);
         }
     
         t += dt;

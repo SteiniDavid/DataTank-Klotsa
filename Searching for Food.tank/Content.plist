@@ -1048,6 +1048,26 @@
 							<key>Inline</key>
 							<dict>
 								<key>Number</key>
+								<string>.1</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>vMax</string>
+						<key>Number Type</key>
+						<integer>0</integer>
+						<key>Type</key>
+						<string>Real Number</string>
+						<key>Var</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
 								<string>0</string>
 							</dict>
 							<key>SelectedNumber</key>
@@ -1088,7 +1108,7 @@
 							<key>Inline</key>
 							<dict>
 								<key>Number</key>
-								<string>0.3</string>
+								<string>0.1</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -1496,6 +1516,24 @@
 							<string>n particles</string>
 						</dict>
 					</dict>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>food</string>
+						<key>Type</key>
+						<string>Point2D</string>
+						<key>Var</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Point</key>
+								<string>0,0</string>
+							</dict>
+							<key>Selected</key>
+							<string>food particle</string>
+						</dict>
+					</dict>
 				</array>
 			</dict>
 			<key>Selection</key>
@@ -1510,7 +1548,7 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>-1388</real>
+		<real>-942</real>
 		<real>107</real>
 		<real>941</real>
 		<real>1413</real>

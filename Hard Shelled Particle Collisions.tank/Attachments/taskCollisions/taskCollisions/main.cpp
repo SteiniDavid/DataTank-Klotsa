@@ -130,16 +130,16 @@ double **v; // velocities
 double **a; // accelerations
 
 void initialize() {
-    r = new double* [N];
-    v = new double* [N];
-    a = new double* [N];
-    for (int i = 0; i < N; i++) {
-        r[i] = new double [3];
+    r = new double* [N]; //the positions
+    v = new double* [N]; //the velocity vectors
+    a = new double* [N]; //the acceleration vectors
+    for (int i = 0; i < N; i++) { //goes over for every particle
+        r[i] = new double [3]; //creates an array for the three dimensions
         v[i] = new double [3];
         a[i] = new double [3];
     }
-    initPositions();
-    initVelocities();
+    initPositions();  //initializes the positions now that its done creating the arrays
+    initVelocities(); //initializes the random inital velocities
 }
 
 double L;  // linear size of cubical volume
@@ -147,11 +147,11 @@ double L;  // linear size of cubical volume
 void initPositions() {
     
     // compute side of cube from number of particles and number density
-    L = pow(N / rho, 1.0/3);
+    L = pow(N / rho, 1.0/3); //the side length is based on the number of particles as well as the density
     
     // find M large enough to fit N atoms on an fcc lattice
-    int M = 1;
-    while (4 * M * M * M < N)
+    int M = 1; //
+    while (4 * M * M * M < N) //so that all of the particles fit within the lattice
         ++M;
     double a = L / M;           // lattice constant of conventional cell
     
@@ -164,32 +164,32 @@ void initPositions() {
     for (int x = 0; x < M; x++) //
         for (int y = 0; y < M; y++) //
             for (int z = 0; z < M; z++) //
-                for (int k = 0; k < 4; k++) 
-                    if (n < N) {
-                        r[n][0] = (x + xCell[k]) * a;
-                        r[n][1] = (y + yCell[k]) * a;
-                        r[n][2] = (z + zCell[k]) * a;
-                        ++n;
+                for (int k = 0; k < 4; k++) //
+                    if (n < N) { //if the number placed so far is less than the number of particles continue
+                        r[n][0] = (x + xCell[k]) * a; //places particle in x part
+                        r[n][1] = (y + yCell[k]) * a; //for y part
+                        r[n][2] = (z + zCell[k]) * a; //for z part
+                        ++n; //the number of particles placed has increased by one
                     }
 }
 
 double gasdev () {
     static bool available = false;  //set to false initially
-    static double gset;             //
-    double fac, rsq, v1, v2;
-    if (!available) {
-        do {
-            v1 = 2.0 * rand() / double(RAND_MAX) - 1.0;
-            v2 = 2.0 * rand() / double(RAND_MAX) - 1.0;
-            rsq = v1 * v1 + v2 * v2;
-        } while (rsq >= 1.0 || rsq == 0.0);
-        fac = sqrt(-2.0 * log(rsq) / rsq);
-        gset = v1 * fac;
-        available = true;
-        return v2*fac;
+    static double gset;             //initialize the gas distribution number
+    double fac, rsq, v1, v2; //
+    if (!available) { //if available is false then do this
+        do { //excecutes until while is false
+            v1 = 2.0 * rand() / double(RAND_MAX) - 1.0; //v1 is 2 times a scaled random num
+            v2 = 2.0 * rand() / double(RAND_MAX) - 1.0; //save for v2
+            rsq = v1 * v1 + v2 * v2; //finds the square of the magnitude
+        } while (rsq >= 1.0 || rsq == 0.0); //keep going until rsq is not greater than 1 or its not zero
+        fac = sqrt(-2.0 * log(rsq) / rsq); //
+        gset = v1 * fac; //the gset is v1 times fac
+        available = true; //available set to true
+        return v2*fac; //return fac times v2
     } else {
-        available = false;
-        return gset;
+        available = false; //set available to false
+        return gset; //returns gset instead
     }
 }
 
@@ -198,84 +198,84 @@ void initVelocities() {
     // Gaussian with unit variance
     for (int n = 0; n < N; n++)
         for (int i = 0; i < 3; i++)
-            v[n][i] = gasdev();
+            v[n][i] = gasdev(); //calls gasdev funciton for each particle for each of the three dim
     
     // Adjust velocities so center-of-mass velocity is zero
-    double vCM[3] = {0, 0, 0};
+    double vCM[3] = {0, 0, 0}; //the center of mass velocity is set as zero
     for (int n = 0; n < N; n++)
         for (int i = 0; i < 3; i++)
-            vCM[i] += v[n][i];
-    for (int i = 0; i < 3; i++)
-        vCM[i] /= N;
-    for (int n = 0; n < N; n++)
-        for (int i = 0; i < 3; i++)
-            v[n][i] -= vCM[i];
+            vCM[i] += v[n][i]; //becomes the total velocity for a given dim
+    for (int i = 0; i < 3; i++) //goes through 3 dim
+        vCM[i] /= N; //devides each dims total velocity by the num of particles
+    for (int n = 0; n < N; n++) //for all of the particles in the system
+        for (int i = 0; i < 3; i++) //for the three dim
+            v[n][i] -= vCM[i]; //subtracts the velocty average for a given dim form each particles velocity in that dim
     // Rescale velocities to get the desired instantaneous temperature
-    rescaleVelocities();
+    rescaleVelocities(); //rescales all of the velocities to get back to the right speed
 }
 
 void rescaleVelocities() {
-    double vSqdSum = 0;
+    double vSqdSum = 0; //velocity square root initialized at 0
+    for (int n = 0; n < N; n++) //for all of the particles
+        for (int i = 0; i < 3; i++) //for the three dim
+            vSqdSum += v[n][i] * v[n][i]; //add the magnitude of all of the particles
+    double lambda = sqrt( 3 * (N-1) * T / vSqdSum ); //value to scale all of the vectors by
     for (int n = 0; n < N; n++)
         for (int i = 0; i < 3; i++)
-            vSqdSum += v[n][i] * v[n][i];
-    double lambda = sqrt( 3 * (N-1) * T / vSqdSum );
-    for (int n = 0; n < N; n++)
-        for (int i = 0; i < 3; i++)
-            v[n][i] *= lambda;
+            v[n][i] *= lambda; //scales all of the vectors dims by lambda
 }
 
 void computeAccelerations() {
     for (int i = 0; i < N; i++)
         for (int k = 0; k < 3; k++)
-            a[i][k] = 0;
-    for (int i = 0; i < N-1; i++)
-        for (int j = i+1; j < N; j++) {
-            double rij[3];
-            double rSqd = 0;
-            for (int k = 0; k < 3; k++) {
-                rij[k] = r[i][k] - r[j][k];
+            a[i][k] = 0; //all of the accelerations are set to zero to re wipe them
+    for (int i = 0; i < N-1; i++) //goes over all particles except the last because it looks at pairs
+        for (int j = i+1; j < N; j++) { //goes through to create pairs
+            double rij[3]; //distnaces in the three dims
+            double rSqd = 0; //set as zero the distance in a given dim
+            for (int k = 0; k < 3; k++) { //for the three dim
+                rij[k] = r[i][k] - r[j][k]; //finds the diff for a dim
                 // closest image convention
-                if (abs(rij[k]) > 0.5 * L) {
+                if (abs(rij[k]) > 0.5 * L) { //since its periodic particles on edges interact with opposite side
                     if (rij[k] > 0)
                         rij[k] -= L;
                     else
                         rij[k] += L;
                 }
-                rSqd += rij[k] * rij[k];
+                rSqd += rij[k] * rij[k]; //adds the magnitdue of the three dim for a given particle
             }
-            double f = 24 * (2 * pow(rSqd, -7) - pow(rSqd, -4));
-            for (int k = 0; k < 3; k++) {
-                a[i][k] += rij[k] * f;
-                a[j][k] -= rij[k] * f;
+            double f = 24 * (2 * pow(rSqd, -7) - pow(rSqd, -4)); //calculates the lenard jones force for a given particle pair
+            for (int k = 0; k < 3; k++) { //for the three dim
+                a[i][k] += rij[k] * f; //the distances scaled by the force is added as the acceleration for the ith particle in the kth dim
+                a[j][k] -= rij[k] * f; //the negation of the previous is done for the jth particle
             }
         }
 }
 
 void velocityVerlet(double dt) {
-    computeAccelerations();
-    for (int i = 0; i < N; i++)
-        for (int k = 0; k < 3; k++) {
-            r[i][k] += v[i][k] * dt + 0.5 * a[i][k] * dt * dt;
+    computeAccelerations(); //accerations are computed for the verlet algorithm to do translations
+    for (int i = 0; i < N; i++) //for N particles
+        for (int k = 0; k < 3; k++) { //for the three dim
+            r[i][k] += v[i][k] * dt + 0.5 * a[i][k] * dt * dt; //handles the displacement based on the current velocity and the current acceleration
             // use periodic boundary conditions
             if (r[i][k] < 0)
                 r[i][k] += L;
             if (r[i][k] >= L)
                 r[i][k] -= L;
-            v[i][k] += 0.5 * a[i][k] * dt;
+            v[i][k] += 0.5 * a[i][k] * dt; //changes the velocity based on the acceleration
         }
-    computeAccelerations();
-    for (int i = 0; i < N; i++)
-        for (int k = 0; k < 3; k++)
-            v[i][k] += 0.5 * a[i][k] * dt;
+    computeAccelerations(); //accelerations are calculated again for the next time step
+    for (int i = 0; i < N; i++) //goes over all particles
+        for (int k = 0; k < 3; k++) //goes over all dim
+            v[i][k] += 0.5 * a[i][k] * dt; //creates new velocities for all particles (why is it done twice?)
 }
 
 double instantaneousTemperature() {
-    double sum = 0;
-    for (int i = 0; i < N; i++)
-        for (int k = 0; k < 3; k++)
-            sum += v[i][k] * v[i][k];
-    return sum / (3 * (N - 1));
+    double sum = 0; //initially sum is zero
+    for (int i = 0; i < N; i++) //all particles
+        for (int k = 0; k < 3; k++) //all dim
+            sum += v[i][k] * v[i][k]; //adds up the magnitude of all of the dims of all of the particles
+    return sum / (3 * (N - 1)); //returns the temp of the system
 }
 
 

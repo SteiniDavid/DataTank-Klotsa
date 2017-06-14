@@ -403,7 +403,7 @@
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>collision</string>
 			<key>WindowPos</key>
@@ -1034,7 +1034,7 @@
 			<key>WindowPos</key>
 			<array>
 				<real>-960</real>
-				<real>117</real>
+				<real>115</real>
 				<real>907</real>
 				<real>718</real>
 			</array>
@@ -1387,8 +1387,8 @@
 			<string>Points from velocity</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-1849</real>
-				<real>154</real>
+				<real>-2059</real>
+				<real>131</real>
 				<real>814</real>
 				<real>672</real>
 			</array>
@@ -1544,8 +1544,8 @@
 						<integer>0</integer>
 						<key>Path</key>
 						<dict>
-							<key>Selected</key>
-							<string>Trace of Points from velocity</string>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
 						</dict>
 						<key>Simplify</key>
 						<string>On</string>
@@ -2092,8 +2092,8 @@
 						<integer>0</integer>
 						<key>Path</key>
 						<dict>
-							<key>Selected</key>
-							<string>Snapshot of Trace of Points from velocity</string>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
 						</dict>
 						<key>Simplify</key>
 						<string>On</string>
@@ -2628,8 +2628,8 @@
 						<integer>0</integer>
 						<key>Path</key>
 						<dict>
-							<key>Selected</key>
-							<string>Trace of Points from velocity</string>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
 						</dict>
 						<key>Simplify</key>
 						<string>On</string>
@@ -3042,7 +3042,7 @@
 			<key>CurrentValue</key>
 			<real>0.0</real>
 			<key>MaxValue</key>
-			<real>1000</real>
+			<real>100</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
@@ -3631,60 +3631,6 @@
 		<dict>
 			<key>Content</key>
 			<dict>
-				<key>EndingType</key>
-				<integer>1</integer>
-				<key>Point</key>
-				<dict>
-					<key>Selected</key>
-					<string>Points from velocity</string>
-				</dict>
-				<key>Start</key>
-				<dict>
-					<key>Inline</key>
-					<dict>
-						<key>Number</key>
-						<string>500</string>
-					</dict>
-					<key>SelectedNumber</key>
-					<integer>0</integer>
-				</dict>
-				<key>Threads</key>
-				<integer>1</integer>
-			</dict>
-			<key>Selection</key>
-			<string>Point Trace</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
-			<key>VariableName</key>
-			<string>Trace of Points from velocity</string>
-			<key>VariableType</key>
-			<string>Path3D</string>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>Description</key>
-				<string></string>
-				<key>SnapshotName</key>
-				<string>Snapshot-2.dtbin</string>
-				<key>Threads</key>
-				<integer>3</integer>
-				<key>Variable</key>
-				<dict>
-					<key>Selected</key>
-					<string>Trace of Points from velocity</string>
-				</dict>
-			</dict>
-			<key>Selection</key>
-			<string>Snapshot</string>
-			<key>VariableName</key>
-			<string>Snapshot of Trace of Points from velocity</string>
-			<key>VariableType</key>
-			<string>Path3D</string>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
 				<key>Description</key>
 				<string></string>
 				<key>SnapshotName</key>
@@ -3699,6 +3645,8 @@
 			</dict>
 			<key>Selection</key>
 			<string>Snapshot</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
 			<key>VariableName</key>
 			<string>Snapshot of Points from velocity</string>
 			<key>VariableType</key>
@@ -3756,8 +3704,8 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>-1482</real>
-		<real>838</real>
+		<real>-2468</real>
+		<real>757</real>
 		<real>941</real>
 		<real>682</real>
 	</array>

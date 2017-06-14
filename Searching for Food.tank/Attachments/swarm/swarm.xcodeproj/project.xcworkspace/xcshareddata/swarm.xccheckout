@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>F6A8EA36-0E09-4FFA-B461-E6B2F6861CFC</string>
 	<key>IDESourceControlProjectName</key>
-	<string>swarm</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>
 		<string>https://github.com/SteiniDavid/DataTank-Klotsa.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Searching for Food.tank/Attachments/swarm/swarm.xcodeproj</string>
+	<string>Searching for Food.tank/Attachments/swarm/swarm.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>

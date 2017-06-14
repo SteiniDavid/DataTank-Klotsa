@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>BFD5E63A-ACDC-49D0-9FAE-1CE62EDF7E19</string>
 	<key>IDESourceControlProjectName</key>
-	<string>taskCollisions</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>
 		<string>https://github.com/SteiniDavid/DataTank-Klotsa.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Hard Shelled Particle Collisions.tank/Attachments/taskCollisions/taskCollisions.xcodeproj</string>
+	<string>Hard Shelled Particle Collisions.tank/Attachments/taskCollisions/taskCollisions.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>

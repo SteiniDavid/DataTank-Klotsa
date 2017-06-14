@@ -112,49 +112,139 @@ int main(int argc,const char *argv[])
 #include <string>
 using namespace std;
 
-const int N = 64; // number of particles
-double r[N][3]; // positions
-double v[N][3]; // velocities
-double a[N][3]; // accelerations
+//simulation parameters
+int N = 64; // number of particles
+double rho = .5; // density (number per unit volume)
+double T = 1.0; // temperature
 
-double L = 10;            // linear size of cubical volume
-double vMax = 0.1;        // maximum initial velocity component
+// function declarations
+
+void initialize();        // allocates memory, calls following 2 functions
+void initPositions();     // places particles on an fcc lattice
+void initVelocities();    // initial Maxwell-Boltzmann velocity distribution
+void rescaleVelocities(); // adjust the instanteous temperature to T
+double gasdev();          // Gaussian distributed random numbers
+
+double **r; // positions
+double **v; // velocities
+double **a; // accelerations
 
 void initialize() {
-    // initialize positions
-    int n = int(ceil(pow(N, 1.0/3)));  // number of atoms in each direction
-    double a = L / n;                  // lattice spacing
-    int p = 0;                         // particles placed so far
-    for (int x = 0; x < n; x++)		   //for the x components of all particles
-        for (int y = 0; y < n; y++)    //for the y components of all particles
-            for (int z = 0; z < n; z++) { //for the z components of all of the particles
-                if (p < N) {  //if p is less than N
-                    r[p][0] = (x + 0.5) * a; //position at p for the x component is the x comp plus .5 times the lattice spacing
-                    r[p][1] = (y + 0.5) * a;
-                    r[p][2] = (z + 0.5) * a;
-                }
-                ++p; //increment the position
-            }
-    // initialize velocities
-				for (int p = 0; p < N; p++) //for loop of p
-                    for (int i = 0; i < 3; i++) //the three didm
-                        v[p][i] = vMax * (2 * rand() / double(RAND_MAX) - 1); //
+    r = new double* [N];
+    v = new double* [N];
+    a = new double* [N];
+    for (int i = 0; i < N; i++) {
+        r[i] = new double [3];
+        v[i] = new double [3];
+        a[i] = new double [3];
+    }
+    initPositions();
+    initVelocities();
+}
+
+double L;  // linear size of cubical volume
+
+void initPositions() {
+    
+    // compute side of cube from number of particles and number density
+    L = pow(N / rho, 1.0/3);
+    
+    // find M large enough to fit N atoms on an fcc lattice
+    int M = 1;
+    while (4 * M * M * M < N)
+        ++M;
+    double a = L / M;           // lattice constant of conventional cell
+    
+    // 4 atomic positions in fcc unit cell
+    double xCell[4] = {0.25, 0.75, 0.75, 0.25};   //
+    double yCell[4] = {0.25, 0.75, 0.25, 0.75};   //
+    double zCell[4] = {0.25, 0.25, 0.75, 0.75};   //
+    
+    int n = 0;                  // atoms placed so far
+    for (int x = 0; x < M; x++) //
+        for (int y = 0; y < M; y++) //
+            for (int z = 0; z < M; z++) //
+                for (int k = 0; k < 4; k++) 
+                    if (n < N) {
+                        r[n][0] = (x + xCell[k]) * a;
+                        r[n][1] = (y + yCell[k]) * a;
+                        r[n][2] = (z + zCell[k]) * a;
+                        ++n;
+                    }
+}
+
+double gasdev () {
+    static bool available = false;  //set to false initially
+    static double gset;             //
+    double fac, rsq, v1, v2;
+    if (!available) {
+        do {
+            v1 = 2.0 * rand() / double(RAND_MAX) - 1.0;
+            v2 = 2.0 * rand() / double(RAND_MAX) - 1.0;
+            rsq = v1 * v1 + v2 * v2;
+        } while (rsq >= 1.0 || rsq == 0.0);
+        fac = sqrt(-2.0 * log(rsq) / rsq);
+        gset = v1 * fac;
+        available = true;
+        return v2*fac;
+    } else {
+        available = false;
+        return gset;
+    }
+}
+
+void initVelocities() {
+    
+    // Gaussian with unit variance
+    for (int n = 0; n < N; n++)
+        for (int i = 0; i < 3; i++)
+            v[n][i] = gasdev();
+    
+    // Adjust velocities so center-of-mass velocity is zero
+    double vCM[3] = {0, 0, 0};
+    for (int n = 0; n < N; n++)
+        for (int i = 0; i < 3; i++)
+            vCM[i] += v[n][i];
+    for (int i = 0; i < 3; i++)
+        vCM[i] /= N;
+    for (int n = 0; n < N; n++)
+        for (int i = 0; i < 3; i++)
+            v[n][i] -= vCM[i];
+    // Rescale velocities to get the desired instantaneous temperature
+    rescaleVelocities();
+}
+
+void rescaleVelocities() {
+    double vSqdSum = 0;
+    for (int n = 0; n < N; n++)
+        for (int i = 0; i < 3; i++)
+            vSqdSum += v[n][i] * v[n][i];
+    double lambda = sqrt( 3 * (N-1) * T / vSqdSum );
+    for (int n = 0; n < N; n++)
+        for (int i = 0; i < 3; i++)
+            v[n][i] *= lambda;
 }
 
 void computeAccelerations() {
-    for (int i = 0; i < N; i++)             // set all accelerations to zero
+    for (int i = 0; i < N; i++)
         for (int k = 0; k < 3; k++)
             a[i][k] = 0;
-    for (int i = 0; i < N-1; i++)           // loop over all distinct pairs i,j
+    for (int i = 0; i < N-1; i++)
         for (int j = i+1; j < N; j++) {
-            double rij[3];                  // position of i relative to j
+            double rij[3];
             double rSqd = 0;
             for (int k = 0; k < 3; k++) {
                 rij[k] = r[i][k] - r[j][k];
+                // closest image convention
+                if (abs(rij[k]) > 0.5 * L) {
+                    if (rij[k] > 0)
+                        rij[k] -= L;
+                    else
+                        rij[k] += L;
+                }
                 rSqd += rij[k] * rij[k];
             }
             double f = 24 * (2 * pow(rSqd, -7) - pow(rSqd, -4));
-            cout << f << '\n';
             for (int k = 0; k < 3; k++) {
                 a[i][k] += rij[k] * f;
                 a[j][k] -= rij[k] * f;
@@ -167,6 +257,11 @@ void velocityVerlet(double dt) {
     for (int i = 0; i < N; i++)
         for (int k = 0; k < 3; k++) {
             r[i][k] += v[i][k] * dt + 0.5 * a[i][k] * dt * dt;
+            // use periodic boundary conditions
+            if (r[i][k] < 0)
+                r[i][k] += L;
+            if (r[i][k] >= L)
+                r[i][k] -= L;
             v[i][k] += 0.5 * a[i][k] * dt;
         }
     computeAccelerations();
@@ -182,6 +277,8 @@ double instantaneousTemperature() {
             sum += v[i][k] * v[i][k];
     return sum / (3 * (N - 1));
 }
+
+
 
 
 void Computation(const DTDictionary &parameters,
@@ -207,14 +304,16 @@ void Computation(const DTDictionary &parameters,
     double maxTime = parameters("maxTime");
     for (int i = 0; i < maxTime/dt; i++) {
         velocityVerlet(dt);
+        if (i % 200 == 0)
+            rescaleVelocities();
         cout << instantaneousTemperature() << '\n';
-        for(int i = 0; i< N; i++) {
-            position(0,i) = r[i][0];
-            position(1,i) = r[i][1];
-            position(2,i) = r[i][2];
-            velocity(0,i) = v[i][0];
-            velocity(1,i) = v[i][1];
-            velocity(2,i) = v[i][2];
+        for(int j = 0; j< N; j++) {
+            position(0,j) = r[j][0];
+            position(1,j) = r[j][1];
+            position(2,j) = r[j][2];
+            velocity(0,j) = v[j][0];
+            velocity(1,j) = v[j][1];
+            velocity(2,j) = v[j][2];
         }
         DTVectorCollection3D vectors(DTPointCollection3D(position), velocity);
         state.velocities = vectors;

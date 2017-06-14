@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>3F23FC3E-FCF2-4526-9D45-C57A3BFFD09F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>evolution</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>
 		<string>https://github.com/SteiniDavid/DataTank-Klotsa.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Flocking Redo.tank/Attachments/evolution/evolution.xcodeproj</string>
+	<string>Flocking Redo.tank/Attachments/evolution/evolution.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>

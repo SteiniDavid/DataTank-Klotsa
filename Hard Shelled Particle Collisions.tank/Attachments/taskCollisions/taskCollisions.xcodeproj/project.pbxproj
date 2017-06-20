@@ -158,7 +158,7 @@
 		63D8654C156D3622004440D9 /* DTFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864B7156D3622004440D9 /* DTFunction.cpp */; };
 		63D8654D156D3622004440D9 /* DTFunctionFit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864B9156D3622004440D9 /* DTFunctionFit.cpp */; };
 		63D8654E156D3622004440D9 /* DTMask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63D864BB156D3622004440D9 /* DTMask.cpp */; };
-		A428CA951EEED2ED000A1449 /* DTSeriesVectorCollection2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A428CA931EEED2ED000A1449 /* DTSeriesVectorCollection2D.cpp */; };
+		A47BBFF51EF965DF0029C892 /* DTSeriesVectorCollection2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A47BBFF41EF965DF0029C892 /* DTSeriesVectorCollection2D.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -491,8 +491,8 @@
 		63D864BA156D3622004440D9 /* DTFunctionFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFunctionFit.h; sourceTree = "<group>"; };
 		63D864BB156D3622004440D9 /* DTMask.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTMask.cpp; sourceTree = "<group>"; };
 		63D864BC156D3622004440D9 /* DTMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTMask.h; sourceTree = "<group>"; };
-		A428CA931EEED2ED000A1449 /* DTSeriesVectorCollection2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesVectorCollection2D.cpp; sourceTree = "<group>"; };
-		A428CA941EEED2ED000A1449 /* DTSeriesVectorCollection2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesVectorCollection2D.h; sourceTree = "<group>"; };
+		A47BBFF41EF965DF0029C892 /* DTSeriesVectorCollection2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTSeriesVectorCollection2D.cpp; sourceTree = "<group>"; };
+		A47BBFF61EF965F20029C892 /* DTSeriesVectorCollection2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTSeriesVectorCollection2D.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -696,8 +696,8 @@
 				63D863E7156D3622004440D9 /* DTSeriesTriangularGrid2D.h */,
 				63D863E8156D3622004440D9 /* DTSeriesTriangularMesh2D.cpp */,
 				63D863E9156D3622004440D9 /* DTSeriesTriangularMesh2D.h */,
-				A428CA931EEED2ED000A1449 /* DTSeriesVectorCollection2D.cpp */,
-				A428CA941EEED2ED000A1449 /* DTSeriesVectorCollection2D.h */,
+				A47BBFF41EF965DF0029C892 /* DTSeriesVectorCollection2D.cpp */,
+				A47BBFF61EF965F20029C892 /* DTSeriesVectorCollection2D.h */,
 			);
 			path = 2D;
 			sourceTree = "<group>";
@@ -1126,7 +1126,7 @@
 				63D8651B156D3622004440D9 /* DTPath2D.cpp in Sources */,
 				63D8651C156D3622004440D9 /* DTPath2DValues.cpp in Sources */,
 				63D8651D156D3622004440D9 /* DTPoint2D.cpp in Sources */,
-				A428CA951EEED2ED000A1449 /* DTSeriesVectorCollection2D.cpp in Sources */,
+				A47BBFF51EF965DF0029C892 /* DTSeriesVectorCollection2D.cpp in Sources */,
 				63D8651E156D3622004440D9 /* DTPoint2DValue.cpp in Sources */,
 				63D8651F156D3622004440D9 /* DTPointCollection2D.cpp in Sources */,
 				63D86520156D3622004440D9 /* DTPointValueCollection2D.cpp in Sources */,

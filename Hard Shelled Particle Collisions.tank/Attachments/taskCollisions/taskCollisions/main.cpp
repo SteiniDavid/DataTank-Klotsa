@@ -135,7 +135,7 @@ void initialize() {
     a = new double* [N]; //the acceleration vectors
     for (int i = 0; i < N; i++) { //goes over for every particle
         r[i] = new double [3]; //creates an array for the three dimensions
-        v[i] = new double [3];
+        v[i] = new double [3]; //
         a[i] = new double [3];
     }
     initPositions();  //initializes the positions now that its done creating the arrays
@@ -171,6 +171,43 @@ void initPositions() {
                         r[n][2] = (z + zCell[k]) * a; //for z part
                         ++n; //the number of particles placed has increased by one
                     }
+}
+
+DTMutablePointCollection3D InitializePosition(int NumPoints,double rhoVal) { //
+    
+    // compute side of cube from number of particles and number density
+   double cubeVol = pow(NumPoints / rhoVal, 1.0/3); //the side length is based on the number of particles as well as the density
+    
+    // find M large enough to fit N atoms on an fcc lattice
+    int M = 1; //
+    while (4 * M * M * M < N) //so that all of the particles fit within the lattice
+        ++M;
+    double a = cubeVol / M;           // lattice constant of conventional cell
+    
+    // 4 atomic positions in fcc unit cell
+    double xCell[4] = {0.25, 0.75, 0.75, 0.25};   //
+    double yCell[4] = {0.25, 0.75, 0.25, 0.75};   //
+    double zCell[4] = {0.25, 0.25, 0.75, 0.75};   //
+    
+    DTMutableDoubleArray points(3,NumPoints);
+    
+    int n = 0;                  // atoms placed so far
+    for (int x = 0; x < M; x++) {//
+        for (int y = 0; y < M; y++) {//
+            for (int z = 0; z < M; z++) {//
+                for (int k = 0; k < 4; k++) {//
+                    if (n < NumPoints) { //if the number placed so far is less than the number of particles continue
+                        points(0,n) = (x + xCell[k]) * a; //places particle in x part
+                        points(1,n) = (y + yCell[k]) * a; //for y part
+                        points(2,n) = (z + zCell[k]) * a; //for z part
+                        ++n; //the number of particles placed has increased by one
+                    }
+                }
+            }
+        }
+    }
+    
+    return DTMutablePointCollection3D(points);
 }
 
 double gasdev () {
@@ -212,6 +249,31 @@ void initVelocities() {
             v[n][i] -= vCM[i]; //subtracts the velocty average for a given dim form each particles velocity in that dim
     // Rescale velocities to get the desired instantaneous temperature
     rescaleVelocities(); //rescales all of the velocities to get back to the right speed
+}
+
+DTMutablePointCollection3D initializeVelocities(int numPoints) {
+    DTMutableDoubleArray points(3,numPoints);
+    
+    // Gaussian with unit variance
+    for (int n = 0; n < numPoints; n++) {
+        for (int i = 0; i < 3; i++) {
+            points(i,n) = gasdev(); //calls gasdev function for each particle for each of the three dim
+        }
+    }
+    // Adjust velocities so center-of-mass velocity is zero
+    double vCM[3] = {0, 0, 0}; //the center of mass velocity is set as zero
+    for (int n = 0; n < N; n++)
+        for (int i = 0; i < 3; i++)
+            vCM[i] += v[n][i]; //becomes the total velocity for a given dim
+    for (int i = 0; i < 3; i++) //goes through 3 dim
+        vCM[i] /= N; //devides each dims total velocity by the num of particles
+    for (int n = 0; n < N; n++) //for all of the particles in the system
+        for (int i = 0; i < 3; i++) //for the three dim
+            points(i,n) -= vCM[i]; //subtracts the velocty average for a given dim form each particles velocity in that dim
+    // Rescale velocities to get the desired instantaneous temperature
+    rescaleVelocities(); //rescales all of the velocities to get back to the right speed
+    
+    return DTMutablePointCollection3D(points);
 }
 
 void rescaleVelocities() {
@@ -285,6 +347,19 @@ void Computation(const DTDictionary &parameters,
                  const DTPointCollection3D &initialPoints,
                  const DTRegion3D &box,DTSeriesGroup<DT_RetGroup> &computed)
 {
+    double numPoints = initialPoints.NumberOfPoints();
+    
+    //My methods version
+    DTMutablePointCollection3D positions = InitializePosition(numPoints, rho);
+    DTMutablePointCollection3D velocities = initializeVelocities(numPoints);
+    
+    
+    
+    
+    
+    
+    //////////////////////////////
+    
     initialize();
     DTMutableDoubleArray position(3,N);
     DTMutableDoubleArray velocity(3,N);
@@ -302,22 +377,26 @@ void Computation(const DTDictionary &parameters,
     computed.Add(state, 0.0);
     double dt = parameters("dt");
     double maxTime = parameters("maxTime");
+    int stride = parameters("stride");
     for (int i = 0; i < maxTime/dt; i++) {
         velocityVerlet(dt);
         if (i % 200 == 0)
             rescaleVelocities();
         cout << instantaneousTemperature() << '\n';
-        for(int j = 0; j< N; j++) {
-            position(0,j) = r[j][0];
-            position(1,j) = r[j][1];
-            position(2,j) = r[j][2];
-            velocity(0,j) = v[j][0];
-            velocity(1,j) = v[j][1];
-            velocity(2,j) = v[j][2];
+        
+        if ((i+1)%stride==0) {
+            for(int j = 0; j< N; j++) {
+                position(0,j) = r[j][0];
+                position(1,j) = r[j][1];
+                position(2,j) = r[j][2];
+                velocity(0,j) = v[j][0];
+                velocity(1,j) = v[j][1];
+                velocity(2,j) = v[j][2];
+            }
+            DTVectorCollection3D vectors(DTPointCollection3D(position), velocity);
+            state.velocities = vectors;
+            computed.Add(state, (i+1)*dt);
         }
-        DTVectorCollection3D vectors(DTPointCollection3D(position), velocity);
-        state.velocities = vectors;
-        computed.Add(state, (i+1)*dt);
     }
     
     double radius = parameters("radius");

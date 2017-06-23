@@ -1028,13 +1028,13 @@
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>velocities from Group</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-960</real>
-				<real>115</real>
+				<real>-1062</real>
+				<real>127</real>
 				<real>907</real>
 				<real>718</real>
 			</array>
@@ -1387,8 +1387,8 @@
 			<string>Points from velocity</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-1071</real>
-				<real>563</real>
+				<real>-1207</real>
+				<real>848</real>
 				<real>814</real>
 				<real>672</real>
 			</array>
@@ -1724,13 +1724,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>50</real>
+								<real>2.2549999999999999</real>
 								<key>MaxValue</key>
 								<real>180</real>
 								<key>MinValue</key>
 								<real>-180</real>
 								<key>String</key>
-								<string>50</string>
+								<string>2.255</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -1740,13 +1740,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>20</real>
+								<real>5.7439999999999998</real>
 								<key>MaxValue</key>
 								<real>60</real>
 								<key>MinValue</key>
 								<real>2</real>
 								<key>String</key>
-								<string>20</string>
+								<string>5.744</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -1760,13 +1760,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>20</real>
+								<real>-0.50860000000000005</real>
 								<key>MaxValue</key>
 								<real>90</real>
 								<key>MinValue</key>
 								<real>-90</real>
 								<key>String</key>
-								<string>20</string>
+								<string>-0.5086</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -1833,22 +1833,24 @@
 						<key>Sparsify</key>
 						<string>On</string>
 						<key>Type</key>
-						<integer>0</integer>
+						<integer>2</integer>
 					</dict>
 					<key>Drawn</key>
 					<string>Include</string>
 					<key>Status</key>
 					<string>Visible</string>
+					<key>ToggleOpen</key>
+					<string>YES</string>
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>192</real>
+			<real>926</real>
 			<key>DrawingWindowType</key>
 			<string>3DGLGraph</string>
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{512, 192}</string>
+			<string>{2559, 926}</string>
 			<key>Lights</key>
 			<dict>
 				<key>Lights</key>
@@ -1926,7 +1928,7 @@
 				<real>0.0</real>
 			</array>
 			<key>ViewSizeJoined</key>
-			<string>514,192</string>
+			<string>2561,926</string>
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
@@ -1936,9 +1938,9 @@
 			<key>WindowPos</key>
 			<array>
 				<real>-2559</real>
-				<real>1113</real>
-				<real>512</real>
-				<real>407</real>
+				<real>248</real>
+				<real>2559</real>
+				<real>1272</real>
 			</array>
 		</dict>
 		<dict>
@@ -2204,8 +2206,8 @@
 			<string>Snapshot of Trace of Points from velocity</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-2446</real>
-				<real>739</real>
+				<real>-1770</real>
+				<real>609</real>
 				<real>892</real>
 				<real>748</real>
 			</array>
@@ -2647,13 +2649,13 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>565</real>
+			<real>405</real>
 			<key>DrawingWindowType</key>
 			<string>3DGLGraph</string>
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{895, 565}</string>
+			<string>{895, 405}</string>
 			<key>Lights</key>
 			<dict>
 				<key>Lights</key>
@@ -2731,7 +2733,7 @@
 				<real>0.0</real>
 			</array>
 			<key>ViewSizeJoined</key>
-			<string>897,565</string>
+			<string>897,405</string>
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
@@ -2740,10 +2742,10 @@
 			<string>Trace of Points from velocity</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-1807</real>
-				<real>223</real>
+				<real>-1662</real>
+				<real>314</real>
 				<real>895</real>
-				<real>1055</real>
+				<real>777</real>
 			</array>
 		</dict>
 		<dict>
@@ -2808,13 +2810,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>-144.70000000000002</real>
+								<real>-56.07</real>
 								<key>MaxValue</key>
 								<real>180</real>
 								<key>MinValue</key>
 								<real>-180</real>
 								<key>String</key>
-								<string>-144.7</string>
+								<string>-56.07</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -2844,13 +2846,13 @@
 							<key>Inline</key>
 							<dict>
 								<key>CurrentValue</key>
-								<real>6.7990000000000004</real>
+								<real>-14.9</real>
 								<key>MaxValue</key>
 								<real>90</real>
 								<key>MinValue</key>
 								<real>-90</real>
 								<key>String</key>
-								<string>6.799</string>
+								<string>-14.9</string>
 							</dict>
 							<key>SelectedNumber</key>
 							<integer>0</integer>
@@ -2928,13 +2930,13 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>485</real>
+			<real>405</real>
 			<key>DrawingWindowType</key>
 			<string>3DGLGraph</string>
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{1107, 485}</string>
+			<string>{1107, 405}</string>
 			<key>Lights</key>
 			<dict>
 				<key>Lights</key>
@@ -3012,7 +3014,7 @@
 				<real>0.0</real>
 			</array>
 			<key>ViewSizeJoined</key>
-			<string>1109,485</string>
+			<string>1109,405</string>
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
@@ -3021,10 +3023,10 @@
 			<string>initialPoints</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-1517</real>
-				<real>550</real>
+				<real>-1519</real>
+				<real>423</real>
 				<real>1107</real>
-				<real>916</real>
+				<real>777</real>
 			</array>
 		</dict>
 	</array>
@@ -3040,13 +3042,13 @@
 		<key>CurrentTime</key>
 		<dict>
 			<key>CurrentValue</key>
-			<real>1000</real>
+			<real>638</real>
 			<key>MaxValue</key>
-			<real>1000</real>
+			<real>845.33000000000004</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>1000</string>
+			<string>638</string>
 		</dict>
 		<key>Duration</key>
 		<string>10</string>
@@ -3055,7 +3057,7 @@
 		<key>Loop</key>
 		<string>Off</string>
 		<key>TimeHint</key>
-		<real>997.10000000000002</real>
+		<real>839.33000000000004</real>
 		<key>TimeStep</key>
 		<string>1.0</string>
 		<key>TimeStepSwitch</key>
@@ -3089,6 +3091,101 @@
 	</dict>
 	<key>Variables</key>
 	<array>
+		<dict>
+			<key>ScriptName</key>
+			<string>Text-1.rtfd</string>
+			<key>TextHeight</key>
+			<real>14</real>
+			<key>VariableName</key>
+			<string>DAText - 1</string>
+			<key>VariableType</key>
+			<string>Text</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Application</key>
+				<string></string>
+				<key>Argument</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>String</key>
+						<string></string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Communication</key>
+				<integer>1</integer>
+				<key>GroupName</key>
+				<string>DT_RetGroup</string>
+				<key>GroupStructure</key>
+				<array>
+					<dict>
+						<key>Name</key>
+						<string>inital</string>
+						<key>Type</key>
+						<string>PointCollection3D</string>
+					</dict>
+					<dict>
+						<key>Name</key>
+						<string>final</string>
+						<key>Type</key>
+						<string>VectorCollection3D</string>
+					</dict>
+				</array>
+				<key>Input</key>
+				<string>Input.dtbin</string>
+				<key>Output</key>
+				<string>Output.dtbin</string>
+				<key>Project</key>
+				<string>old code/old code.xcodeproj</string>
+				<key>Variables</key>
+				<array>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>parameters</string>
+						<key>Type</key>
+						<string>Dictionary</string>
+						<key>Var</key>
+						<dict>
+							<key>Selected</key>
+							<string>parameters</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>box</string>
+						<key>Type</key>
+						<string>Region3D</string>
+						<key>Var</key>
+						<dict>
+							<key>Selected</key>
+							<string>3D Region</string>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+			<key>Selection</key>
+			<string>External Program</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>Old Implementation</string>
+			<key>VariableType</key>
+			<string>Group</string>
+		</dict>
+		<dict>
+			<key>VariableName</key>
+			<string>DADivider - 1</string>
+			<key>VariableType</key>
+			<string>Divider</string>
+		</dict>
 		<dict>
 			<key>Content</key>
 			<dict>
@@ -3157,8 +3254,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>Random</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>List of Numbers</string>
 			<key>VariableType</key>
@@ -3179,8 +3274,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>Reshape</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>List of Numbers Reshaped</string>
 			<key>VariableType</key>
@@ -3212,8 +3305,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>Expression</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>3D Region</string>
 			<key>VariableType</key>
@@ -3371,8 +3462,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>Time Sequence</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>seed</string>
 			<key>VariableType</key>
@@ -3625,8 +3714,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>Parameter Run</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>Task</string>
 			<key>VariableType</key>
@@ -3705,8 +3792,10 @@
 			</dict>
 			<key>Selection</key>
 			<string>Task</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
 			<key>VariableName</key>
-			<string>particleDynamics</string>
+			<string>Personal Implementation</string>
 			<key>VariableType</key>
 			<string>Group</string>
 		</dict>
@@ -3716,7 +3805,7 @@
 				<key>Group</key>
 				<dict>
 					<key>Selected</key>
-					<string>particleDynamics</string>
+					<string>Personal Implementation</string>
 				</dict>
 				<key>Name</key>
 				<dict>
@@ -3740,8 +3829,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>From Group</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>velocity</string>
 			<key>VariableType</key>
@@ -3758,8 +3845,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>From Variable</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>Points from velocity</string>
 			<key>VariableType</key>
@@ -3782,8 +3867,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>Snapshot</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>Snapshot of Points from velocity</string>
 			<key>VariableType</key>
@@ -3815,8 +3898,6 @@
 			</dict>
 			<key>Selection</key>
 			<string>Line</string>
-			<key>ToggleOpen</key>
-			<string>YES</string>
 			<key>VariableName</key>
 			<string>3D Path</string>
 			<key>VariableType</key>
@@ -3841,10 +3922,10 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>-2546</real>
-		<real>283</real>
-		<real>959</real>
-		<real>1231</real>
+		<real>-2459</real>
+		<real>105</real>
+		<real>941</real>
+		<real>1415</real>
 	</array>
 </dict>
 </plist>

@@ -2336,7 +2336,7 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>691</real>
+			<real>488.5</real>
 			<key>DrawingWindow</key>
 			<dict>
 				<key>ClickMenu</key>
@@ -2352,7 +2352,7 @@
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{1082, 691}</string>
+			<string>{1082, 488.5}</string>
 			<key>MaxHeight</key>
 			<string></string>
 			<key>MaxWidth</key>
@@ -2387,7 +2387,7 @@
 				<real>0.0</real>
 			</array>
 			<key>ViewSizeJoined</key>
-			<string>1082,691</string>
+			<string>1082,488.5</string>
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
@@ -2397,9 +2397,9 @@
 			<key>WindowPos</key>
 			<array>
 				<real>0.0</real>
-				<real>489</real>
+				<real>1120</real>
 				<real>1080</real>
-				<real>1063</real>
+				<real>773</real>
 			</array>
 		</dict>
 		<dict>
@@ -6089,7 +6089,7 @@
 			<key>WindowPos</key>
 			<array>
 				<real>173</real>
-				<real>1197</real>
+				<real>1193</real>
 				<real>709</real>
 				<real>700</real>
 			</array>
@@ -6344,7 +6344,7 @@
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>Source</string>
 			<key>WindowPos</key>
@@ -7336,10 +7336,10 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>-1611</real>
-		<real>107</real>
+		<real>-2558</real>
+		<real>747</real>
 		<real>1032</real>
-		<real>1413</real>
+		<real>773</real>
 	</array>
 </dict>
 </plist>

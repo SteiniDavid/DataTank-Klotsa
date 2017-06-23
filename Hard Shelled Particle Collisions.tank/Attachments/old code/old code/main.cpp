@@ -1,56 +1,100 @@
-// Include DTSource.h if you want to include all the headers.
-
-#include "DTArguments.h"
+// #include "DTSource.h"
 #include "DTSaveError.h"
 
+#include "DTArguments.h"
 #include "DTDataFile.h"
-#include "DTVectorCollection2D.h"
-
-// Common utilities
-#include "DTDoubleArrayOperators.h"
-#include "DTProgress.h"
-#include "DTTimer.h"
-#include "DTUtilities.h"
 #include "DTDictionary.h"
+#include "DTProgress.h"
+#include "DTRegion3D.h"
+#include "DTSeriesGroup.h"
+#include "DTVectorCollection3D.h"
 
-#include <math.h>
+//////////////////////////////////////////////////////////////////////////////
+//    DT_RetGroup
+//////////////////////////////////////////////////////////////////////////////
 
-DTVectorCollection2D Computation(int N);
+struct DT_RetGroup {
+    DTVectorCollection3D velocities;
+    
+    void pinfo(void) const;
+    void pinfoIndent(string) const;
+    
+    static void WriteStructure(DTDataStorage &,string);
+};
+
+void DT_RetGroup::pinfo(void) const
+{
+    pinfoIndent("");
+}
+
+void DT_RetGroup::pinfoIndent(string pad) const
+{
+    cerr << pad << "velocities = "; velocities.pinfo();
+}
+
+void DT_RetGroup::WriteStructure(DTDataStorage &output,string name)
+{
+    output.Save("velocities",name+"_1N");
+    output.Save("VectorCollection3D",name+"_1T");
+    
+    output.Save(1,name+"_N");
+    output.Save("Group",name);
+}
+
+extern void Write(DTDataStorage &,string name,const DT_RetGroup &);
+
+void Write(DTDataStorage &output,string name,const DT_RetGroup &var)
+{
+    Write(output,name+"_velocities",var.velocities);
+    Write(output,name,DTDoubleArray()); // So that DataTank can see the variable.
+}
+
+//////////////////////////////////////////////////////////////////////////////
+//    Main routine
+//////////////////////////////////////////////////////////////////////////////
+
+void Computation(const DTDictionary &parameters,const DTRegion3D &_3D_Region,
+                 DTSeriesGroup<DT_RetGroup> &computed);
 
 int main(int argc,const char *argv[])
 {
     DTSetArguments(argc,argv);
-
+    
     DTDataFile inputFile("Input.dtbin",DTFile::ReadOnly);
-    // Read in the input variables.
-    int N = int(inputFile.ReadNumber("N"));
-
+    DTDataFile outputFile("Output.dtbin",DTFile::NewReadWrite);
+    // Input variables.
+    DTDictionary parameters;
+    Read(inputFile,"parameters",parameters);
+    DTRegion3D _3D_Region;
+    Read(inputFile,"3D Region",_3D_Region);
+    
+    // Output series.
+    DTSeriesGroup<DT_RetGroup> computed(outputFile,"Var");
+    if (DTArgumentIncludesFlag("saveInput")) { // Add -saveInput to the argument list to save the input in the output file.
+        WriteOne(outputFile,"parameters",parameters);
+        WriteOne(outputFile,"3D Region",_3D_Region);
+    }
+    
+    
     // The computation.
-    DTVectorCollection2D computed;
     clock_t t_before = clock();
-    computed = Computation(N);
+    Computation(parameters,_3D_Region,computed);
     clock_t t_after = clock();
     double exec_time = double(t_after-t_before)/double(CLOCKS_PER_SEC);
-
-    // Write the output.
-    DTDataFile outputFile("Output.dtbin",DTFile::NewReadWrite);
-
-    // Output from computation
-    Write(outputFile,"Var",computed);
-    outputFile.Save("VectorCollection2D","Seq_Var");
-
+    
     // The execution time.
     outputFile.Save(exec_time,"ExecutionTime");
     outputFile.Save("Real Number","Seq_ExecutionTime");
-
+    
     // The errors.
     DTSaveError(outputFile,"ExecutionErrors");
     outputFile.Save("StringList","Seq_ExecutionErrors");
-
+    
     outputFile.SaveIndex();
-
+    
     return 0;
 }
+
 
 #include "DTRandom.h"
 #include <cmath>
@@ -228,7 +272,12 @@ double instantaneousTemperature() {
 }
 
 
-DTVectorCollection2D Computation(int N)
+//////////////////////////////////////////////////////////////////////////////
+//    Computational routine
+//////////////////////////////////////////////////////////////////////////////
+
+void Computation(const DTDictionary &parameters,const DTRegion3D &_3D_Region,
+                 DTSeriesGroup<DT_RetGroup> &computed)
 {
     initialize();
     DTMutableDoubleArray position(3,N);
@@ -247,6 +296,7 @@ DTVectorCollection2D Computation(int N)
     computed.Add(state, 0.0);
     double dt = parameters("dt");
     double maxTime = parameters("maxTime");
+    int stride = parameters("stride");
     for (int i = 0; i < maxTime/dt; i++) {
         velocityVerlet(dt);
         if (i % 200 == 0)
@@ -259,21 +309,11 @@ DTVectorCollection2D Computation(int N)
             velocity(0,j) = v[j][0];
             velocity(1,j) = v[j][1];
             velocity(2,j) = v[j][2];
+            
+            DTVectorCollection3D vectors(DTPointCollection3D(position), velocity);
+            state.velocities = vectors;
+            computed.Add(state, (i+1)*dt);
         }
-        DTVectorCollection3D vectors(DTPointCollection3D(position), velocity);
-        state.velocities = vectors;
-        computed.Add(state, (i+1)*dt);
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    DTVectorCollection2D toReturn;
-
-    return toReturn;
+    DTProgress progress;
 }

@@ -99,10 +99,13 @@ int main(int argc,const char *argv[])
     
     return 0;
 }
-
-//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    Computational routine
-//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include "DTRandom.h"
 #include <cmath>
@@ -125,7 +128,7 @@ void initVelocities();    // initial Maxwell-Boltzmann velocity distribution
 void rescaleVelocities(); // adjust the instanteous temperature to T
 double gasdev();          // Gaussian distributed random numbers
 
-DTMutableDoubleArray rescaleVelocities(int numPoints, DTMutableDoubleArray & points);
+void rescaleVelocitiesUpdate(int numPoints, DTMutablePointCollection3D& velocities);
 
 double **r; // positions
 double **v; // velocities
@@ -265,18 +268,19 @@ DTMutablePointCollection3D InitializeVelocities(int numPoints) {
     }
     // Adjust velocities so center-of-mass velocity is zero
     double vCM[3] = {0, 0, 0}; //the center of mass velocity is set as zero
-    for (int n = 0; n < N; n++)
+    for (int n = 0; n < numPoints; n++)
         for (int i = 0; i < 3; i++)
-            vCM[i] += v[n][i]; //becomes the total velocity for a given dim
+            vCM[i] += points(i,n); //becomes the total velocity for a given dim
     for (int i = 0; i < 3; i++) //goes through 3 dim
-        vCM[i] /= N; //devides each dims total velocity by the num of particles
-    for (int n = 0; n < N; n++) //for all of the particles in the system
+        vCM[i] /= numPoints; //devides each dims total velocity by the num of particles
+    for (int n = 0; n < numPoints; n++) //for all of the particles in the system
         for (int i = 0; i < 3; i++) //for the three dim
             points(i,n) -= vCM[i]; //subtracts the velocty average for a given dim form each particles velocity in that dim
     // Rescale velocities to get the desired instantaneous temperature
-    points = rescaleVelocities(numPoints, points); //rescales all of the velocities to get back to the right speed
+    DTMutablePointCollection3D velocities = DTMutablePointCollection3D(points);
+    rescaleVelocitiesUpdate(numPoints, velocities); //rescales all of the velocities to get back to the right speed
     
-    return DTMutablePointCollection3D(points);
+    return velocities;
 }
 
 void rescaleVelocities() {
@@ -291,8 +295,8 @@ void rescaleVelocities() {
 }
 
 //Mine///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-DTMutableDoubleArray rescaleVelocities(int numPoints, DTMutableDoubleArray & points) {
-    
+void rescaleVelocitiesUpdate(int numPoints, DTMutablePointCollection3D& velocities) {
+    DTMutableDoubleArray points = velocities.DoubleData();
     double vSqdSum = 0; //velocity square root initialized at 0
     for (int n = 0; n < numPoints; n++) //for all of the particles
         for (int i = 0; i < 3; i++) //for the three dim
@@ -301,7 +305,7 @@ DTMutableDoubleArray rescaleVelocities(int numPoints, DTMutableDoubleArray & poi
     for (int n = 0; n < numPoints; n++)
         for (int i = 0; i < 3; i++)
             points(i, n) *= lambda; //scales all of the vectors dims by lambda
-    return points;
+    velocities = DTMutablePointCollection3D(points);
 }
 
 void computeAccelerations() {
@@ -392,7 +396,7 @@ void velocityVerletUpdate(double dt, double rhoVal, double numPoints, DTMutableP
     DTMutableDoubleArray vel = velocities.DoubleData(); // Get the underlying double array
     DTMutableDoubleArray acc = accelerations.DoubleData(); // Get the underlying double array
     
-    for (int i = 0; i < pos.Length(); i++) {
+    for (int i = 0; i < numPoints; i++) {
         double dtSquare = dt*dt;
         for (int k  = 0; k < 3; k++) {
             pos(k,i) += vel(k,i) * dt+ .5 * acc(k,i) * dtSquare;
@@ -408,9 +412,9 @@ void velocityVerletUpdate(double dt, double rhoVal, double numPoints, DTMutableP
     positions = DTMutablePointCollection3D(pos); //updates the positions
     computeAccelerations(numPoints, rhoVal, positions);
     
-    for (int i = 0; i < pos.Length(); i++) {
+    for (int i = 0; i < numPoints; i++) {
          for (int k  = 0; k < 3; k++) {
-             vel(k,i) = .5 * acc(i,k) * dt;
+             vel(k,i) = .5 * acc(k,i) * dt;
          }
     }
     velocities = DTMutablePointCollection3D(vel); //updates the velocities
@@ -425,6 +429,14 @@ double instantaneousTemperature() {
     return sum / (3 * (N - 1)); //returns the temp of the system
 }
 
+double instantaneousTemperatureUpdate(int numPoints, DTMutablePointCollection3D velocities) {
+    DTDoubleArray vel = velocities.DoubleData();
+    double sum = 0; //initially sum is zero
+    for (int i = 0; i < numPoints; i++) //all particles
+        for (int k = 0; k < 3; k++) //all dim
+            sum += vel(k,i) * vel(k,i); //adds up the magnitude of all of the dims of all of the particles
+    return sum / (3 * (numPoints - 1)); //returns the temp of the system
+}
 
 
 
@@ -435,76 +447,27 @@ void Computation(const DTDictionary &parameters,
     double numPoints = initialPoints.NumberOfPoints();
     
     //My methods version
-    //DTMutablePointCollection3D positions = InitializePosition(numPoints, rho);
-    //DTMutablePointCollection3D velocities = InitializeVelocities(numPoints);
+    DTMutablePointCollection3D positions = InitializePosition(numPoints, rho);
+    DTMutablePointCollection3D velocities = InitializeVelocities(numPoints);
     
+    DTVectorCollection3D vectors(positions, velocities.DoubleData());
     
-    
-    
-    
-    
-    //////////////////////////////
-    
-    initialize();
-    DTMutableDoubleArray position(3,N);
-    DTMutableDoubleArray velocity(3,N);
-    for(int i = 0; i< N; i++) {
-        position(0,i) = r[i][0];
-        position(1,i) = r[i][1];
-        position(2,i) = r[i][2];
-        velocity(0,i) = v[i][0];
-        velocity(1,i) = v[i][1];
-        velocity(2,i) = v[i][2];
-    }
-    DTVectorCollection3D vectors(DTPointCollection3D(position), velocity);
     DT_RetGroup state;
     state.velocities = vectors;
     computed.Add(state, 0.0);
+    
     double dt = parameters("dt");
     double maxTime = parameters("maxTime");
     int stride = parameters("stride");
+    int rhoVal = .5; // density (number per unit volume)
+
     for (int i = 0; i < maxTime/dt; i++) {
-        velocityVerlet(dt);
-        if (i % 200 == 0)
-            rescaleVelocities();
-        cout << instantaneousTemperature() << '\n';
-        for(int j = 0; j< N; j++) {
-            position(0,j) = r[j][0];
-            position(1,j) = r[j][1];
-            position(2,j) = r[j][2];
-            velocity(0,j) = v[j][0];
-            velocity(1,j) = v[j][1];
-            velocity(2,j) = v[j][2];
-            
-            DTVectorCollection3D vectors(DTPointCollection3D(position), velocity);
-            state.velocities = vectors;
-            computed.Add(state, (i+1)*dt);
+        velocityVerletUpdate(dt, rhoVal, numPoints, positions, velocities);
+        if (i % 200 == 0) {
+            rescaleVelocitiesUpdate(numPoints, velocities);
         }
+        cout << instantaneousTemperatureUpdate(numPoints, velocities) << '\n';
     }
     
-    double radius = parameters("radius");
-    double v0 = parameters("v0");
-    double vMax = parameters("vMax");
-    double seed = parameters("seed");
-    
-    DTRandom random(seed);
-    
-//    //Initializes the particles positions and velocities
-//    int numPoints = initialParticles.NumberOfPoints();
-//    for (int i = 0; i < numPoints; i++) {
-//        DTPoint2D point = initialParticles(i);
-//        particlePositions[i][0] = point.x;
-//        particlePositions[i][1] = point.y;
-//        
-//        double angle = r.UniformHalf()*2*M_PI;
-//        particleVelocities[i][0] = cos(angle)*v0; //initial vx
-//        particleVelocities[i][1] = sin(angle)*v0; //inital vy
-//    }
-    
     DTProgress progress;
-    
-    // Inside the loop, do
-    //     progress.UpdatePercentage(fraction);
-    //     computed.Add(returnStructure,time); // Call with time>=0 and strictly increasing.
-    
 }

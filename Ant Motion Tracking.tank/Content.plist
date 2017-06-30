@@ -2336,7 +2336,7 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>488.5</real>
+			<real>488</real>
 			<key>DrawingWindow</key>
 			<dict>
 				<key>ClickMenu</key>
@@ -2352,7 +2352,7 @@
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{1082, 488.5}</string>
+			<string>{1082, 488}</string>
 			<key>MaxHeight</key>
 			<string></string>
 			<key>MaxWidth</key>
@@ -2391,13 +2391,13 @@
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>2D Path</string>
 			<key>WindowPos</key>
 			<array>
 				<real>0.0</real>
-				<real>1120</real>
+				<real>4</real>
 				<real>1080</real>
 				<real>773</real>
 			</array>
@@ -5149,13 +5149,13 @@
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>Contour of Subtract background</string>
 			<key>WindowPos</key>
 			<array>
-				<real>201</real>
-				<real>1221</real>
+				<real>-1343</real>
+				<real>888</real>
 				<real>753</real>
 				<real>632</real>
 			</array>
@@ -6083,13 +6083,13 @@
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>Region of Points</string>
 			<key>WindowPos</key>
 			<array>
-				<real>173</real>
-				<real>1193</real>
+				<real>-1534</real>
+				<real>820</real>
 				<real>709</real>
 				<real>700</real>
 			</array>
@@ -6689,6 +6689,299 @@
 				<real>407</real>
 			</array>
 		</dict>
+		<dict>
+			<key>Antialiasing</key>
+			<string>YES</string>
+			<key>Axis</key>
+			<dict>
+				<key>YScale</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Number</key>
+						<string>1</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingBox</key>
+			<dict>
+				<key>MaxXValue</key>
+				<string></string>
+				<key>MaxYValue</key>
+				<string></string>
+				<key>MinXValue</key>
+				<string></string>
+				<key>MinYValue</key>
+				<string></string>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>Region</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>CommandContents</key>
+			<array>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Bitmap</string>
+					<key>Computation</key>
+					<dict>
+						<key>Bitmap</key>
+						<dict>
+							<key>Selected</key>
+							<string>Source</string>
+						</dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>Crop</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>Interpolation</key>
+						<integer>0</integer>
+						<key>Sparsify</key>
+						<string>On</string>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Hidden</string>
+				</dict>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Path</string>
+					<key>Computation</key>
+					<dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>ClockWiseSwitch</key>
+						<string>Off</string>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>CroppingPath</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>FillStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Blue</key>
+									<real>0.0</real>
+									<key>Green</key>
+									<real>0.11008059161256623</real>
+									<key>Red</key>
+									<real>1</real>
+									<key>Space</key>
+									<string>NSCalibratedRGBColorSpace</string>
+								</dict>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>FillSwitch</key>
+						<string>On</string>
+						<key>LineStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Color</key>
+									<dict>
+										<key>Blue</key>
+										<real>0.080225848228442587</real>
+										<key>Green</key>
+										<real>0.0</real>
+										<key>Red</key>
+										<real>1</real>
+										<key>Space</key>
+										<string>NSCalibratedRGBColorSpace</string>
+									</dict>
+								</dict>
+								<key>LineType</key>
+								<integer>0</integer>
+								<key>LineWidth</key>
+								<string>0.5</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>LineSwitch</key>
+						<string>On</string>
+						<key>Path</key>
+						<dict>
+							<key>Selected</key>
+							<string>Ant outline approximation</string>
+						</dict>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+					<key>ToggleOpen</key>
+					<string>YES</string>
+				</dict>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Path</string>
+					<key>Computation</key>
+					<dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>ClockWiseSwitch</key>
+						<string>Off</string>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>CroppingPath</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>FillStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Blue</key>
+									<real>0.032063801000000003</real>
+									<key>Green</key>
+									<real>1</real>
+									<key>Red</key>
+									<real>0.020642599000000001</real>
+									<key>Space</key>
+									<string>NSCalibratedRGBColorSpace</string>
+								</dict>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>FillSwitch</key>
+						<string>Off</string>
+						<key>LineStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Color</key>
+									<dict>
+										<key>Blue</key>
+										<real>0.0</real>
+										<key>Green</key>
+										<real>0.0</real>
+										<key>Red</key>
+										<real>0.0</real>
+										<key>Space</key>
+										<string>NSCalibratedRGBColorSpace</string>
+									</dict>
+								</dict>
+								<key>LineType</key>
+								<integer>0</integer>
+								<key>LineWidth</key>
+								<string>0.5</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>LineSwitch</key>
+						<string>On</string>
+						<key>Path</key>
+						<dict>
+							<key>Selected</key>
+							<string>2D Path</string>
+						</dict>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+				</dict>
+			</array>
+			<key>DrawingHeight</key>
+			<real>528</real>
+			<key>DrawingWindow</key>
+			<dict>
+				<key>ClickMenu</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Automatic</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>DrawingWindowType</key>
+			<string>2DGraph</string>
+			<key>FigureName</key>
+			<string>Untitled</string>
+			<key>Last Drawing View Size</key>
+			<string>{1082, 528}</string>
+			<key>MaxHeight</key>
+			<string></string>
+			<key>MaxWidth</key>
+			<string></string>
+			<key>OutputHeight</key>
+			<string></string>
+			<key>OutputWidth</key>
+			<string></string>
+			<key>QT</key>
+			<dict>
+				<key>Format</key>
+				<string>Animation</string>
+				<key>Quality</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Lossless</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Range</key>
+				<string>0,∞</string>
+				<key>ShowInFinder</key>
+				<string>On</string>
+				<key>TimeStep</key>
+				<string>1.0</string>
+			</dict>
+			<key>SeparateWindowPos</key>
+			<array>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+			</array>
+			<key>ViewSizeJoined</key>
+			<string>1082,528</string>
+			<key>ViewSizeSeparated</key>
+			<string></string>
+			<key>Visible</key>
+			<string>YES</string>
+			<key>WindowName</key>
+			<string>Ant outline approximation</string>
+			<key>WindowPos</key>
+			<array>
+				<real>5</real>
+				<real>333</real>
+				<real>1080</real>
+				<real>777</real>
+			</array>
+		</dict>
 	</array>
 	<key>MonitorVariables</key>
 	<array>
@@ -6706,13 +6999,13 @@
 		<key>CurrentTime</key>
 		<dict>
 			<key>CurrentValue</key>
-			<real>0.73499999999999999</real>
+			<real>16.100000000000001</real>
 			<key>MaxValue</key>
 			<real>19.960000000000001</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>0.735</string>
+			<string>16.1</string>
 		</dict>
 		<key>Duration</key>
 		<string>35</string>
@@ -6721,7 +7014,7 @@
 		<key>Loop</key>
 		<string>On</string>
 		<key>TimeHint</key>
-		<real>3.6899999999999999</real>
+		<real>16.100000000000001</real>
 		<key>TimeStep</key>
 		<string>1.0</string>
 		<key>TimeStepSwitch</key>
@@ -6920,13 +7213,13 @@
 				<key>Slider</key>
 				<dict>
 					<key>CurrentValue</key>
-					<real>-0.29599999999999999</real>
+					<real>-0.214</real>
 					<key>MaxValue</key>
 					<real>0.122</real>
 					<key>MinValue</key>
 					<real>-0.53300000000000003</real>
 					<key>String</key>
-					<string>-0.296</string>
+					<string>-0.214</string>
 				</dict>
 			</dict>
 			<key>Selection</key>
@@ -7336,10 +7629,10 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>-2558</real>
-		<real>747</real>
-		<real>1032</real>
-		<real>773</real>
+		<real>-2560</real>
+		<real>743</real>
+		<real>986</real>
+		<real>777</real>
 	</array>
 </dict>
 </plist>

@@ -776,7 +776,7 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>555.5</real>
+			<real>555</real>
 			<key>DrawingWindow</key>
 			<dict>
 				<key>ClickMenu</key>
@@ -792,7 +792,7 @@
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{973, 555.5}</string>
+			<string>{973, 555}</string>
 			<key>MaxHeight</key>
 			<string></string>
 			<key>MaxWidth</key>
@@ -1513,7 +1513,7 @@
 		<key>Loop</key>
 		<string>Off</string>
 		<key>TimeHint</key>
-		<real>94.900000000000006</real>
+		<real>0.0</real>
 		<key>TimeStep</key>
 		<string>1.0</string>
 		<key>TimeStepSwitch</key>
@@ -2462,7 +2462,7 @@
 	<array>
 		<real>-2519</real>
 		<real>743</real>
-		<real>948</real>
+		<real>941</real>
 		<real>777</real>
 	</array>
 </dict>

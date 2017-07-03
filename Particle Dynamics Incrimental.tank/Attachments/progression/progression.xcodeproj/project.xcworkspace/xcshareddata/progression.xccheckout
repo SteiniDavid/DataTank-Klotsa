@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>3F23FC3E-FCF2-4526-9D45-C57A3BFFD09F</string>
+	<string>C72B2ADF-2DA8-4C35-B1D4-1C9F01A8F139</string>
 	<key>IDESourceControlProjectName</key>
-	<string>evolution</string>
+	<string>progression</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>
 		<string>https://github.com/SteiniDavid/DataTank-Klotsa.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Flocking Redo.tank/Attachments/evolution/evolution.xcodeproj</string>
+	<string>Particle Dynamics Incrimental.tank/Attachments/progression/progression.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9EAF9CD327CDB63CA3AA07B817D6748F6763C336</key>

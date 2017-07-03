@@ -6971,13 +6971,13 @@
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
-			<string>YES</string>
+			<string>NO</string>
 			<key>WindowName</key>
 			<string>Ant outline approximation</string>
 			<key>WindowPos</key>
 			<array>
-				<real>5</real>
-				<real>333</real>
+				<real>-3</real>
+				<real>388</real>
 				<real>1080</real>
 				<real>777</real>
 			</array>
@@ -7631,7 +7631,7 @@
 	<array>
 		<real>-2560</real>
 		<real>743</real>
-		<real>986</real>
+		<real>941</real>
 		<real>777</real>
 	</array>
 </dict>

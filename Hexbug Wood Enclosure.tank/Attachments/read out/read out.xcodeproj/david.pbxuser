@@ -1,0 +1,113 @@
+// !$*UTF8*$!
+{
+	63D414DC1786010200A108A2 /* DTSource For XCode 32 */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "DTSource For XCode 32";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	63D414E01786012600A108A2 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	63D414E11786012600A108A2 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	63D414E21786014B00A108A2 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 63D86475156D3622004440D9 /* DTAtomCollection3D.cpp */;
+	};
+	63D414E31786014B00A108A2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63D86475156D3622004440D9 /* DTAtomCollection3D.cpp */;
+		name = "DTAtomCollection3D.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 935;
+		vrLoc = 0;
+	};
+	63D86350156D2DD2004440D9 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 63D414DC1786010200A108A2 /* DTSource For XCode 32 */;
+		activeTarget = 63D86358156D2DD2004440D9 /* DTSource For XCode 32 */;
+		codeSenseManager = 63D414E11786012600A108A2 /* Code sense */;
+		executables = (
+			63D414DC1786010200A108A2 /* DTSource For XCode 32 */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					329,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 394658050;
+			PBXWorkspaceStateSaveDate = 394658050;
+		};
+		perUserProjectItems = {
+			63D414E21786014B00A108A2 /* PBXBookmark */ = 63D414E21786014B00A108A2 /* PBXBookmark */;
+			63D414E31786014B00A108A2 /* PBXTextBookmark */ = 63D414E31786014B00A108A2 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 63D414E01786012600A108A2 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	63D86358156D2DD2004440D9 /* DTSource For XCode 32 */ = {
+		activeExec = 0;
+		executables = (
+			63D414DC1786010200A108A2 /* DTSource For XCode 32 */,
+		);
+	};
+	63D86475156D3622004440D9 /* DTAtomCollection3D.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {775, 1937}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 935}";
+		};
+	};
+}

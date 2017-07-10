@@ -81,7 +81,7 @@ public:
         timeIndex = timeI;
     }
     
-    DTPath2DValues ConvertToPath(DTDoubleArray timeValues){
+    DTPath2DValues ConvertToPath(DTDoubleArray timeValues){ //i made a new version.
         // The first column needs to be the length
         DTMutableDoubleArray loop(2,howManyPoints+1);
         // [ 0 x1 .... xN]
@@ -97,8 +97,14 @@ public:
             loop(1,i+1) = points(1,i);
         }
         
+        DTMutableDoubleArray timePlusOne(howManyPoints+1);
+        timePlusOne(0) = howManyPoints;
+        for (int i=0;i<howManyPoints;i++) {
+            timePlusOne(i+1) = timeValues(i);
+        }
+        
         DTPath2D path = DTPath2D(loop);
-        return DTPath2DValues(path, timeValues);
+        return DTPath2DValues(path, timePlusOne);
     }
     
     //a way of getting a more compact explanation in the debugger
@@ -110,7 +116,7 @@ public:
 
 DTPath2DValues Computation(const DTSeriesPointCollection2D &allPoints,double maxDist)
 {
-    DTMutableList<SingleList> listOfSegments(24);
+    DTMutableList<SingleList> listOfSegments(31);
     int howManySegments = 0;
     DTDoubleArray timeValues = allPoints.TimeValues();
     int timeN, howManyTimes = timeValues.Length();
@@ -126,8 +132,11 @@ DTPath2DValues Computation(const DTSeriesPointCollection2D &allPoints,double max
         listOfSegments(i).AddPoint(currentPoint, 2);
     }
     //The start time is hardcoded for the video and will need to be intelligently modified later
+    
+    DTProgress progress;
     for (timeN=3;timeN<howManyTimes;timeN++) {
         current = allPoints.Get(timeValues(timeN));
+        progress.UpdatePercentage(timeN/double(howManyTimes));
         
         if (current.IsEmpty()) continue; //If its empty continue
         howManySegments = listOfSegments.Length();
@@ -141,6 +150,8 @@ DTPath2DValues Computation(const DTSeriesPointCollection2D &allPoints,double max
                 dist(j,k) = Norm(currentPoint-endPoint);
             }
         }
+        
+        cerr << timeN << endl;
         
         // Finds j,k such that dist(j,k) is the minimum distance
         while (1) {

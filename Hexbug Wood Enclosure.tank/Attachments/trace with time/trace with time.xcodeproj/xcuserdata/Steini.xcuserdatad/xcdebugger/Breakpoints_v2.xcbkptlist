@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "trace with time/main.cpp"
-            timestampString = "520454417.395534"
+            timestampString = "521336913.093315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "Computation(const DTSeriesPointCollection2D &amp;allPoints,double maxDist)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "trace with time/main.cpp"
-            timestampString = "520455126.434754"
+            timestampString = "521336210.457466"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "Computation(const DTSeriesPointCollection2D &amp;allPoints,double maxDist)"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,12 +41,60 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "trace with time/main.cpp"
-            timestampString = "520455149.610434"
+            filePath = "../../../../../../../Applications/DataTank.app/Contents/Library/DTSource/Support/DTError.cpp"
+            timestampString = "521336200.935758"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "DTErrorMessage(std::string fcn,std::string msg)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../../../Applications/DataTank.app/Contents/Library/DTSource/Support/DTError.cpp"
+            timestampString = "521336204.434697"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "DTErrorMessage(std::string msg)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../../../../Applications/DataTank.app/Contents/Library/DTSource/Variables/2D/DTPath2DValues.cpp"
+            timestampString = "521337079.749847"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "DTPath2DValues::DTPath2DValues(const DTPath2D &amp;pathIn,const DTDoubleArray &amp;valuesIn)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "trace with time/main.cpp"
+            timestampString = "521337389.812991"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "Computation(const DTSeriesPointCollection2D &amp;allPoints,double maxDist)"
             landmarkType = "7">
          </BreakpointContent>

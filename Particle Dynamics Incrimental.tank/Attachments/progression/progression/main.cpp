@@ -67,8 +67,8 @@ int main(int argc,const char *argv[])
 //////////////////////////////////////////////////////////////////////////////
 class Particle {
 public:
-    Particle() : x(0), y(0){};
-    Particle(DTPoint2D singleParticle) : x(singleParticle.x), y(singleParticle.y) {};
+    Particle() : x(NAN), y(NAN), vx(NAN), vy(NAN), ax(NAN), ay(NAN) {};
+    Particle(DTPoint2D singleParticle) : x(singleParticle.x), y(singleParticle.y), vx(NAN), vy(NAN), ax(NAN), ay(NAN) {};
     
     //Instance variables
     double x,y;
@@ -84,6 +84,8 @@ public:
 DTMutableList<Particle> instantiate(DTPointCollection2D inital, int numParticles, DTRandom r, double velocity);
 DTMutableDoubleArray makePointCollection(DTMutableList<Particle> particles);
 void boundCheck(DTMutableList<Particle> &particles, DTRegion2D region);
+void calculateAccelerations(DTMutableList<Particle> &particles, DTRegion2D region);
+void verlet(DTMutableList<Particle> &particles, DTRegion2D region, double dt);
 
 //////////////////////////////////////////////////////////////////////////////
 //    My Functions
@@ -103,10 +105,10 @@ DTMutableList<Particle> instantiate(DTPointCollection2D inital, int numParticles
 
 DTMutableDoubleArray makePointCollection(DTMutableList<Particle> particles) {
     int length = particles.Length();
-    DTMutableDoubleArray points(length,2);
+    DTMutableDoubleArray points(2,length);
     for (int i = 0; i < length; i++) {
-        points(i,0) = particles(i).x;
-        points(i,1) = (particles(i).y);
+        points(0,i) = particles(i).x;
+        points(1,i) = (particles(i).y);
     }
     return points;
 }
@@ -135,7 +137,7 @@ void calculateAccelerations(DTMutableList<Particle> &particles, DTRegion2D regio
     
     for (int i = 0; i < length; i++) {
         particles(i).ax = 0;
-        particles(i).ax = 0;
+        particles(i).ay = 0;
     }
     
     for (int i = 0; i < length-1; i++) {
@@ -157,41 +159,81 @@ void calculateAccelerations(DTMutableList<Particle> &particles, DTRegion2D regio
                 dist += distXY[k]*distXY[k];
             }
             double f = 24 * (2 * pow(dist, -7) - pow(dist, -4));
-            particles(i).x += distXY[0]*f;
-            particles(i).y += distXY[1]*f;
+//            if (f > 100) {
+//                f = 10;
+//            }
+            cout << particles(0).x << '\n';
+            cout << particles(0).y << '\n';
             
-            particles(j).x -= distXY[0]*f;
-            particles(j).y -= distXY[1]*f;
+            particles(i).ax += distXY[0]*f;
+            particles(i).ay += distXY[1]*f;
+            
+            particles(j).ax -= distXY[0]*f;
+            particles(j).ay -= distXY[1]*f;
+            
+            cout << particles(0).x << '\n';
+            cout << particles(0).y << '\n';
         }
     }
 }
 
-void computeAccelerations() {
-    for (int i = 0; i < N; i++)
-        for (int k = 0; k < 3; k++)
-            a[i][k] = 0; //all of the accelerations are set to zero to re wipe them
-    for (int i = 0; i < N-1; i++) //goes over all particles except the last because it looks at pairs
-        for (int j = i+1; j < N; j++) { //goes through to create pairs
-            double rij[3]; //distnaces in the three dims
-            double rSqd = 0; //set as zero the distance in a given dim
-            for (int k = 0; k < 3; k++) { //for the three dim
-                rij[k] = r[i][k] - r[j][k]; //finds the diff for a dim
-                // closest image convention
-                if (abs(rij[k]) > 0.5 * L) { //since its periodic particles on edges interact with opposite side
-                    if (rij[k] > 0)
-                        rij[k] -= L;
-                    else
-                        rij[k] += L;
-                }
-                rSqd += rij[k] * rij[k]; //adds the magnitdue of the three dim for a given particle
-            }
-            double f = 24 * (2 * pow(rSqd, -7) - pow(rSqd, -4)); //calculates the lenard jones force for a given particle pair
-            for (int k = 0; k < 3; k++) { //for the three dim
-                a[i][k] += rij[k] * f; //the distances scaled by the force is added as the acceleration for the ith particle in the kth dim
-                a[j][k] -= rij[k] * f; //the negation of the previous is done for the jth particle
+
+void calculateAccelerationsLangevin(DTMutableList<Particle> &particles, DTRegion2D region){
+    int length = particles.Length();
+    double L = region.xmax;
+    double f[length][2];
+    double rc = .1;
+    double rc2 = rc*rc;
+    double en = 0;
+    for (int i = 0; i < length; i++) {
+        particles(i).ax = 0;
+        particles(i).ay = 0;
+        f[i][0] = 0;
+        f[i][1] = 0;
+    }
+    
+    for (int i = 0; i < length-1; i++) {
+        for (int j = i+1; j < length; j++) {
+            double distXY[2];
+            double r2 = 0;
+            
+            distXY[0] = particles(i).x-particles(j).x;
+            distXY[1] = particles(i).y-particles(j).y;
+            
+            distXY[0] = distXY[0]-L*round(distXY[0]/L);
+            distXY[1] = distXY[1]-L*round(distXY[1]/L);
+            
+            r2 = distXY[0]*distXY[0]+distXY[1]*distXY[1];
+            //dist = dist-L*round(dist/L);
+            
+            if (r2 < rc2) {
+                double r2i = 1/r2;
+                double r6i = pow(r2i, 3.0);
+                double ff = 48*r2i*r6i*(r6i-0.5);
+                f[i][0] = f[i][0]+ff*distXY[0];
+                f[i][1] = f[i][1]+ff*distXY[1];
+                
+                f[j][0] = f[j][0]-ff*distXY[0];
+                f[j][1] = f[j][1]-ff*distXY[1];
+                double ecut = 4*((1/pow(rc, 12.0))-(1/pow(rc, 6.0)));
+                en = en + 4*r6i*(r6i-1)-ecut;
             }
         }
+    }
 }
+
+void verletLangevin(DTMutableList<Particle> &particles, DTRegion2D region, double dt) {
+    int length = particles.Length();
+    double L = region.xmax;
+    
+    double sumv = 0;
+    double sumv2 = 0;
+    for (int i; i < length; i++) {
+        
+    }
+    
+}
+
 
 void verlet(DTMutableList<Particle> &particles, DTRegion2D region, double dt) {
     int length = particles.Length();
@@ -200,28 +242,35 @@ void verlet(DTMutableList<Particle> &particles, DTRegion2D region, double dt) {
     calculateAccelerations(particles, region);
     
     for (int i = 0; i < length; i++) {
+        particles(i).x += particles(i).vx * dt + 0.5 * particles(i).ax * dt * dt;
+        particles(i).y += particles(i).vy * dt + 0.5 * particles(i).ay * dt * dt;
         
+        if (particles(i).x < 0) {
+            particles(i).x += L;
+        }
+        if (particles(i).x >= L) {
+            particles(i).x -= L;
+        }
+        if (particles(i).y < 0) {
+            particles(i).y += L;
+        }
+        if (particles(i).y >= L) {
+            particles(i).y -= L;
+        }
+        
+        particles(i).vx += 0.5 * particles(i).ax * dt;
+        particles(i).vy += 0.5 * particles(i).ay * dt;
+    }
+//    cout << particles(0).x << '\n'; //its a list of particle objects
+//    cout << particles(0).y << '\n';
+    
+    calculateAccelerations(particles, region);
+    
+    for (int i = 0; i < length; i++) {
+        particles(i).vx += 0.5 * particles(i).ax * dt;
+        particles(i).vy += 0.5 * particles(i).ay * dt;
     }
 }
-
-void velocityVerlet(double dt) {
-    computeAccelerations(); //accerations are computed for the verlet algorithm to do translations
-    for (int i = 0; i < N; i++) //for N particles
-        for (int k = 0; k < 3; k++) { //for the three dim
-            r[i][k] += v[i][k] * dt + 0.5 * a[i][k] * dt * dt; //handles the displacement based on the current velocity and the current acceleration
-            // use periodic boundary conditions
-            if (r[i][k] < 0)
-                r[i][k] += L;
-            if (r[i][k] >= L)
-                r[i][k] -= L;
-            v[i][k] += 0.5 * a[i][k] * dt; //changes the velocity based on the acceleration
-        }
-    computeAccelerations(); //accelerations are calculated again for the next time step
-    for (int i = 0; i < N; i++) //goes over all particles
-        for (int k = 0; k < 3; k++) //goes over all dim
-            v[i][k] += 0.5 * a[i][k] * dt; //creates new velocities for all particles (why is it done twice?)
-}
-
 
 //////////////////////////////////////////////////////////////////////////////
 //    Computational routine
@@ -239,6 +288,7 @@ void Computation(const DTPointCollection2D &inital,const DTRegion2D &region,
     double maxTime = parameters("maxTime");
     double nu = parameters("nu");
     double seed = parameters("seed");
+    double dt = parameters("dt");
     
     int numParticles = inital.NumberOfPoints();
     DTRandom r(seed);
@@ -246,13 +296,13 @@ void Computation(const DTPointCollection2D &inital,const DTRegion2D &region,
     DTMutableList<Particle> particles = instantiate(inital, numParticles, r, velocity);
     
     
-    for (int i = 0; i < maxTime; i++) {
-        
+    for (int i = 0; i < maxTime/dt; i++) {
+        verlet(particles, region, dt);
         
         boundCheck(particles,region);
         DTMutableDoubleArray pointArray = makePointCollection(particles);
         DTPointCollection2D points = DTPointCollection2D(pointArray);
-        computed.Add(points, i+1);
+        computed.Add(points, i+1); //ive got another weirder problem, the value does not change.
     }
     
     cout << particles(0).y << '\n';

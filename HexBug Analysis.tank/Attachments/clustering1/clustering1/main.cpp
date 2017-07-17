@@ -58,10 +58,28 @@ int main(int argc,const char *argv[])
 
 DTPointValueCollection2D Computation(const DTSeriesPointCollection2D &points,double radius)
 {
+    DTDoubleArray timeValues = points.TimeValues();
+    int howManyTimes = timeValues.Length();
     
+    int numPoints = points.Get(timeValues(1)).NumberOfPoints();
+    DTMutableDoubleArray values(numPoints);
+    for (int i = 0; i < numPoints; i++) {
+        values(i) = 0;
+    }
+    DTPointCollection2D currentPoints = points.Get(timeValues(2));
+    for (int i = 1; i < numPoints; i++) {
+        for (int j = 0; j < numPoints-1; j++) {
+            double dist = Norm(currentPoints(i) - currentPoints(j));
+            if (dist <= radius*radius && i != j) {
+                cout << "match" << endl;
+                values(i)=1;
+                values(j)=1;
+            }
+            cout << currentPoints(i).x << " , " << currentPoints(j).x << " , " << dist << endl;
+        }
+    }
     
-    
-    DTPointValueCollection2D toReturn;
+    DTPointValueCollection2D cluster(currentPoints, values);
 
-    return toReturn;
+    return cluster;
 }

@@ -1,0 +1,10 @@
+convert_to_xyz.sh
+henda.sh
+list.txt
+myFolder
+points.txt
+convert_to_xyz.sh
+henda.sh
+list.txt
+myFolder
+points.txt

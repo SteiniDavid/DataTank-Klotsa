@@ -57,9 +57,25 @@ int main(int argc,const char *argv[])
 
 DTPointValueCollection2D Computation(double radius,const DTPointCollection2D &points)
 {
-    DTPointValueCollection2D toReturn;
+    int numPoints = points.NumberOfPoints();
+    DTMutableDoubleArray values(numPoints);
+    
+    for (int i = 0; i < numPoints; i++) {
+        values(i) = i;
+    }
+    
+    for (int i = 1; i < numPoints; i++) {
+        for (int j = 0; j < numPoints-1; j++) {
+            double dist = Norm(points(i) - points(j));
+            if (dist > radius*radius) {
+                
+                
+            }
+        }
+    }
     
     
+    DTPointValueCollection2D cluster(points, values);
     
-    return toReturn;
+    return cluster;
 }

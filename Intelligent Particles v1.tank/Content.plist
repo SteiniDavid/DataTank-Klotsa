@@ -6,6 +6,11 @@
 	<array/>
 	<key>DrawingWindows</key>
 	<array/>
+	<key>MonitorVariables</key>
+	<array>
+		<string>2D Point Collection</string>
+		<string>2D Point Value Collection</string>
+	</array>
 	<key>Time</key>
 	<dict>
 		<key>CurrentTime</key>
@@ -130,8 +135,52 @@
 			</dict>
 			<key>Selection</key>
 			<string>Random</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
 			<key>VariableName</key>
 			<string>List of Numbers</string>
+			<key>VariableType</key>
+			<string>NumberList</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Formula</key>
+				<string>0</string>
+				<key>SecondFormula</key>
+				<string>n</string>
+				<key>Variables</key>
+				<array>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>n</string>
+						<key>Number Type</key>
+						<integer>0</integer>
+						<key>Type</key>
+						<string>Real Number</string>
+						<key>Var</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
+								<string>0</string>
+							</dict>
+							<key>Selected</key>
+							<string>n</string>
+						</dict>
+					</dict>
+				</array>
+				<key>Zero</key>
+				<string>Off</string>
+			</dict>
+			<key>Selection</key>
+			<string>Expression</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>zeros</string>
 			<key>VariableType</key>
 			<string>NumberList</string>
 		</dict>
@@ -340,19 +389,13 @@
 			<key>Content</key>
 			<dict>
 				<key>Application</key>
-				<string></string>
+				<string>interactions/interactions.xcodeproj</string>
 				<key>Argument</key>
-				<dict>
-					<key>Inline</key>
-					<dict>
-						<key>String</key>
-						<string></string>
-					</dict>
-					<key>SelectedNumber</key>
-					<integer>0</integer>
-				</dict>
-				<key>Communication</key>
-				<integer>1</integer>
+				<string></string>
+				<key>DirName</key>
+				<string></string>
+				<key>DirType</key>
+				<integer>0</integer>
 				<key>Input</key>
 				<string>Input.dtbin</string>
 				<key>Output</key>
@@ -360,37 +403,33 @@
 				<key>Project</key>
 				<string></string>
 				<key>Variables</key>
-				<array>
-					<dict>
-						<key>Include</key>
-						<string>On</string>
-						<key>Name</key>
-						<string>2D Region</string>
-						<key>Type</key>
-						<string>Region2D</string>
-						<key>Var</key>
-						<dict>
-							<key>Selected</key>
-							<string>2D Region</string>
-						</dict>
-					</dict>
-					<dict>
-						<key>Include</key>
-						<string>On</string>
-						<key>Name</key>
-						<string>Parameters</string>
-						<key>Type</key>
-						<string>Dictionary</string>
-						<key>Var</key>
-						<dict>
-							<key>Selected</key>
-							<string>Parameters</string>
-						</dict>
-					</dict>
-				</array>
+				<array/>
 			</dict>
 			<key>Selection</key>
-			<string>External Program</string>
+			<string>Task</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>interactions</string>
+			<key>VariableType</key>
+			<string>PointValueCollection2D</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Points</key>
+				<dict>
+					<key>Selected</key>
+					<string>2D Point Collection</string>
+				</dict>
+				<key>Values</key>
+				<dict>
+					<key>Selected</key>
+					<string>zeros</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>Points and Values</string>
 			<key>ToggleOpen</key>
 			<string>YES</string>
 			<key>VariableName</key>
@@ -401,10 +440,10 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>-1421</real>
-		<real>575</real>
+		<real>800</real>
+		<real>80</real>
 		<real>941</real>
-		<real>945</real>
+		<real>697</real>
 	</array>
 </dict>
 </plist>

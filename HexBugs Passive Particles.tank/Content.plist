@@ -5,19 +5,686 @@
 	<key>Attachments</key>
 	<array/>
 	<key>DrawingWindows</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Antialiasing</key>
+			<string>YES</string>
+			<key>Axis</key>
+			<dict>
+				<key>YScale</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Number</key>
+						<string>1</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingBox</key>
+			<dict>
+				<key>MaxXValue</key>
+				<string></string>
+				<key>MaxYValue</key>
+				<string></string>
+				<key>MinXValue</key>
+				<string></string>
+				<key>MinYValue</key>
+				<string></string>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>Region</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>CommandContents</key>
+			<array>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Bitmap</string>
+					<key>Computation</key>
+					<dict>
+						<key>Bitmap</key>
+						<dict>
+							<key>Selected</key>
+							<string>IMG_1829.mp4</string>
+						</dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>Crop</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>Interpolation</key>
+						<integer>0</integer>
+						<key>Sparsify</key>
+						<string>On</string>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+				</dict>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Path</string>
+					<key>Computation</key>
+					<dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>ClockWiseSwitch</key>
+						<string>Off</string>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>CroppingPath</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>FillStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Blue</key>
+									<real>0.032063801000000003</real>
+									<key>Green</key>
+									<real>1</real>
+									<key>Red</key>
+									<real>0.020642599000000001</real>
+									<key>Space</key>
+									<string>NSCalibratedRGBColorSpace</string>
+								</dict>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>FillSwitch</key>
+						<string>Off</string>
+						<key>LineStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Color</key>
+									<dict>
+										<key>Blue</key>
+										<real>0.0</real>
+										<key>Green</key>
+										<real>0.0</real>
+										<key>Red</key>
+										<real>0.0</real>
+										<key>Space</key>
+										<string>NSCalibratedRGBColorSpace</string>
+									</dict>
+								</dict>
+								<key>LineType</key>
+								<integer>0</integer>
+								<key>LineWidth</key>
+								<string>0.5</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>LineSwitch</key>
+						<string>On</string>
+						<key>Path</key>
+						<dict>
+							<key>Selected</key>
+							<string>contour of color dist</string>
+						</dict>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Hidden</string>
+				</dict>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Path</string>
+					<key>Computation</key>
+					<dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>ClockWiseSwitch</key>
+						<string>Off</string>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>CroppingPath</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>FillStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Blue</key>
+									<real>0.032063801000000003</real>
+									<key>Green</key>
+									<real>1</real>
+									<key>Red</key>
+									<real>0.020642599000000001</real>
+									<key>Space</key>
+									<string>NSCalibratedRGBColorSpace</string>
+								</dict>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>FillSwitch</key>
+						<string>Off</string>
+						<key>LineStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Color</key>
+									<dict>
+										<key>Blue</key>
+										<real>0.0</real>
+										<key>Green</key>
+										<real>0.0</real>
+										<key>Red</key>
+										<real>0.0</real>
+										<key>Space</key>
+										<string>NSCalibratedRGBColorSpace</string>
+									</dict>
+								</dict>
+								<key>LineType</key>
+								<integer>0</integer>
+								<key>LineWidth</key>
+								<string>0.5</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>LineSwitch</key>
+						<string>On</string>
+						<key>Path</key>
+						<dict>
+							<key>Selected</key>
+							<string>Big loops in contour of color dist</string>
+						</dict>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+				</dict>
+			</array>
+			<key>DrawingHeight</key>
+			<real>404</real>
+			<key>DrawingWindow</key>
+			<dict>
+				<key>ClickMenu</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Automatic</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>DrawingWindowType</key>
+			<string>2DGraph</string>
+			<key>FigureName</key>
+			<string>Untitled</string>
+			<key>Last Drawing View Size</key>
+			<string>{1009, 404}</string>
+			<key>MaxHeight</key>
+			<string></string>
+			<key>MaxWidth</key>
+			<string></string>
+			<key>OutputHeight</key>
+			<string></string>
+			<key>OutputWidth</key>
+			<string></string>
+			<key>QT</key>
+			<dict>
+				<key>Format</key>
+				<string>Animation</string>
+				<key>Quality</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Lossless</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Range</key>
+				<string>0,∞</string>
+				<key>ShowInFinder</key>
+				<string>On</string>
+				<key>TimeStep</key>
+				<string>1.0</string>
+			</dict>
+			<key>SeparateWindowPos</key>
+			<array>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+			</array>
+			<key>ViewSizeJoined</key>
+			<string>1009,404</string>
+			<key>ViewSizeSeparated</key>
+			<string></string>
+			<key>Visible</key>
+			<string>NO</string>
+			<key>WindowName</key>
+			<string>contour of color dist</string>
+			<key>WindowPos</key>
+			<array>
+				<real>16</real>
+				<real>4</real>
+				<real>1007</real>
+				<real>773</real>
+			</array>
+		</dict>
+		<dict>
+			<key>Antialiasing</key>
+			<string>YES</string>
+			<key>Axis</key>
+			<dict>
+				<key>YScale</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Number</key>
+						<string>1</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingBox</key>
+			<dict>
+				<key>MaxXValue</key>
+				<string></string>
+				<key>MaxYValue</key>
+				<string></string>
+				<key>MinXValue</key>
+				<string></string>
+				<key>MinYValue</key>
+				<string></string>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>Region</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>CommandContents</key>
+			<array>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Path With Color</string>
+					<key>Computation</key>
+					<dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>Crop</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>Path</key>
+						<dict>
+							<key>Selected</key>
+							<string>2D Path Values</string>
+						</dict>
+						<key>Ramp</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Menu</key>
+								<integer>0</integer>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Range</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Range</key>
+								<string>0,1</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>Swap</key>
+						<string>Off</string>
+						<key>Width</key>
+						<string>1</string>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+				</dict>
+			</array>
+			<key>DrawingHeight</key>
+			<real>198</real>
+			<key>DrawingWindow</key>
+			<dict>
+				<key>ClickMenu</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Automatic</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>DrawingWindowType</key>
+			<string>2DGraph</string>
+			<key>FigureName</key>
+			<string>Untitled</string>
+			<key>Last Drawing View Size</key>
+			<string>{514, 198}</string>
+			<key>MaxHeight</key>
+			<string></string>
+			<key>MaxWidth</key>
+			<string></string>
+			<key>OutputHeight</key>
+			<string></string>
+			<key>OutputWidth</key>
+			<string></string>
+			<key>QT</key>
+			<dict>
+				<key>Format</key>
+				<string>Animation</string>
+				<key>Quality</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Lossless</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Range</key>
+				<string>0,∞</string>
+				<key>ShowInFinder</key>
+				<string>On</string>
+				<key>TimeStep</key>
+				<string>1.0</string>
+			</dict>
+			<key>SeparateWindowPos</key>
+			<array>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+			</array>
+			<key>ViewSizeJoined</key>
+			<string>514,198</string>
+			<key>ViewSizeSeparated</key>
+			<string></string>
+			<key>Visible</key>
+			<string>NO</string>
+			<key>WindowName</key>
+			<string>2D Path Values</string>
+			<key>WindowPos</key>
+			<array>
+				<real>-2035</real>
+				<real>921</real>
+				<real>512</real>
+				<real>416</real>
+			</array>
+		</dict>
+		<dict>
+			<key>Antialiasing</key>
+			<string>YES</string>
+			<key>Axis</key>
+			<dict>
+				<key>YScale</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Number</key>
+						<string>1</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingBox</key>
+			<dict>
+				<key>MaxXValue</key>
+				<string></string>
+				<key>MaxYValue</key>
+				<string></string>
+				<key>MinXValue</key>
+				<string></string>
+				<key>MinYValue</key>
+				<string></string>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>Region</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>CommandContents</key>
+			<array>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Bitmap</string>
+					<key>Computation</key>
+					<dict>
+						<key>Bitmap</key>
+						<dict>
+							<key>Selected</key>
+							<string>IMG_1829.mp4</string>
+						</dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>Crop</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>Interpolation</key>
+						<integer>0</integer>
+						<key>Sparsify</key>
+						<string>On</string>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+				</dict>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Path</string>
+					<key>Computation</key>
+					<dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>ClockWiseSwitch</key>
+						<string>Off</string>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>CroppingPath</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>FillStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Blue</key>
+									<real>0.032063801000000003</real>
+									<key>Green</key>
+									<real>1</real>
+									<key>Red</key>
+									<real>0.020642599000000001</real>
+									<key>Space</key>
+									<string>NSCalibratedRGBColorSpace</string>
+								</dict>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>FillSwitch</key>
+						<string>Off</string>
+						<key>LineStyle</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Color</key>
+								<dict>
+									<key>Color</key>
+									<dict>
+										<key>Blue</key>
+										<real>0.0</real>
+										<key>Green</key>
+										<real>0.0</real>
+										<key>Red</key>
+										<real>0.0</real>
+										<key>Space</key>
+										<string>NSCalibratedRGBColorSpace</string>
+									</dict>
+								</dict>
+								<key>LineType</key>
+								<integer>0</integer>
+								<key>LineWidth</key>
+								<string>0.5</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>LineSwitch</key>
+						<string>On</string>
+						<key>Path</key>
+						<dict>
+							<key>Selected</key>
+							<string>Big loops in contour of color dist</string>
+						</dict>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+				</dict>
+			</array>
+			<key>DrawingHeight</key>
+			<real>350</real>
+			<key>DrawingWindow</key>
+			<dict>
+				<key>ClickMenu</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Automatic</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>DrawingWindowType</key>
+			<string>2DGraph</string>
+			<key>FigureName</key>
+			<string>Untitled</string>
+			<key>Last Drawing View Size</key>
+			<string>{792, 350}</string>
+			<key>MaxHeight</key>
+			<string></string>
+			<key>MaxWidth</key>
+			<string></string>
+			<key>OutputHeight</key>
+			<string></string>
+			<key>OutputWidth</key>
+			<string></string>
+			<key>QT</key>
+			<dict>
+				<key>Format</key>
+				<string>Animation</string>
+				<key>Quality</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Lossless</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Range</key>
+				<string>0,∞</string>
+				<key>ShowInFinder</key>
+				<string>On</string>
+				<key>TimeStep</key>
+				<string>1.0</string>
+			</dict>
+			<key>SeparateWindowPos</key>
+			<array>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+			</array>
+			<key>ViewSizeJoined</key>
+			<string>792,350</string>
+			<key>ViewSizeSeparated</key>
+			<string></string>
+			<key>Visible</key>
+			<string>NO</string>
+			<key>WindowName</key>
+			<string>Big loops in contour of color dist</string>
+			<key>WindowPos</key>
+			<array>
+				<real>-2116</real>
+				<real>376</real>
+				<real>790</real>
+				<real>680</real>
+			</array>
+		</dict>
+	</array>
+	<key>MonitorVariables</key>
+	<array>
+		<string>hexbug points</string>
+		<string>Sampling of Loops for Big loops in contour of color dist</string>
+		<string>all time values</string>
+		<string>2D Path Values</string>
+	</array>
 	<key>Time</key>
 	<dict>
 		<key>CurrentTime</key>
 		<dict>
 			<key>CurrentValue</key>
-			<real>0.0</real>
+			<real>99.900000000000006</real>
 			<key>MaxValue</key>
 			<real>103.53564444444444</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>0</string>
+			<string>99.9</string>
 		</dict>
 		<key>Duration</key>
 		<string>10</string>
@@ -98,7 +765,7 @@
 		</dict>
 		<dict>
 			<key>State</key>
-			<string>Closed</string>
+			<string>Open</string>
 			<key>Title</key>
 			<string>creating the contours</string>
 			<key>VariableName</key>
@@ -121,11 +788,11 @@
 						<key>Color</key>
 						<dict>
 							<key>Blue</key>
-							<real>0.28627450980392155</real>
+							<real>0.2627450980392157</real>
 							<key>Green</key>
-							<real>0.50588235294117645</real>
+							<real>0.26666666666666666</real>
 							<key>Red</key>
-							<real>0.10588235294117647</real>
+							<real>0.94509803921568625</real>
 							<key>Space</key>
 							<string>NSCalibratedRGBColorSpace</string>
 						</dict>
@@ -211,12 +878,14 @@
 			<key>Content</key>
 			<dict>
 				<key>Formula</key>
-				<string>40</string>
+				<string>51</string>
 				<key>Variables</key>
 				<array/>
 			</dict>
 			<key>Selection</key>
 			<string>Expression</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
 			<key>VariableName</key>
 			<string>loop threshold</string>
 			<key>VariableType</key>
@@ -298,13 +967,13 @@
 				<key>Slider</key>
 				<dict>
 					<key>CurrentValue</key>
-					<real>0.29399999999999998</real>
+					<real>0.19800000000000001</real>
 					<key>MaxValue</key>
 					<real>1</real>
 					<key>MinValue</key>
 					<real>0.0</real>
 					<key>String</key>
-					<string>0.294</string>
+					<string>0.198</string>
 				</dict>
 			</dict>
 			<key>Selection</key>
@@ -320,13 +989,608 @@
 			<key>VariableType</key>
 			<string>CollapserClose</string>
 		</dict>
+		<dict>
+			<key>State</key>
+			<string>Open</string>
+			<key>Title</key>
+			<string>Extracting and sparsifying Points</string>
+			<key>VariableName</key>
+			<string>DACollapser - 2</string>
+			<key>VariableType</key>
+			<string>CollapserOpen</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Variable</key>
+				<dict>
+					<key>Selected</key>
+					<string>Big loops in contour of color dist</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>Center of Mass</string>
+			<key>VariableName</key>
+			<string>Center of mass of Big loops in contour of color dist</string>
+			<key>VariableType</key>
+			<string>PointValueCollection2D</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Variable</key>
+				<dict>
+					<key>Selected</key>
+					<string>Center of mass of Big loops in contour of color dist</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>Extract Points</string>
+			<key>VariableName</key>
+			<string>hexbug points</string>
+			<key>VariableType</key>
+			<string>PointCollection2D</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>FromVariable</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>KeepUnder</key>
+				<string>200</string>
+				<key>Max</key>
+				<string>203.3</string>
+				<key>Min</key>
+				<string>202.1333333333333</string>
+				<key>Restrict</key>
+				<string>Off</string>
+				<key>Sparsify</key>
+				<string>Off</string>
+				<key>SparsifySwitch</key>
+				<string>Off</string>
+				<key>StartNumber</key>
+				<string>0</string>
+				<key>StrideNumber</key>
+				<string>10</string>
+				<key>TimeStep</key>
+				<string>0.1</string>
+				<key>Type</key>
+				<integer>0</integer>
+				<key>Until</key>
+				<string>1.0</string>
+				<key>Variable</key>
+				<dict>
+					<key>Selected</key>
+					<string>hexbug points</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>Sparsify Time</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>hexbug points sparsified in time</string>
+			<key>VariableType</key>
+			<string>PointCollection2D</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Variable</key>
+				<dict>
+					<key>Selected</key>
+					<string>hexbug points sparsified in time</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>Time From Variable</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>time from hex bug</string>
+			<key>VariableType</key>
+			<string>Real Number</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Formula</key>
+				<string>myTime</string>
+				<key>Points</key>
+				<dict>
+					<key>Selected</key>
+					<string>hexbug points sparsified in time</string>
+				</dict>
+				<key>Variables</key>
+				<array>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>myTime</string>
+						<key>Number Type</key>
+						<integer>0</integer>
+						<key>Type</key>
+						<string>Real Number</string>
+						<key>Var</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
+								<string>0</string>
+							</dict>
+							<key>Selected</key>
+							<string>time from hex bug</string>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+			<key>Selection</key>
+			<string>Expression</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>Expression at hexbug points sparsified in time</string>
+			<key>VariableType</key>
+			<string>PointValueCollection2D</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Threads</key>
+				<integer>3</integer>
+				<key>Variable</key>
+				<dict>
+					<key>Selected</key>
+					<string>hexbug points sparsified in time</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>Combine Time Values</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>all time values</string>
+			<key>VariableType</key>
+			<string>Series</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>FileName</key>
+				<string>/tmp/Variables.dtbin</string>
+				<key>TimeChoice</key>
+				<integer>0</integer>
+				<key>Variables</key>
+				<array>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>all time values</string>
+						<key>SeriesType</key>
+						<string>PointCollection2D</string>
+						<key>Type</key>
+						<string>Series</string>
+						<key>Var</key>
+						<dict>
+							<key>Selected</key>
+							<string>all time values</string>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+			<key>Selection</key>
+			<string>Create Data File</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>Saving all time values</string>
+			<key>VariableType</key>
+			<string>Output</string>
+		</dict>
+		<dict>
+			<key>VariableName</key>
+			<string>DACollapser - 2 - Closed</string>
+			<key>VariableType</key>
+			<string>CollapserClose</string>
+		</dict>
+		<dict>
+			<key>State</key>
+			<string>Open</string>
+			<key>Title</key>
+			<string>calculating trace and showing it correctly</string>
+			<key>VariableName</key>
+			<string>DACollapser - 3</string>
+			<key>VariableType</key>
+			<string>CollapserOpen</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Application</key>
+				<string>$BUILD/Release/trace with time</string>
+				<key>Argument</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>String</key>
+						<string></string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Communication</key>
+				<integer>1</integer>
+				<key>Input</key>
+				<string>Input.dtbin</string>
+				<key>Output</key>
+				<string>Output.dtbin</string>
+				<key>Project</key>
+				<string>trace with time/trace with time.xcodeproj</string>
+				<key>Variables</key>
+				<array>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>allPoints</string>
+						<key>SeriesType</key>
+						<string>PointCollection2D</string>
+						<key>Type</key>
+						<string>Series</string>
+						<key>Var</key>
+						<dict>
+							<key>Selected</key>
+							<string>all time values</string>
+						</dict>
+					</dict>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>maxDist</string>
+						<key>Number Type</key>
+						<integer>0</integer>
+						<key>Type</key>
+						<string>Real Number</string>
+						<key>Var</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
+								<string>2000</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+			<key>Selection</key>
+			<string>External Program</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>2D Path Values</string>
+			<key>VariableType</key>
+			<string>Path2DValues</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Path</key>
+				<dict>
+					<key>Selected</key>
+					<string>2D Path Values</string>
+				</dict>
+				<key>Range</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Range</key>
+						<string>-1,1</string>
+					</dict>
+					<key>Selected</key>
+					<string>1D Region</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>Crop Values</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>2D Path Values Cropped</string>
+			<key>VariableType</key>
+			<string>Path2DValues</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Curve</key>
+				<dict>
+					<key>Selected</key>
+					<string>2D Path Values Cropped</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>From Path Values</string>
+			<key>VariableName</key>
+			<string>Path from 2D Path Values Cropped</string>
+			<key>VariableType</key>
+			<string>Path2D</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Variable</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>Time From Variable</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>Real Number</string>
+			<key>VariableType</key>
+			<string>Real Number</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Formula</key>
+				<string>0.033366666666667,TimeValue</string>
+				<key>Variables</key>
+				<array>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>TimeValue</string>
+						<key>Number Type</key>
+						<integer>0</integer>
+						<key>Type</key>
+						<string>Real Number</string>
+						<key>Var</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
+								<string>10</string>
+							</dict>
+							<key>Selected</key>
+							<string>Real Number</string>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+			<key>Selection</key>
+			<string>Expression</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>1D Region</string>
+			<key>VariableType</key>
+			<string>Range</string>
+		</dict>
+		<dict>
+			<key>VariableName</key>
+			<string>DACollapser - 3 - Closed</string>
+			<key>VariableType</key>
+			<string>CollapserClose</string>
+		</dict>
+		<dict>
+			<key>State</key>
+			<string>Closed</string>
+			<key>Title</key>
+			<string>Exporting data points</string>
+			<key>VariableName</key>
+			<string>DACollapser - 4</string>
+			<key>VariableType</key>
+			<string>CollapserOpen</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Variable</key>
+				<dict>
+					<key>Selected</key>
+					<string>Expression at hexbug points sparsified in time</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>From Point Variable</string>
+			<key>VariableName</key>
+			<string>Numbers from Expression at hexbug points sparsified in time</string>
+			<key>VariableType</key>
+			<string>Array</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Array</key>
+				<dict>
+					<key>Selected</key>
+					<string>Numbers from Expression at hexbug points sparsified in time</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>From Array</string>
+			<key>VariableName</key>
+			<string>Points from Numbers from Expression at hexbug points sparsified in time</string>
+			<key>VariableType</key>
+			<string>PointCollection3D</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Points</key>
+				<dict>
+					<key>Selected</key>
+					<string>Points from Numbers from Expression at hexbug points sparsified in time</string>
+				</dict>
+				<key>Threads</key>
+				<integer>3</integer>
+			</dict>
+			<key>Selection</key>
+			<string>Combine Time Values</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>3D Point Collection</string>
+			<key>VariableType</key>
+			<string>PointCollection3D</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Variable</key>
+				<dict>
+					<key>Selected</key>
+					<string>3D Point Collection</string>
+				</dict>
+			</dict>
+			<key>Selection</key>
+			<string>From Point Variable</string>
+			<key>VariableName</key>
+			<string>Array form for 3D Point Collection</string>
+			<key>VariableType</key>
+			<string>Array</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Array</key>
+				<dict>
+					<key>Selected</key>
+					<string>Array form for 3D Point Collection</string>
+				</dict>
+				<key>Digits</key>
+				<string>7</string>
+				<key>FileName</key>
+				<string>/tmp/points.txt</string>
+				<key>Separator</key>
+				<integer>0</integer>
+			</dict>
+			<key>Selection</key>
+			<string>Array Text In File</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>Output</string>
+			<key>VariableType</key>
+			<string>Output</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Application</key>
+				<string>$BUILD/Debug/extracting data</string>
+				<key>Argument</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>String</key>
+						<string></string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Communication</key>
+				<integer>1</integer>
+				<key>Input</key>
+				<string>Input.dtbin</string>
+				<key>Output</key>
+				<string>Output.dtbin</string>
+				<key>Project</key>
+				<string>extracting data/extracting data.xcodeproj</string>
+				<key>Variables</key>
+				<array>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>dt</string>
+						<key>Number Type</key>
+						<integer>0</integer>
+						<key>Type</key>
+						<string>Real Number</string>
+						<key>Var</key>
+						<dict>
+							<key>Inline</key>
+							<dict>
+								<key>Number</key>
+								<string>0</string>
+							</dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+					<dict>
+						<key>Include</key>
+						<string>On</string>
+						<key>Name</key>
+						<string>path</string>
+						<key>Type</key>
+						<string>Path2DValues</string>
+						<key>Var</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+			<key>Selection</key>
+			<string>External Program</string>
+			<key>VariableName</key>
+			<string>extracting data</string>
+			<key>VariableType</key>
+			<string>Array</string>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>Array</key>
+				<dict>
+					<key>Selected</key>
+					<string>extracting data</string>
+				</dict>
+				<key>Digits</key>
+				<string>7</string>
+				<key>FileName</key>
+				<string>/tmp/points.txt</string>
+				<key>Separator</key>
+				<integer>2</integer>
+			</dict>
+			<key>Selection</key>
+			<string>Array Text In File</string>
+			<key>ToggleOpen</key>
+			<string>YES</string>
+			<key>VariableName</key>
+			<string>Saving extracting data</string>
+			<key>VariableType</key>
+			<string>Output</string>
+		</dict>
+		<dict>
+			<key>VariableName</key>
+			<string>DACollapser - 4 - Closed</string>
+			<key>VariableType</key>
+			<string>CollapserClose</string>
+		</dict>
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>-1446</real>
-		<real>312</real>
+		<real>-2560</real>
+		<real>747</real>
 		<real>941</real>
-		<real>682</real>
+		<real>773</real>
 	</array>
 </dict>
 </plist>

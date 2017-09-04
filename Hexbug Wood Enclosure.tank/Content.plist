@@ -233,8 +233,8 @@
 					<dict>
 						<key>Bitmap</key>
 						<dict>
-							<key>Selected</key>
-							<string>IMG_1829.mp4</string>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
 						</dict>
 						<key>ClockWiseCropSwitch</key>
 						<string>Off</string>
@@ -413,7 +413,7 @@
 				</dict>
 			</array>
 			<key>DrawingHeight</key>
-			<real>502.5</real>
+			<real>499.5</real>
 			<key>DrawingWindow</key>
 			<dict>
 				<key>ClickMenu</key>
@@ -429,7 +429,7 @@
 			<key>FigureName</key>
 			<string>Untitled</string>
 			<key>Last Drawing View Size</key>
-			<string>{898, 502.5}</string>
+			<string>{898, 499.5}</string>
 			<key>MaxHeight</key>
 			<string></string>
 			<key>MaxWidth</key>
@@ -464,7 +464,7 @@
 				<real>0.0</real>
 			</array>
 			<key>ViewSizeJoined</key>
-			<string>898,502.5</string>
+			<string>898,499.5</string>
 			<key>ViewSizeSeparated</key>
 			<string></string>
 			<key>Visible</key>
@@ -473,10 +473,10 @@
 			<string>Big loops in contour of color dist</string>
 			<key>WindowPos</key>
 			<array>
-				<real>-2521</real>
-				<real>423</real>
+				<real>9</real>
+				<real>4</real>
 				<real>896</real>
-				<real>777</real>
+				<real>773</real>
 			</array>
 		</dict>
 		<dict>
@@ -1186,8 +1186,8 @@
 					<dict>
 						<key>Bitmap</key>
 						<dict>
-							<key>Selected</key>
-							<string>IMG_1829.mp4</string>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
 						</dict>
 						<key>ClockWiseCropSwitch</key>
 						<string>Off</string>
@@ -1276,11 +1276,145 @@
 				<real>928</real>
 			</array>
 		</dict>
+		<dict>
+			<key>Antialiasing</key>
+			<string>YES</string>
+			<key>Axis</key>
+			<dict>
+				<key>YScale</key>
+				<dict>
+					<key>Inline</key>
+					<dict>
+						<key>Number</key>
+						<string>1</string>
+					</dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>BoundingBox</key>
+			<dict>
+				<key>MaxXValue</key>
+				<string></string>
+				<key>MaxYValue</key>
+				<string></string>
+				<key>MinXValue</key>
+				<string></string>
+				<key>MinYValue</key>
+				<string></string>
+				<key>RangeType</key>
+				<integer>0</integer>
+				<key>Region</key>
+				<dict>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>CommandContents</key>
+			<array>
+				<dict>
+					<key>CommandName</key>
+					<string></string>
+					<key>CommandType</key>
+					<string>Bitmap</string>
+					<key>Computation</key>
+					<dict>
+						<key>Bitmap</key>
+						<dict>
+							<key>Selected</key>
+							<string>IMG_1830.mp4</string>
+						</dict>
+						<key>ClockWiseCropSwitch</key>
+						<string>Off</string>
+						<key>Crop</key>
+						<dict>
+							<key>SelectedNumber</key>
+							<integer>0</integer>
+						</dict>
+						<key>CropSwitch</key>
+						<string>On</string>
+						<key>Interpolation</key>
+						<integer>0</integer>
+						<key>Sparsify</key>
+						<string>On</string>
+					</dict>
+					<key>Drawn</key>
+					<string>Include</string>
+					<key>Status</key>
+					<string>Visible</string>
+				</dict>
+			</array>
+			<key>DrawingHeight</key>
+			<real>198</real>
+			<key>DrawingWindow</key>
+			<dict>
+				<key>ClickMenu</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Automatic</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>DrawingWindowType</key>
+			<string>2DGraph</string>
+			<key>FigureName</key>
+			<string>Untitled</string>
+			<key>Last Drawing View Size</key>
+			<string>{514, 198}</string>
+			<key>MaxHeight</key>
+			<string></string>
+			<key>MaxWidth</key>
+			<string></string>
+			<key>OutputHeight</key>
+			<string></string>
+			<key>OutputWidth</key>
+			<string></string>
+			<key>QT</key>
+			<dict>
+				<key>Format</key>
+				<string>Animation</string>
+				<key>Quality</key>
+				<dict>
+					<key>EntryName</key>
+					<string>Lossless</string>
+					<key>EntryNumber</key>
+					<integer>0</integer>
+				</dict>
+				<key>Range</key>
+				<string>0,∞</string>
+				<key>ShowInFinder</key>
+				<string>On</string>
+				<key>TimeStep</key>
+				<string>1.0</string>
+			</dict>
+			<key>SeparateWindowPos</key>
+			<array>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+				<real>0.0</real>
+			</array>
+			<key>ViewSizeJoined</key>
+			<string>514,198</string>
+			<key>ViewSizeSeparated</key>
+			<string></string>
+			<key>Visible</key>
+			<string>YES</string>
+			<key>WindowName</key>
+			<string>IMG_1830.mp4</string>
+			<key>WindowPos</key>
+			<array>
+				<real>439</real>
+				<real>333</real>
+				<real>512</real>
+				<real>416</real>
+			</array>
+		</dict>
 	</array>
 	<key>MonitorVariables</key>
 	<array>
 		<string>Sampling of Loops for Big loops in contour of color dist</string>
-		<string>extracting data</string>
 		<string>all time values</string>
 	</array>
 	<key>Time</key>
@@ -1288,16 +1422,16 @@
 		<key>CurrentTime</key>
 		<dict>
 			<key>CurrentValue</key>
-			<real>0.0</real>
+			<real>242.0806666666667</real>
 			<key>MaxValue</key>
-			<real>103.53564444444444</real>
+			<real>242.0806666666667</real>
 			<key>MinValue</key>
 			<real>0.0</real>
 			<key>String</key>
-			<string>0</string>
+			<string>242.08066666667</string>
 		</dict>
 		<key>Duration</key>
-		<string>311</string>
+		<string>310</string>
 		<key>Floating</key>
 		<array>
 			<string>loop threshold</string>
@@ -1307,7 +1441,7 @@
 		<key>Loop</key>
 		<string>Off</string>
 		<key>TimeHint</key>
-		<real>0.033366666666667003</real>
+		<real>0.0</real>
 		<key>TimeStep</key>
 		<string>1.0</string>
 		<key>TimeStepSwitch</key>
@@ -1345,53 +1479,17 @@
 			<key>Content</key>
 			<dict>
 				<key>File</key>
-				<string>../Source File Videos/IMG_1280.mp4</string>
+				<string>../Source File Videos/IMG_1830.mp4</string>
 				<key>MovieTime</key>
 				<dict>
 					<key>CurrentValue</key>
-					<real>0.0</real>
+					<real>233</real>
 					<key>MaxValue</key>
-					<real>83.383300000000006</real>
+					<real>242.0806666666667</real>
 					<key>MinValue</key>
 					<real>0.0</real>
 					<key>String</key>
-					<string>0</string>
-				</dict>
-				<key>Origin</key>
-				<string>0,0</string>
-				<key>Range</key>
-				<string>0,∞</string>
-				<key>Rotate</key>
-				<integer>1</integer>
-				<key>Sparsify</key>
-				<string>1</string>
-				<key>Step</key>
-				<string>1</string>
-				<key>TimeScale</key>
-				<string>1</string>
-			</dict>
-			<key>Selection</key>
-			<string>From Movie</string>
-			<key>VariableName</key>
-			<string>IMG_1280.mp4</string>
-			<key>VariableType</key>
-			<string>Bitmap2D</string>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>File</key>
-				<string>../Source File Videos/IMG_1829.mp4</string>
-				<key>MovieTime</key>
-				<dict>
-					<key>CurrentValue</key>
-					<real>0.0</real>
-					<key>MaxValue</key>
-					<real>103.53564444444444</real>
-					<key>MinValue</key>
-					<real>0.0</real>
-					<key>String</key>
-					<string>0</string>
+					<string>233</string>
 				</dict>
 				<key>Origin</key>
 				<string>0,0</string>
@@ -1411,7 +1509,7 @@
 			<key>ToggleOpen</key>
 			<string>YES</string>
 			<key>VariableName</key>
-			<string>IMG_1829.mp4</string>
+			<string>IMG_1830.mp4</string>
 			<key>VariableType</key>
 			<string>Bitmap2D</string>
 		</dict>
@@ -1545,7 +1643,7 @@
 				<key>Bitmap</key>
 				<dict>
 					<key>Selected</key>
-					<string>IMG_1829.mp4</string>
+					<string>IMG_1830.mp4</string>
 				</dict>
 				<key>Color</key>
 				<dict>
@@ -2172,8 +2270,8 @@
 			<dict>
 				<key>Variable</key>
 				<dict>
-					<key>Selected</key>
-					<string>IMG_1280.mp4</string>
+					<key>SelectedNumber</key>
+					<integer>0</integer>
 				</dict>
 			</dict>
 			<key>Selection</key>
@@ -2231,7 +2329,7 @@
 		</dict>
 		<dict>
 			<key>State</key>
-			<string>Open</string>
+			<string>Closed</string>
 			<key>Title</key>
 			<string>Exporting data points</string>
 			<key>VariableName</key>
@@ -2463,10 +2561,10 @@
 	</array>
 	<key>WindowPosition</key>
 	<array>
-		<real>-2483</real>
-		<real>161</real>
+		<real>139</real>
+		<real>4</real>
 		<real>965</real>
-		<real>904</real>
+		<real>773</real>
 	</array>
 </dict>
 </plist>

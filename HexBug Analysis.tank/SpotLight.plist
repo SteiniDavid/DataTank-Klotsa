@@ -8,6 +8,9 @@ Percent
 Time Step
 Average Cluster Size
 Number of Particles
+Time Step
+Number of Particles on the Boundry
+Number of Particles
 Time Step</string>
 </dict>
 </plist>
